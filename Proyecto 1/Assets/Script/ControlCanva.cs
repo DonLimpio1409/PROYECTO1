@@ -10,6 +10,7 @@ public class ControlCanva : MonoBehaviour
     [SerializeField] GameObject MenuDeOpciones;
     [SerializeField] GameObject Interfaz;
     [SerializeField] Scrollbar ScrolSensivilidad;
+    [SerializeField] Animator animJugador; 
 
     [Header("Variables")]
     public bool estaJugando;
@@ -29,9 +30,10 @@ public class ControlCanva : MonoBehaviour
     public void Jugar()
     {
         //Que empiece la animacion del principio del juego
-
+        animJugador.SetBool("EntrarHall", true);
+        new WaitUntil(() => animJugador.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f);
+        
         estaJugando = true;
-
         MenuPrincipal.SetActive(false);
         Interfaz.SetActive(true);
     }
