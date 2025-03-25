@@ -6,6 +6,7 @@ m_ProjectFiles:
     m_ModificationDate:
       serializedVersion: 2
       ticks: 638784976122496499
+      ticks: 638784604718602261
     m_Hash: 316836062
   m_LockFileStatus:
     m_FilePath: C:/Users/torra/Documents/GitHub/PROYECTO1/Proyecto 1/Packages/packages-lock.json
@@ -14,6 +15,7 @@ m_ProjectFiles:
     m_ModificationDate:
       serializedVersion: 2
       ticks: 638784976122506505
+      ticks: 638784604718612222
     m_Hash: 3609760787
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
