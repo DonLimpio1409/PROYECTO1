@@ -14,6 +14,7 @@ public class ControlCanva : MonoBehaviour
 
     [Header("Variables")]
     public bool estaJugando;
+    float contador;
 
     [Header("Scripts")]
     Jugador ScrJugador;
@@ -27,13 +28,17 @@ public class ControlCanva : MonoBehaviour
         Cursor.visible = true;
     }
 
+    void Update()
+    {
+        contador += Time.deltaTime; 
+    }
+
     public void Jugar()
     {
         //Que empiece la animacion del principio del juego
-        animJugador.SetBool("EntrarHall", true);
-        new WaitUntil(() => animJugador.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f);
-        
-        estaJugando = true;
+        StartCoroutine(EjecutarDespuesDeAnimacion());
+
+        ScrJugador.CentrarRaton();
         MenuPrincipal.SetActive(false);
         Interfaz.SetActive(true);
     }
@@ -62,5 +67,26 @@ public class ControlCanva : MonoBehaviour
         #else
             Application.Quit(); // Cierra la aplicación en una build
         #endif
+    }
+
+
+    IEnumerator EjecutarDespuesDeAnimacion()
+    {
+        // Iniciar la animación
+        animJugador.SetBool("EntrarHall", true);
+
+        // Esperar a que el estado de la animación sea el correcto
+        yield return new WaitUntil(() => animJugador.GetCurrentAnimatorStateInfo(0).IsName("AnimEntrarHall"));
+
+        // Obtener la duración de la animación
+        float animDuracion = animJugador.GetCurrentAnimatorStateInfo(0).length;
+
+        // Esperar a que termine la animación
+        yield return new WaitForSeconds(animDuracion);
+
+        animJugador.enabled = false; 
+        
+        // Ahora ejecutar el código después de la animación
+        estaJugando = true;
     }
 }
