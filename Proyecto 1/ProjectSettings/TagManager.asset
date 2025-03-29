@@ -7,6 +7,9 @@ TagManager:
   - ObjInteractuable
   - Suelo
   - Activable
+  - CamaraPuzzle
+  - Puzzle
+  - Jugador
   layers:
   - Default
   - TransparentFX
