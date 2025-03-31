@@ -10,6 +10,7 @@ TagManager:
   - CamaraPuzzle
   - Puzzle
   - Jugador
+  - Puerta
   layers:
   - Default
   - TransparentFX

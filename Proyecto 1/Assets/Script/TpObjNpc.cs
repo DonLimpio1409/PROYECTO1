@@ -8,6 +8,8 @@ public class TpObjNpc : MonoBehaviour
     [SerializeField] GameObject objetoTp;
     [SerializeField] Transform nuevaPosicion;
     public bool usado = false;
+    public bool puedeUsarse = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,5 +32,18 @@ public class TpObjNpc : MonoBehaviour
             gameObject.SetActive(false);
             usado = true;
         }
+    }
+
+    private void OnMouseDown()
+    {
+        if (puedeUsarse)
+        {
+            if (gameObject.CompareTag("Puerta"))
+            {
+                objetoTp.transform.position = nuevaPosicion.position;
+
+            }
+        }
+        
     }
 }
