@@ -19,7 +19,7 @@ public class Jugador : MonoBehaviour
     private float verticalAux;   
     
     [Header("Objetos/Componentes")]
-    bool manoLlena;
+    public bool manoLlena;
     CharacterController controlador;
     Vector3 VGravedad;
     [SerializeField] GameObject ObjetoEnMano;
@@ -28,7 +28,7 @@ public class Jugador : MonoBehaviour
     [Header("Posiciones")]
     [SerializeField] GameObject manoVacia;
     [SerializeField] GameObject dejarObjeto;
-    GameObject ObjMano;
+    public GameObject ObjMano;
     GameObject ObjOriginal;
 
     [Header("Accion")]
@@ -179,7 +179,7 @@ public class Jugador : MonoBehaviour
         }
     }
 
-    void Accion()
+    public void Accion()
     {
         RaycastHit rayoTocando;
         Vector3 direccion = camara.transform.forward; //Siempre hacia delante pero en un vertor 3 para tener en cuenta la rotacion
