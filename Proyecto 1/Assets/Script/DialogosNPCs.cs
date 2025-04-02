@@ -11,6 +11,17 @@ public class DialogosNPCs : MonoBehaviour
 
     [Header("Obgetos")]
     [SerializeField] TextMeshProUGUI textoDialogo;
+    [SerializeField] GameObject ParaContinuar;
+
+    [Header("Variables")]
+    string textoAEnseñar;
+    [SerializeField] float tiempoTipeado = 0.5f;
+    bool mostrandoTexto;
+
+    //Contadores
+    int contadorPresi = 1;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,14 +37,40 @@ public class DialogosNPCs : MonoBehaviour
 
     void Hablar()
     {
-        if(Input.GetKey(KeyCode.E) && ScrJugador.rayoAccionToca == true)
+        if(Input.GetKeyDown(KeyCode.E) && ScrJugador.rayoAccionToca == true)
         {
-            switch(ScrJugador.nombreObjActivable)
+            ParaContinuar.SetActive(false);
+            textoAEnseñar = "";
+
+            if (mostrandoTexto == false)
             {
-                case "Presidenta":
-                    textoDialogo.text = ScrDialogos.ObtenerDialogo(1, 2);
-                    break;
+                switch(ScrJugador.nombreObjActivable)
+                {
+                    case "Presidenta":
+                        //Setup
+                        contadorPresi++;
+                        textoDialogo.text = "";
+                        //Reproduccion del texto
+                        textoAEnseñar = ScrDialogos.ObtenerDialogo(1, contadorPresi);
+                        StopAllCoroutines();
+                        StartCoroutine(EnseñarTexto());
+                        //Interfaz
+                        ParaContinuar.SetActive(true);
+                        break;
+                }
+
             }
         }
+    }
+
+    IEnumerator EnseñarTexto()
+    {
+        mostrandoTexto = true;
+        foreach(char caracter in textoAEnseñar)
+        {
+            textoDialogo.text += caracter;
+            yield return new WaitForSeconds(tiempoTipeado);
+        }
+        mostrandoTexto = false;
     }
 }
