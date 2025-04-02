@@ -44,7 +44,7 @@ public class ControladorEventos : MonoBehaviour
         {
             cogerPizza = true;
             ParedInvisible.SetActive(true);
-            ParedInvisible.GetComponent<TpObjNpc>().puedeUsarse = true;
+            ScrTpObjNpc.puedeUsarse = true;
             
             
         }

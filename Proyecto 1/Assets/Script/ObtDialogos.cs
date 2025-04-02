@@ -8,7 +8,7 @@ public class ObtDialogos : MonoBehaviour
     void Start()
     {
         CargarCSV("Dialogos"); // Nombre del archivo sin extensión
-        Debug.Log(ObtenerDialogo(1, 2)); // Debe imprimir "Hola, soy la presidenta de este Excel"
+        Debug.Log(ObtenerDialogo(1, 2));
     }
 
     void CargarCSV(string NombreExcel)
