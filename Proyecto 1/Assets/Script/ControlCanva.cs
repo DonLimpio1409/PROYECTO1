@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -5,16 +6,19 @@ using UnityEngine;
 using UnityEngine.UI;
 public class ControlCanva : MonoBehaviour
 {
-    [Header("Jugador")]
+    [Header("Acciones de Menu")]
     [SerializeField] GameObject MenuPrincipal;
     [SerializeField] GameObject MenuDeOpciones;
     [SerializeField] GameObject Interfaz;
     [SerializeField] Scrollbar ScrolSensivilidad;
     [SerializeField] Animator animJugador; 
+    [SerializeField] GameObject MenuDePausa;
 
     [Header("Variables")]
     public bool estaJugando;
     float contador;
+    bool EstoyEnMenuPausa = false;
+    bool EstoyEnMenuPrincipal = true;
 
     [Header("Scripts")]
     Jugador ScrJugador;
@@ -30,6 +34,8 @@ public class ControlCanva : MonoBehaviour
 
     void Update()
     {
+        Pausar();
+
         contador += Time.deltaTime; 
     }
 
@@ -41,12 +47,15 @@ public class ControlCanva : MonoBehaviour
         ScrJugador.CentrarRaton();
         MenuPrincipal.SetActive(false);
         Interfaz.SetActive(true);
+        EstoyEnMenuPrincipal = false;
     }
 
     public void Opciones()
     {
         MenuPrincipal.SetActive(false);
+        MenuDePausa.SetActive(false);
         MenuDeOpciones.SetActive(true);
+        EstoyEnMenuPausa = true;
 
         //Control sensivilidad
         ScrJugador.sensibilidadHorizontal = ScrolSensivilidad.value * 1000; 
@@ -58,6 +67,10 @@ public class ControlCanva : MonoBehaviour
             ScrJugador.sensibilidadHorizontal = ScrolSensivilidad.value * 1000; 
             ScrJugador.sensibilidadVertical = ScrolSensivilidad.value * 1000;
         }
+
+        //Control sonido
+
+        //Control 
     }
 
     public void Salir()
@@ -67,6 +80,42 @@ public class ControlCanva : MonoBehaviour
         #else
             Application.Quit(); // Cierra la aplicación en una build
         #endif
+    }
+
+    //Menu de pausa
+    void Pausar()
+    {
+        if(Input.GetKey(KeyCode.P))
+        {
+            EstoyEnMenuPausa = true;
+            MenuDePausa.SetActive(true);
+            estaJugando = false;
+            //Descentrar raton
+            Cursor.lockState = CursorLockMode.None  ;
+            Cursor.visible = true;  
+        }
+    }
+
+    public void Volver()
+    {
+        MenuDePausa.SetActive(false);
+        ScrJugador.CentrarRaton();
+        estaJugando = true;
+    }
+
+    public void Atras()
+    {
+        MenuDeOpciones.SetActive(false);
+
+        if(EstoyEnMenuPrincipal == true)
+        {
+            MenuPrincipal.SetActive(true);
+        }
+        else if(EstoyEnMenuPausa == true)
+        {
+            MenuDePausa.SetActive(true);
+            EstoyEnMenuPausa = false;
+        }
     }
 
 

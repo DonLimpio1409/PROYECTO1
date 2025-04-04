@@ -68,12 +68,10 @@ public class Jugador : MonoBehaviour
             //Cojer y dejar Objetos
             CogerObjeto();
             DejarObjeto();
-           
-        }
 
-        // Acciones y Puzzle
-        Accion();
-        TocarPuzzle();       
+            Accion();
+            TocarPuzzle();
+        }       
     }
 
     void Mover()

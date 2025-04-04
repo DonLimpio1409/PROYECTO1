@@ -8,6 +8,7 @@ public class DialogosNPCs : MonoBehaviour
     [Header("Scripts")]
     Jugador ScrJugador;
     ObtDialogos ScrDialogos;
+    ControlCanva ScrControlCanva;
 
     [Header("Obgetos")]
     [SerializeField] TextMeshProUGUI textoDialogo;
@@ -27,6 +28,7 @@ public class DialogosNPCs : MonoBehaviour
     {
         ScrJugador = FindObjectOfType<Jugador>();
         ScrDialogos = FindObjectOfType<ObtDialogos>();
+        ScrControlCanva = FindObjectOfType<ControlCanva>();
     }
 
     // Update is called once per frame
@@ -37,28 +39,30 @@ public class DialogosNPCs : MonoBehaviour
 
     void Hablar()
     {
-        if(Input.GetKeyDown(KeyCode.E) && ScrJugador.rayoAccionToca == true)
+        if(ScrControlCanva.estaJugando == true)
         {
-            ParaContinuar.SetActive(false);
-            textoAEnseñar = "";
-
-            if (mostrandoTexto == false)
+            if(Input.GetKeyDown(KeyCode.E) && ScrJugador.rayoAccionToca == true)
             {
-                switch(ScrJugador.nombreObjActivable)
-                {
-                    case "Presidenta":
-                        //Setup
-                        contadorPresi++;
-                        textoDialogo.text = "";
-                        //Reproduccion del texto
-                        textoAEnseñar = ScrDialogos.ObtenerDialogo(1, contadorPresi);
-                        StopAllCoroutines();
-                        StartCoroutine(EnseñarTexto());
-                        //Interfaz
-                        ParaContinuar.SetActive(true);
-                        break;
-                }
+                ParaContinuar.SetActive(false);
+                textoAEnseñar = "";
 
+                if (mostrandoTexto == false)
+                {
+                    switch(ScrJugador.nombreObjActivable)
+                    {
+                        case "Presidenta":
+                            //Setup
+                            contadorPresi++;
+                            textoDialogo.text = "";
+                            //Reproduccion del texto
+                            textoAEnseñar = ScrDialogos.ObtenerDialogo(1, contadorPresi);
+                            StopAllCoroutines();
+                            StartCoroutine(EnseñarTexto());
+                            //Interfaz
+                            ParaContinuar.SetActive(true);
+                            break;
+                    }
+                } 
             }
         }
     }
