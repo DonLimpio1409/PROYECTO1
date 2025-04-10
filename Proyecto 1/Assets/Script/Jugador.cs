@@ -197,7 +197,8 @@ public class Jugador : MonoBehaviour
             {
                 rayoAccionToca = true;
                 nombreObjActivable = rayoTocando.collider.gameObject.name;
-                textoAccion.SetActive(true); 
+                textoAccion.SetActive(true);
+
             }
             else
             {
