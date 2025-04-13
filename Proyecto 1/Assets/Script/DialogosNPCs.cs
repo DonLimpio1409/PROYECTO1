@@ -16,7 +16,6 @@ public class DialogosNPCs : MonoBehaviour
 
     [Header("Obgetos")]
     [SerializeField] TextMeshProUGUI textoDialogo;
-    [SerializeField] GameObject ParaContinuar;
     [SerializeField] GameObject CuadroDialogo;
 
     [Header("Variables")]
@@ -42,43 +41,43 @@ public class DialogosNPCs : MonoBehaviour
         Hablar();
     }
 
-    void Hablar()
+   void Hablar()
+{
+    if (ScrControlCanva.estaJugando == true)
     {
-        if(ScrControlCanva.estaJugando == true)
+        if (Input.GetKeyDown(KeyCode.E) && ScrJugador.rayoAccionToca == true)
         {
-            if(Input.GetKeyDown(KeyCode.E) && ScrJugador.rayoAccionToca == true)
-            {
-                ParaContinuar.SetActive(false);
-                CuadroDialogo.SetActive(true);
-                textoAEnseñar = "";
+            CuadroDialogo.SetActive(true);
 
-                if (mostrandoTexto == false)
-                {
-                    switch(ScrJugador.nombreObjActivable)
-                    {
-                        case "Presidenta":
-                            //Setup
-                            contadorPresi++;
-                            textoDialogo.text = "";
-                            CuadroDialogo.GetComponent<Image>().sprite = CuadroPresidenta;
-                            CuadroDialogo.SetActive(true);
-                            //Reproduccion del texto
-                            textoAEnseñar = ScrDialogos.ObtenerDialogo(1, contadorPresi);
-                            StopAllCoroutines();
-                            StartCoroutine(EnseñarTexto());
-                            //Interfaz
-                            ParaContinuar.SetActive(true);
-                            break;
-                    }
-                } 
-            }
-            else if (ScrJugador.rayoAccionToca == false)
+            // Si está escribiéndose el texto, interrumpimos y lo mostramos completo
+            if (mostrandoTexto == true)
             {
-                CuadroDialogo.SetActive(false);
+                StopAllCoroutines();
+                textoDialogo.text = textoAEnseñar;
+                mostrandoTexto = false;
+                return;
+            }
+
+            // Si no se está escribiendo nada, empieza el nuevo diálogo
+            switch (ScrJugador.nombreObjActivable)
+            {
+                case "Presidenta":
+                    contadorPresi++;
+                    textoAEnseñar = ScrDialogos.ObtenerDialogo(1, contadorPresi);
+                    textoDialogo.text = "";
+                    CuadroDialogo.GetComponent<Image>().sprite = CuadroPresidenta;
+                    CuadroDialogo.SetActive(true);
+
+                    StartCoroutine(EnseñarTexto());
+                    break;
             }
         }
+        else if (ScrJugador.rayoAccionToca == false)
+        {
+            CuadroDialogo.SetActive(false);
+        }
     }
-
+}
     IEnumerator EnseñarTexto()
     {
         mostrandoTexto = true;

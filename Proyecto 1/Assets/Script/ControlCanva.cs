@@ -11,6 +11,7 @@ public class ControlCanva : MonoBehaviour
     [SerializeField] GameObject MenuDeOpciones;
     [SerializeField] GameObject Interfaz;
     [SerializeField] Scrollbar ScrolSensivilidad;
+    [SerializeField] Scrollbar ScrolVolumen;
     [SerializeField] Animator animJugador; 
     [SerializeField] GameObject MenuDePausa;
 
@@ -19,6 +20,7 @@ public class ControlCanva : MonoBehaviour
     float contador;
     bool EstoyEnMenuPausa = false;
     bool EstoyEnMenuPrincipal = true;
+    bool EstoyEnMenuDeOpciones;
 
     [Header("Scripts")]
     Jugador ScrJugador;
@@ -30,6 +32,14 @@ public class ControlCanva : MonoBehaviour
         //Asegurrarse de que el raton es libre
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+
+        // Sincronizar volumen inicial
+        if (ScrolVolumen.value <= 0.01f)
+        {
+            ScrolVolumen.value = 0.05f;
+        }
+
+        AudioListener.volume = ScrolVolumen.value;
     }
 
     void Update()
@@ -55,22 +65,25 @@ public class ControlCanva : MonoBehaviour
         MenuPrincipal.SetActive(false);
         MenuDePausa.SetActive(false);
         MenuDeOpciones.SetActive(true);
-        EstoyEnMenuPausa = true;
+        EstoyEnMenuDeOpciones = true;
+    }
 
-        //Control sensivilidad
+    public void ControlSensibilidad()
+    {
         ScrJugador.sensibilidadHorizontal = ScrolSensivilidad.value * 1000; 
         ScrJugador.sensibilidadVertical = ScrolSensivilidad.value * 1000;
 
         if(ScrolSensivilidad.value == 0)
         {
-            ScrolSensivilidad.value = 0.1f;
+            ScrolSensivilidad.value = 0.0005f;
             ScrJugador.sensibilidadHorizontal = ScrolSensivilidad.value * 1000; 
             ScrJugador.sensibilidadVertical = ScrolSensivilidad.value * 1000;
         }
+    }
 
-        //Control sonido
-
-        //Control 
+    public void ControlVolumen()
+    {
+        AudioListener.volume = ScrolVolumen.value;
     }
 
     public void Salir()
@@ -85,7 +98,7 @@ public class ControlCanva : MonoBehaviour
     //Menu de pausa
     void Pausar()
     {
-        if(Input.GetKey(KeyCode.P))
+        if(Input.GetKey(KeyCode.P) && EstoyEnMenuDeOpciones == false)
         {
             EstoyEnMenuPausa = true;
             MenuDePausa.SetActive(true);
@@ -106,12 +119,13 @@ public class ControlCanva : MonoBehaviour
     public void Atras()
     {
         MenuDeOpciones.SetActive(false);
+        EstoyEnMenuDeOpciones = false; 
 
         if(EstoyEnMenuPrincipal == true)
         {
             MenuPrincipal.SetActive(true);
         }
-        else if(EstoyEnMenuPausa == true)
+        else 
         {
             MenuDePausa.SetActive(true);
             EstoyEnMenuPausa = false;
