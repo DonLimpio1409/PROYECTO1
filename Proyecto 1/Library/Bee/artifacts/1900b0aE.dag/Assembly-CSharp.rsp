@@ -363,6 +363,7 @@
 "Assets/Script/MecanicasPuzzle.cs"
 "Assets/Script/ObtDialogos.cs"
 "Assets/Script/OrigenRaycast.cs"
+"Assets/Script/Portal.cs"
 "Assets/Script/Puzzles.cs"
 "Assets/Script/Reloj.cs"
 "Assets/Script/TpObjNpc.cs"

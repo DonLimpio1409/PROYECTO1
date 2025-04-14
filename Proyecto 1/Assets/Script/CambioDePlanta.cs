@@ -1,34 +1,63 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CambioDePlanta : MonoBehaviour
 {
-    [Header("Objetos")]
-    [SerializeField] GameObject SubirBajar;
+    [Header("Posiciones")]
+    [SerializeField] GameObject Subir0_1;
+    [SerializeField] GameObject Subir1_2;
+    [SerializeField] GameObject Bajar2_1;
+    [SerializeField] GameObject Bajar1_0;
+
+    [Header("Portales")]
+    [SerializeField] Portal portal_0;
+    [SerializeField] Portal portalSubir_1;
+    [SerializeField] Portal portalBajar_1;
+    [SerializeField] Portal portal_2;
+
+    [Header("")]
     [SerializeField] GameObject Jugador;
 
-    private void OnTriggerEnter(Collider collision)
-    { 
-        if (collision.CompareTag("Jugador"))
+    [Header("Variables")]
+    CharacterController cc;
+
+    void Start()
+    {
+        cc = Jugador.GetComponent<CharacterController>();
+
+        // Asignar este controlador a cada portal
+        portal_0.cambioDePlanta = this;
+        portalSubir_1.cambioDePlanta = this;
+        portalBajar_1.cambioDePlanta = this;
+        portal_2.cambioDePlanta = this;
+    }
+
+    public void JugadorHaEntradoEnPortal(Portal.TipoPortal tipo)
+    {
+        cc.enabled = false;
+
+        switch (tipo)
         {
-            CharacterController cc = Jugador.GetComponent<CharacterController>();
+            case Portal.TipoPortal.Subir0a1:
+                Jugador.transform.position = Subir0_1.transform.position;
+                break;
 
-            if (cc != null)
-            {
-                cc.enabled = false;
-            } 
+            case Portal.TipoPortal.Subir1a2:
+                Jugador.transform.position = Subir1_2.transform.position;
+                break;
 
-            Jugador.transform.position = SubirBajar.transform.position;
+            case Portal.TipoPortal.Bajar2a1:
+                Jugador.transform.position = Bajar2_1.transform.position;
+                break;
 
-            if (cc != null)
-            {
-                cc.enabled = true;
-            }
+            case Portal.TipoPortal.Bajar1a0:
+                Jugador.transform.position = Bajar1_0.transform.position;
+                break;
+
+            default:
+                Debug.LogWarning("Tipo de portal no reconocido");
+                break;
         }
 
-        //Cambiar la posicion del SubirBaja
+        cc.enabled = true;
     }
-    
 }

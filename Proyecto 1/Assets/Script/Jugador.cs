@@ -166,7 +166,6 @@ public class Jugador : MonoBehaviour
                 if(rayoTocando.collider.gameObject.CompareTag("Suelo"))
                 {
                     dejarObjeto.transform.position = rayoTocando.point;//Transportar el Dejar Objeto al punto de choque del raycast dejar
-                    dejarObjeto.transform.position = new Vector3(dejarObjeto.transform.position.x, dejarObjeto.transform.position.y + 0.4f, dejarObjeto.transform.position.z);//Corregir postura del objeto
                     ObjMano.GetComponent<BoxCollider>().enabled = true;//Activamos el collider del obj que dejamos
                     ObjMano.transform.position = dejarObjeto.transform.position;
                     ObjMano.transform.SetParent(null);
