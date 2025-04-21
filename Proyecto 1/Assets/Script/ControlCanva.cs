@@ -19,11 +19,15 @@ public class ControlCanva : MonoBehaviour
     public bool estaJugando;
     float contador;
     bool EstoyEnMenuPausa = false;
-    bool EstoyEnMenuPrincipal = true;
+    public bool EstoyEnMenuPrincipal = true;
     bool EstoyEnMenuDeOpciones;
 
     [Header("Scripts")]
     Jugador ScrJugador;
+
+    [Header("Animators")]
+    [SerializeField] Animator PuertaDer;
+    [SerializeField] Animator PuertaId;
 
     void Start()
     {
@@ -54,6 +58,7 @@ public class ControlCanva : MonoBehaviour
         //Que empiece la animacion del principio del juego
         StartCoroutine(EjecutarDespuesDeAnimacion());
 
+        //Ajustar todos lo posible para jugar
         ScrJugador.CentrarRaton();
         MenuPrincipal.SetActive(false);
         Interfaz.SetActive(true);
@@ -133,23 +138,33 @@ public class ControlCanva : MonoBehaviour
     }
 
 
-    IEnumerator EjecutarDespuesDeAnimacion()
+   IEnumerator EjecutarDespuesDeAnimacion()
     {
-        // Iniciar la animación
+        // Activar la animación
         animJugador.SetBool("EntrarHall", true);
 
-        // Esperar a que el estado de la animación sea el correcto
+        // Esperar a que entre en el estado deseado
         yield return new WaitUntil(() => animJugador.GetCurrentAnimatorStateInfo(0).IsName("AnimEntrarHall"));
 
-        // Obtener la duración de la animación
-        float animDuracion = animJugador.GetCurrentAnimatorStateInfo(0).length;
+        // Esperar un frame para asegurar que la animación ha arrancado completamente
+        yield return null;
 
-        // Esperar a que termine la animación
+        // Obtener la duración de la animación actual
+        float animDuracion = animJugador.GetCurrentAnimatorStateInfo(0).length;
+        
+        //Iniciar las animaciones de las puertas
+        PuertaDer.SetBool("Abrir",true);
+        PuertaId.SetBool("Abrir",true);
+        
+
+        // Esperar el tiempo de duración
         yield return new WaitForSeconds(animDuracion);
 
-        animJugador.enabled = false; 
-        
-        // Ahora ejecutar el código después de la animación
+        // Desactivar animator si quieres congelar el personaje
+        animJugador.enabled = false;
+
+        // Continuar con el juego
         estaJugando = true;
     }
+
 }

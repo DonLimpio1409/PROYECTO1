@@ -357,6 +357,7 @@
 "Assets/Script/Auxiliares/MovJugdor.cs"
 "Assets/Script/CambioDePlanta.cs"
 "Assets/Script/ControladorEventos.cs"
+"Assets/Script/ControladorSFX.cs"
 "Assets/Script/ControlCanva.cs"
 "Assets/Script/DialogosNPCs.cs"
 "Assets/Script/Jugador.cs"
