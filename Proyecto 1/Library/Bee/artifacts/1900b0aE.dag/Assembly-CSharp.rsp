@@ -361,6 +361,7 @@
 "Assets/Script/ControlCanva.cs"
 "Assets/Script/DialogosNPCs.cs"
 "Assets/Script/Jugador.cs"
+"Assets/Script/Limpiador.cs"
 "Assets/Script/MecanicasPuzzle.cs"
 "Assets/Script/ObtDialogos.cs"
 "Assets/Script/OrigenRaycast.cs"

@@ -11,9 +11,11 @@ public class ControladorSFX : MonoBehaviour
     [Header("Audios Clips")]
     [SerializeField] AudioClip SonidoPulsarBoton;
     [SerializeField] AudioClip Pasos;
+    [SerializeField] AudioClip Puertas; 
 
     [Header("Variables")]
-    float duracionFadeOut = 2;
+    float duracionFadeOut = 2.5f;
+    int contador = 0;
 
     [Header("Script")]
     ControlCanva controlCanva;
@@ -25,10 +27,17 @@ public class ControladorSFX : MonoBehaviour
 
     void Update()
     {
-        if(controlCanva.estaJugando == true)
+        if(controlCanva.estaJugando == true && contador == 0)
         {
             SFX.Stop();
-        }    
+            contador++;
+        }
+
+        if(controlCanva.abrirPuertas == true)
+        {
+            SFX.PlayOneShot(Puertas);
+            controlCanva.abrirPuertas = false;
+        }
     }
     public void PulsarBoton()
     {
@@ -39,7 +48,7 @@ public class ControladorSFX : MonoBehaviour
     {
         StartCoroutine(FadeOut(PantallaDeTitulo, duracionFadeOut));
 
-        if(controlCanva.EstoyEnMenuPrincipal == false)
+        if(controlCanva.estoyEnMenuPrincipal == false)
         {
             SFX.PlayOneShot(Pasos);
         }

@@ -18,9 +18,10 @@ public class ControlCanva : MonoBehaviour
     [Header("Variables")]
     public bool estaJugando;
     float contador;
-    bool EstoyEnMenuPausa = false;
-    public bool EstoyEnMenuPrincipal = true;
-    bool EstoyEnMenuDeOpciones;
+    bool estoyEnMenuPausa = false;
+    public bool estoyEnMenuPrincipal = true;
+    public bool abrirPuertas = false;
+    bool estoyEnMenuDeOpciones;
 
     [Header("Scripts")]
     Jugador ScrJugador;
@@ -62,7 +63,7 @@ public class ControlCanva : MonoBehaviour
         ScrJugador.CentrarRaton();
         MenuPrincipal.SetActive(false);
         Interfaz.SetActive(true);
-        EstoyEnMenuPrincipal = false;
+        estoyEnMenuPrincipal = false;
     }
 
     public void Opciones()
@@ -70,7 +71,7 @@ public class ControlCanva : MonoBehaviour
         MenuPrincipal.SetActive(false);
         MenuDePausa.SetActive(false);
         MenuDeOpciones.SetActive(true);
-        EstoyEnMenuDeOpciones = true;
+        estoyEnMenuDeOpciones = true;
     }
 
     public void ControlSensibilidad()
@@ -103,9 +104,9 @@ public class ControlCanva : MonoBehaviour
     //Menu de pausa
     void Pausar()
     {
-        if(Input.GetKey(KeyCode.P) && EstoyEnMenuDeOpciones == false)
+        if(Input.GetKey(KeyCode.P) && estoyEnMenuDeOpciones == false)
         {
-            EstoyEnMenuPausa = true;
+            estoyEnMenuPausa = true;
             MenuDePausa.SetActive(true);
             estaJugando = false;
             //Descentrar raton
@@ -124,25 +125,25 @@ public class ControlCanva : MonoBehaviour
     public void Atras()
     {
         MenuDeOpciones.SetActive(false);
-        EstoyEnMenuDeOpciones = false; 
+        estoyEnMenuDeOpciones = false; 
 
-        if(EstoyEnMenuPrincipal == true)
+        if(estoyEnMenuPrincipal == true)
         {
             MenuPrincipal.SetActive(true);
         }
         else 
         {
             MenuDePausa.SetActive(true);
-            EstoyEnMenuPausa = false;
+            estoyEnMenuPausa = false;
         }
     }
 
 
-   IEnumerator EjecutarDespuesDeAnimacion()
+    IEnumerator EjecutarDespuesDeAnimacion()
     {
         // Activar la animación
         animJugador.SetBool("EntrarHall", true);
-
+        
         // Esperar a que entre en el estado deseado
         yield return new WaitUntil(() => animJugador.GetCurrentAnimatorStateInfo(0).IsName("AnimEntrarHall"));
 
@@ -155,8 +156,8 @@ public class ControlCanva : MonoBehaviour
         //Iniciar las animaciones de las puertas
         PuertaDer.SetBool("Abrir",true);
         PuertaId.SetBool("Abrir",true);
+        abrirPuertas = true;
         
-
         // Esperar el tiempo de duración
         yield return new WaitForSeconds(animDuracion);
 
