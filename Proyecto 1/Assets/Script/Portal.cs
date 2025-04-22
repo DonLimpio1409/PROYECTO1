@@ -5,9 +5,8 @@ public class Portal : MonoBehaviour
     public enum TipoPortal
     {
         Subir0a1,
-        Subir1a2,
-        Bajar2a1,
-        Bajar1a0
+        SubirBajar1a2,
+        Bajar2a1
     }
 
     public TipoPortal tipo;

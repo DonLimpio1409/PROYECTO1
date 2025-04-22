@@ -14,6 +14,7 @@ public class ControlCanva : MonoBehaviour
     [SerializeField] Scrollbar ScrolVolumen;
     [SerializeField] Animator animJugador; 
     [SerializeField] GameObject MenuDePausa;
+    [SerializeField] GameObject MenuSubirBajar;
 
     [Header("Variables")]
     public bool estaJugando;
@@ -21,10 +22,11 @@ public class ControlCanva : MonoBehaviour
     bool estoyEnMenuPausa = false;
     public bool estoyEnMenuPrincipal = true;
     public bool abrirPuertas = false;
-    bool estoyEnMenuDeOpciones;
+    bool estoyEnOtroMenu = true;
 
     [Header("Scripts")]
     Jugador ScrJugador;
+    CambioDePlanta cambioDePlanta;
 
     [Header("Animators")]
     [SerializeField] Animator PuertaDer;
@@ -33,6 +35,7 @@ public class ControlCanva : MonoBehaviour
     void Start()
     {
         ScrJugador = FindObjectOfType<Jugador>();
+        cambioDePlanta = FindObjectOfType<CambioDePlanta>();
 
         //Asegurrarse de que el raton es libre
         Cursor.lockState = CursorLockMode.None;
@@ -71,7 +74,7 @@ public class ControlCanva : MonoBehaviour
         MenuPrincipal.SetActive(false);
         MenuDePausa.SetActive(false);
         MenuDeOpciones.SetActive(true);
-        estoyEnMenuDeOpciones = true;
+        estoyEnOtroMenu = true;
     }
 
     public void ControlSensibilidad()
@@ -104,7 +107,7 @@ public class ControlCanva : MonoBehaviour
     //Menu de pausa
     void Pausar()
     {
-        if(Input.GetKey(KeyCode.P) && estoyEnMenuDeOpciones == false)
+        if(Input.GetKey(KeyCode.P) && estoyEnOtroMenu == false)
         {
             estoyEnMenuPausa = true;
             MenuDePausa.SetActive(true);
@@ -125,7 +128,7 @@ public class ControlCanva : MonoBehaviour
     public void Atras()
     {
         MenuDeOpciones.SetActive(false);
-        estoyEnMenuDeOpciones = false; 
+        estoyEnOtroMenu = false; 
 
         if(estoyEnMenuPrincipal == true)
         {
@@ -166,6 +169,48 @@ public class ControlCanva : MonoBehaviour
 
         // Continuar con el juego
         estaJugando = true;
+        estoyEnOtroMenu = false; 
     }
 
+    public void DesplegarSubirBajar()
+    {
+        MenuSubirBajar.SetActive(true);
+        estoyEnOtroMenu = true;
+        
+        //Descentrar raton
+        estaJugando = false;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;  
+    }
+
+    public void SubirPlanta()
+    {
+        //Cambiar de planta
+        cambioDePlanta.SubirPlanta();
+        Debug.Log("Esto funciona");
+
+        //Quitar Menu
+        MenuSubirBajar.SetActive(false);
+        estoyEnOtroMenu = false;
+
+        //Centrar raton
+        estaJugando = true;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false; 
+    }
+
+    public void BajarPlanta()
+    {
+        //Cambio de planta
+        cambioDePlanta.BajarPlanta();
+
+        //Quitar Menu
+        MenuSubirBajar.SetActive(false);
+        estoyEnOtroMenu = false;
+
+        //Centrar raton
+        estaJugando = true;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false; 
+    }
 }
