@@ -13,6 +13,7 @@ public class DialogosNPCs : MonoBehaviour
     Jugador ScrJugador;
     ObtDialogos ScrDialogos;
     ControlCanva ScrControlCanva;
+    TpObjNpc ScrtpObjNpc;
 
     [Header("Obgetos")]
     [SerializeField] TextMeshProUGUI textoDialogo;
@@ -22,6 +23,10 @@ public class DialogosNPCs : MonoBehaviour
     string textoAEnseñar;
     [SerializeField] float tiempoTipeado = 0.5f;
     bool mostrandoTexto;
+
+    // Cooldowns individuales para cada personaje
+    Dictionary<string, float> cooldownsNPC = new Dictionary<string, float>();
+    [SerializeField] float tiempoCooldown = 120f;
 
     //Contadores
     int contadorPresi = 1;
@@ -42,50 +47,74 @@ public class DialogosNPCs : MonoBehaviour
     }
 
    void Hablar()
-{
-    if (ScrControlCanva.estaJugando == true)
     {
-        if (Input.GetKeyDown(KeyCode.E) && ScrJugador.rayoAccionToca == true)
+        if (ScrControlCanva.estaJugando == true)
         {
-            CuadroDialogo.SetActive(true);
-
-            // Si está escribiéndose el texto, interrumpimos y lo mostramos completo
-            if (mostrandoTexto == true)
+            if (Input.GetKeyDown(KeyCode.E) && ScrJugador.rayoAccionToca == true)
             {
-                StopAllCoroutines();
-                textoDialogo.text = textoAEnseñar;
-                mostrandoTexto = false;
-                return;
-            }
+                string nombreNPC = ScrJugador.nombreObjActivable;
 
-            // Si no se está escribiendo nada, empieza el nuevo diálogo
-            switch (ScrJugador.nombreObjActivable)
-            {
-                case "Presidenta":
-                    contadorPresi++;
-                    textoAEnseñar = ScrDialogos.ObtenerDialogo(1, contadorPresi);
-                    textoDialogo.text = "";
-                    CuadroDialogo.GetComponent<Image>().sprite = CuadroPresidenta;
-                    CuadroDialogo.SetActive(true);
+                // Comprobar si el NPC está en cooldown
+                if (cooldownsNPC.ContainsKey(nombreNPC) && Time.time < cooldownsNPC[nombreNPC])
+                {
+                    Debug.Log($"{nombreNPC} todavía está en cooldown.");
+                    return;
+                }
 
-                    StartCoroutine(EnseñarTexto());
-                    break;
+                CuadroDialogo.SetActive(true);
+
+                // Si está escribiéndose el texto, interrumpimos y lo mostramos completo
+                if (mostrandoTexto == true)
+                {
+                    StopAllCoroutines();
+                    textoDialogo.text = textoAEnseñar;
+                    mostrandoTexto = false;
+                    return;
+                }
+
+                // Si no se está escribiendo nada, empieza el nuevo diálogo
+                switch (ScrJugador.nombreObjActivable)
+                {
+                    case "Presidenta":
+                        contadorPresi++;
+                        textoAEnseñar = ScrDialogos.ObtenerDialogo(1, contadorPresi);
+                        textoDialogo.text = "";
+                        CuadroDialogo.GetComponent<Image>().sprite = CuadroPresidenta;
+                        CuadroDialogo.SetActive(true);
+
+                        StartCoroutine(EnseñarTexto(nombreNPC));
+
+                        break;
+                }
+
+                if(ScrJugador.rayoAccionToca == false)
+                {
+                    CuadroDialogo.SetActive(false);
+                }
             }
-        }
-        else if (ScrJugador.rayoAccionToca == false)
-        {
-            CuadroDialogo.SetActive(false);
         }
     }
-}
-    IEnumerator EnseñarTexto()
+    IEnumerator EnseñarTexto(string nombreNPC)
     {
         mostrandoTexto = true;
-        foreach(char caracter in textoAEnseñar)
+        foreach (char caracter in textoAEnseñar)
         {
-            textoDialogo.text += caracter;
-            yield return new WaitForSeconds(tiempoTipeado);
+            if (caracter == '#')
+            {
+                CuadroDialogo.SetActive(false);
+
+                // Ahora sí, cuando aparece #, empezamos el cooldown para ese NPC
+                cooldownsNPC[nombreNPC] = Time.time + tiempoCooldown;
+
+                break;
+            }
+            else
+            {
+                textoDialogo.text += caracter;
+                yield return new WaitForSeconds(tiempoTipeado);
+            }
         }
         mostrandoTexto = false;
     }
 }
+

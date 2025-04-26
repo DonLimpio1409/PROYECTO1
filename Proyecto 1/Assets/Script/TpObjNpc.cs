@@ -10,10 +10,12 @@ public class TpObjNpc : MonoBehaviour
     public bool usado = false;
     public bool puedeUsarse = false;
 
+    public bool personajeMovido;
+
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("La consola está funcionando correctamente");
+        Debug.Log("La consola estï¿½ funcionando correctamente");
     }
 
     // Update is called once per frame
@@ -27,7 +29,7 @@ public class TpObjNpc : MonoBehaviour
 
         if (other.CompareTag("Jugador"))
         {
-            Debug.Log("¡El jugador ha tocado el Quad activadorTp!");
+            Debug.Log("ï¿½El jugador ha tocado el Quad activadorTp!");
             objetoTp.transform.position = nuevaPosicion.position;
             gameObject.SetActive(false);
             usado = true;

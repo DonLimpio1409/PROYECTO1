@@ -8203,6 +8203,7 @@ MonoBehaviour:
   textoDialogo: {fileID: 1220970718}
   CuadroDialogo: {fileID: 1115011757}
   tiempoTipeado: 0.05
+  tiempoCooldown: 120
 --- !u!4 &860280658
 Transform:
   m_ObjectHideFlags: 0
@@ -11327,6 +11328,7 @@ MonoBehaviour:
   nuevaPosicion: {fileID: 726395958}
   usado: 0
   puedeUsarse: 0
+  personajeMovido: 0
 --- !u!114 &1307056709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11343,6 +11345,7 @@ MonoBehaviour:
   nuevaPosicion: {fileID: 1941244383}
   usado: 0
   puedeUsarse: 0
+  personajeMovido: 0
 --- !u!1 &1318683145 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7141506354229211294, guid: 8beaf63491a0007419d391fa9d8c2157, type: 3}
