@@ -8,7 +8,7 @@ public class Puzzles : MonoBehaviour
     [Header("Scripts")]
     Jugador ScrJugador;
 
-    [Header("Posiciones Cámara")]
+    [Header("Posiciones Cï¿½mara")]
     public GameObject camaraPuzzle;
     private Camera camaraPrincipal;
     public bool enPuzzle;
@@ -32,7 +32,7 @@ public class Puzzles : MonoBehaviour
 
     void PasarCamaraPuzzle()
     {
-        if (Input.GetKeyDown(KeyCode.F) && ScrJugador.rayoPuzzleToca)
+        if (Input.GetKeyDown(KeyCode.E) && ScrJugador.rayoPuzzleToca)
         {
             switch (ScrJugador.nombrePuzzle)
             {
