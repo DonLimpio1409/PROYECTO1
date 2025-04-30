@@ -12,21 +12,26 @@ public class ControladorSFX : MonoBehaviour
     [SerializeField] AudioClip SonidoPulsarBoton;
     [SerializeField] AudioClip Pasos;
     [SerializeField] AudioClip Puertas; 
+    [SerializeField] AudioClip Ruido1;
 
     [Header("Variables")]
     float duracionFadeOut = 2.5f;
     int contador = 0;
+    bool yaReproducido = false;
 
     [Header("Script")]
     ControlCanva controlCanva;
+    DialogosNPCs dialogosNPCs;
 
     void Start()
     {
         controlCanva = FindObjectOfType<ControlCanva>();
+        dialogosNPCs = FindObjectOfType<DialogosNPCs>();
     }
 
     void Update()
     {
+        //Control inicial
         if(controlCanva.estaJugando == true && contador == 0)
         {
             SFX.Stop();
@@ -38,6 +43,9 @@ public class ControladorSFX : MonoBehaviour
             SFX.PlayOneShot(Puertas);
             controlCanva.abrirPuertas = false;
         }
+
+        //Primer sonido de ruido
+        PrimerSonidoRuido();
     }
     public void PulsarBoton()
     {
@@ -66,5 +74,20 @@ public class ControladorSFX : MonoBehaviour
 
         audioSource.Stop();
         audioSource.volume = inicioVolumen; // Por si quieres volver a usarlo
+    }
+
+    void PrimerSonidoRuido()
+    {
+        if(dialogosNPCs.contadorPresi == 5 && yaReproducido == false)
+        {
+            StartCoroutine(Ruido1Tiempo());
+        }
+    }
+    private IEnumerator Ruido1Tiempo()
+    {    
+        yaReproducido = true; 
+        yield return new WaitForSeconds(0.5f);
+        SFX.PlayOneShot(Ruido1);
+        
     }
 }

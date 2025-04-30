@@ -8,7 +8,7 @@ public class Puzzles : MonoBehaviour
     [Header("Scripts")]
     Jugador ScrJugador;
 
-    [Header("Posiciones C�mara")]
+    [Header("Posiciones Camara")]
     public GameObject camaraPuzzle;
     private Camera camaraPrincipal;
     public bool enPuzzle;
@@ -36,9 +36,6 @@ public class Puzzles : MonoBehaviour
         {
             switch (ScrJugador.nombrePuzzle)
             {
-                case "Sphere":
-                    camaraPuzzle.transform.position = posicion2.position;
-                    break;
                 case "Puzzle":
                     camaraPuzzle.transform.position = posicionCamaraPuzzle.position;
                     break;

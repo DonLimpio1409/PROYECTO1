@@ -29,7 +29,7 @@ public class DialogosNPCs : MonoBehaviour
     [SerializeField] float tiempoCooldown = 120f;
 
     //Contadores
-    int contadorPresi = 1;
+    public int contadorPresi = 1;
 
 
     // Start is called before the first frame update
