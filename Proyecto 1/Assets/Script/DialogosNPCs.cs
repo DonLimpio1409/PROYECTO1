@@ -8,6 +8,27 @@ public class DialogosNPCs : MonoBehaviour
 {
     [Header("Sprites paneles")]
     [SerializeField] Sprite CuadroPresidenta;
+    [SerializeField] Sprite CuadroIsrrael;
+    [SerializeField] Sprite CuadroNestor;
+    [SerializeField] Sprite CuadroMario;
+    [SerializeField] Sprite CuadroJavier;
+    [SerializeField] Sprite CuadroPaul;
+
+    [Header("Contadores dialogos")]
+    public int contadorPresi = 1;
+    public int contadorIsrael = 1;
+    public int contadorNestor = 1;
+    public int contadorMario = 1;
+    public int contadorJavier = 1;
+    public int contadorPaul = 1;
+
+    [Header("Boolleanos dialogos")]
+    public bool PuedeHablarPresi = true;
+    public bool PuedeHablarIsrael = true;
+    public bool PuedeHablarNestor = true;
+    public bool PuedeHablarMario = true;
+    public bool PuedeHablarJavier = true;
+    public bool PuedeHablarPaul = true;
 
     [Header("Scripts")]
     Jugador ScrJugador;
@@ -27,10 +48,6 @@ public class DialogosNPCs : MonoBehaviour
     // Cooldowns individuales para cada personaje
     Dictionary<string, float> cooldownsNPC = new Dictionary<string, float>();
     [SerializeField] float tiempoCooldown = 120f;
-
-    //Contadores
-    public int contadorPresi = 1;
-
 
     // Start is called before the first frame update
     void Start()
@@ -76,10 +93,69 @@ public class DialogosNPCs : MonoBehaviour
                 switch (ScrJugador.nombreObjActivable)
                 {
                     case "Presidenta":
+                        if()
+                        {
+                            
+                        }
                         contadorPresi++;
                         textoAEnseñar = ScrDialogos.ObtenerDialogo(1, contadorPresi);
                         textoDialogo.text = "";
                         CuadroDialogo.GetComponent<Image>().sprite = CuadroPresidenta;
+                        CuadroDialogo.SetActive(true);
+
+                        StartCoroutine(EnseñarTexto(nombreNPC));
+
+                        break;
+
+                    case "Israel":
+                        contadorIsrael++;
+                        textoAEnseñar = ScrDialogos.ObtenerDialogo(5, contadorIsrael);
+                        textoDialogo.text = "";
+                        CuadroDialogo.GetComponent<Image>().sprite = CuadroIsrrael;
+                        CuadroDialogo.SetActive(true);
+
+                        StartCoroutine(EnseñarTexto(nombreNPC));
+
+                        break;
+
+                    case "Nestor":
+                        contadorNestor++;
+                        textoAEnseñar = ScrDialogos.ObtenerDialogo(8, contadorNestor);
+                        textoDialogo.text = "";
+                        CuadroDialogo.GetComponent<Image>().sprite = CuadroNestor;
+                        CuadroDialogo.SetActive(true);
+
+                        StartCoroutine(EnseñarTexto(nombreNPC));
+
+                        break;
+
+                    case "Mario":
+                        contadorMario++;
+                        textoAEnseñar = ScrDialogos.ObtenerDialogo(7, contadorMario);
+                        textoDialogo.text = "";
+                        CuadroDialogo.GetComponent<Image>().sprite = CuadroMario;
+                        CuadroDialogo.SetActive(true);
+
+                        StartCoroutine(EnseñarTexto(nombreNPC));
+
+                        break;
+
+                    case "Javier":
+                        contadorJavier++;
+                        textoAEnseñar = ScrDialogos.ObtenerDialogo(4, contadorJavier);
+                        textoDialogo.text = "";
+                        CuadroDialogo.GetComponent<Image>().sprite = CuadroJavier;
+                        CuadroDialogo.SetActive(true);
+
+                        StartCoroutine(EnseñarTexto(nombreNPC));
+
+                        break;
+
+                    case "Paul":
+                        contadorPaul++;
+                        textoAEnseñar = ScrDialogos.ObtenerDialogo(6, contadorPaul);
+                        textoDialogo.text = "";
+                        CuadroDialogo.GetComponent<Image>().sprite = CuadroPaul;
                         CuadroDialogo.SetActive(true);
 
                         StartCoroutine(EnseñarTexto(nombreNPC));
