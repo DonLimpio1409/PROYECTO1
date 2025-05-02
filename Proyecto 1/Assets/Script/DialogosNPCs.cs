@@ -93,73 +93,92 @@ public class DialogosNPCs : MonoBehaviour
                 switch (ScrJugador.nombreObjActivable)
                 {
                     case "Presidenta":
-                        if()
+                        if(PuedeHablarPresi == true)
                         {
+                            contadorPresi++;
+                            textoAEnseñar = ScrDialogos.ObtenerDialogo(1, contadorPresi);
+                            textoDialogo.text = "";
+                            CuadroDialogo.GetComponent<Image>().sprite = CuadroPresidenta;
+                            CuadroDialogo.SetActive(true);
+
+                            StartCoroutine(EnseñarTexto(nombreNPC));
                             
+                            break;
                         }
-                        contadorPresi++;
-                        textoAEnseñar = ScrDialogos.ObtenerDialogo(1, contadorPresi);
-                        textoDialogo.text = "";
-                        CuadroDialogo.GetComponent<Image>().sprite = CuadroPresidenta;
-                        CuadroDialogo.SetActive(true);
-
-                        StartCoroutine(EnseñarTexto(nombreNPC));
-
                         break;
 
                     case "Israel":
-                        contadorIsrael++;
-                        textoAEnseñar = ScrDialogos.ObtenerDialogo(5, contadorIsrael);
-                        textoDialogo.text = "";
-                        CuadroDialogo.GetComponent<Image>().sprite = CuadroIsrrael;
-                        CuadroDialogo.SetActive(true);
+                        if(PuedeHablarIsrael == true)
+                        {
+                            contadorIsrael++;
+                            textoAEnseñar = ScrDialogos.ObtenerDialogo(5, contadorIsrael);
+                            textoDialogo.text = "";
+                            CuadroDialogo.GetComponent<Image>().sprite = CuadroIsrrael;
+                            CuadroDialogo.SetActive(true);
 
-                        StartCoroutine(EnseñarTexto(nombreNPC));
+                            StartCoroutine(EnseñarTexto(nombreNPC));
 
+                            break;
+                        }
                         break;
 
                     case "Nestor":
-                        contadorNestor++;
-                        textoAEnseñar = ScrDialogos.ObtenerDialogo(8, contadorNestor);
-                        textoDialogo.text = "";
-                        CuadroDialogo.GetComponent<Image>().sprite = CuadroNestor;
-                        CuadroDialogo.SetActive(true);
+                        if(PuedeHablarNestor == true)
+                        {
+                            contadorNestor++;
+                            textoAEnseñar = ScrDialogos.ObtenerDialogo(8, contadorNestor);
+                            textoDialogo.text = "";
+                            CuadroDialogo.GetComponent<Image>().sprite = CuadroNestor;
+                            CuadroDialogo.SetActive(true);
 
-                        StartCoroutine(EnseñarTexto(nombreNPC));
+                            StartCoroutine(EnseñarTexto(nombreNPC));
 
+                            break;  
+                        }  
                         break;
-
                     case "Mario":
-                        contadorMario++;
-                        textoAEnseñar = ScrDialogos.ObtenerDialogo(7, contadorMario);
-                        textoDialogo.text = "";
-                        CuadroDialogo.GetComponent<Image>().sprite = CuadroMario;
-                        CuadroDialogo.SetActive(true);
+                        if(PuedeHablarMario == true)
+                        {
+                            contadorMario++;
+                            textoAEnseñar = ScrDialogos.ObtenerDialogo(7, contadorMario);
+                            textoDialogo.text = "";
+                            CuadroDialogo.GetComponent<Image>().sprite = CuadroMario;
+                            CuadroDialogo.SetActive(true);
 
-                        StartCoroutine(EnseñarTexto(nombreNPC));
+                            StartCoroutine(EnseñarTexto(nombreNPC));
 
+                            break;
+                        }
                         break;
 
                     case "Javier":
-                        contadorJavier++;
-                        textoAEnseñar = ScrDialogos.ObtenerDialogo(4, contadorJavier);
-                        textoDialogo.text = "";
-                        CuadroDialogo.GetComponent<Image>().sprite = CuadroJavier;
-                        CuadroDialogo.SetActive(true);
+                        if(PuedeHablarJavier == true)
+                        {
+                            contadorJavier++;
+                            textoAEnseñar = ScrDialogos.ObtenerDialogo(4, contadorJavier);
+                            textoDialogo.text = "";
+                            CuadroDialogo.GetComponent<Image>().sprite = CuadroJavier;
+                            CuadroDialogo.SetActive(true);
 
-                        StartCoroutine(EnseñarTexto(nombreNPC));
+                            StartCoroutine(EnseñarTexto(nombreNPC));
 
+                            break;
+                        }
                         break;
 
                     case "Paul":
-                        contadorPaul++;
-                        textoAEnseñar = ScrDialogos.ObtenerDialogo(6, contadorPaul);
-                        textoDialogo.text = "";
-                        CuadroDialogo.GetComponent<Image>().sprite = CuadroPaul;
-                        CuadroDialogo.SetActive(true);
+                        if(PuedeHablarPaul == true)
+                        {
+                            contadorJavier++;
+                            textoAEnseñar = ScrDialogos.ObtenerDialogo(4, contadorJavier);
+                            textoDialogo.text = "";
+                            CuadroDialogo.GetComponent<Image>().sprite = CuadroJavier;
+                            CuadroDialogo.SetActive(true);
 
-                        StartCoroutine(EnseñarTexto(nombreNPC));
+                            StartCoroutine(EnseñarTexto(nombreNPC));
 
+                            break;
+                        }
                         break;
                 }
 
@@ -178,9 +197,42 @@ public class DialogosNPCs : MonoBehaviour
             if (caracter == '#')
             {
                 CuadroDialogo.SetActive(false);
+                PuedeHablarPresi = false;
 
-                // Ahora sí, cuando aparece #, empezamos el cooldown para ese NPC
-                cooldownsNPC[nombreNPC] = Time.time + tiempoCooldown;
+                break;
+            }
+            else if (caracter == '$')
+            {
+                CuadroDialogo.SetActive(false);
+                PuedeHablarIsrael = false;
+
+                break;
+            }
+            else if (caracter == 'º')
+            {
+                CuadroDialogo.SetActive(false);
+                PuedeHablarNestor = false;
+
+                break;
+            }
+            else if (caracter == '=')
+            {
+                CuadroDialogo.SetActive(false);
+                PuedeHablarMario = false;
+
+                break;
+            }
+            else if (caracter == '%')
+            {
+                CuadroDialogo.SetActive(false);
+                PuedeHablarJavier = false;
+
+                break;
+            }
+            else if (caracter == '/')
+            {
+                CuadroDialogo.SetActive(false);
+                PuedeHablarPaul = false;
 
                 break;
             }

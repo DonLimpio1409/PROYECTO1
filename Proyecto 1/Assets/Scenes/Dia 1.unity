@@ -8530,11 +8530,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CuadroPresidenta: {fileID: 21300000, guid: 2e5194a433e9de346bb6b35cafca7203, type: 3}
+  CuadroIsrrael: {fileID: 0}
+  CuadroNestor: {fileID: 0}
+  CuadroMario: {fileID: 0}
+  CuadroJavier: {fileID: 0}
+  CuadroPaul: {fileID: 0}
+  contadorPresi: 1
+  contadorIsrael: 1
+  contadorNestor: 1
+  contadorMario: 1
+  contadorJavier: 1
+  contadorPaul: 1
+  PuedeHablarPresi: 1
+  PuedeHablarIsrael: 1
+  PuedeHablarNestor: 1
+  PuedeHablarMario: 1
+  PuedeHablarJavier: 1
+  PuedeHablarPaul: 1
   textoDialogo: {fileID: 1220970718}
   CuadroDialogo: {fileID: 1115011757}
   tiempoTipeado: 0.05
   tiempoCooldown: 120
-  contadorPresi: 1
 --- !u!4 &860280658
 Transform:
   m_ObjectHideFlags: 0
@@ -11404,8 +11420,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10.000001, y: 1.9231808, z: 11.023022}
-  m_Center: {x: 0.0000040165046, y: -0.059120696, z: 0.51148814}
+  m_Size: {x: 10.000001, y: 5.291786, z: 11.023022}
+  m_Center: {x: 0.0000038059238, y: 1.6252027, z: 0.5114881}
 --- !u!23 &1271901422
 MeshRenderer:
   m_ObjectHideFlags: 0
