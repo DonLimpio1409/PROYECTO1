@@ -15,7 +15,7 @@ C:/Users/Usuario/Documents/GitHub/PROYECTO1/Proyecto 1
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-54234
+52963
 Successfully changed project path to: C:/Users/Usuario/Documents/GitHub/PROYECTO1/Proyecto 1
 C:/Users/Usuario/Documents/GitHub/PROYECTO1/Proyecto 1
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,12 +49,12 @@ C:/Users/Usuario/Documents/GitHub/PROYECTO1/Proyecto 1
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [19100] Host "[IP] 192.168.1.132 [Port] 0 [Flags] 2 [Guid] 1312841472 [EditorId] 1312841472 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-1OD70R12) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [8652] Host "[IP] 192.168.1.132 [Port] 0 [Flags] 2 [Guid] 3092900408 [EditorId] 3092900408 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-1OD70R12) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [19100] Host "[IP] 192.168.1.132 [Port] 0 [Flags] 2 [Guid] 1312841472 [EditorId] 1312841472 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-1OD70R12) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [8652] Host "[IP] 192.168.1.132 [Port] 0 [Flags] 2 [Guid] 3092900408 [EditorId] 3092900408 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-1OD70R12) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 15 workers.
-Refreshing native plugins compatible for Editor in 10.94 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 8.00 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.17f1 (4fc78088f837)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.17f1/Editor/Data/Resources/UnitySubsystems
@@ -70,47 +70,47 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.17f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.17f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.17f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56768
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56784
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.17f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.17f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.007806 seconds.
-- Loaded All Assemblies, in  0.503 seconds
+Registered in 0.009477 seconds.
+- Loaded All Assemblies, in  0.447 seconds
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 1521 ms
+Android Extension - Scanning For ADB Devices 461 ms
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  2.039 seconds
-Domain Reload Profiling: 2541ms
-	BeginReloadAssembly (130ms)
+- Finished resetting the current domain, in  0.884 seconds
+Domain Reload Profiling: 1331ms
+	BeginReloadAssembly (145ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (70ms)
+	RebuildCommonClasses (42ms)
 	RebuildNativeTypeToScriptingClass (11ms)
-	initialDomainReloadingComplete (71ms)
-	LoadAllAssembliesAndSetupDomain (220ms)
-		LoadAssemblies (128ms)
+	initialDomainReloadingComplete (70ms)
+	LoadAllAssembliesAndSetupDomain (177ms)
+		LoadAssemblies (144ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (217ms)
-			TypeCache.Refresh (215ms)
-				TypeCache.ScanAssembly (199ms)
+		AnalyzeDomain (174ms)
+			TypeCache.Refresh (172ms)
+				TypeCache.ScanAssembly (156ms)
 			ScanForSourceGeneratedMonoScriptInfo (1ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (2040ms)
+	FinalizeReload (885ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1965ms)
+		SetupLoadedEditorAssemblies (813ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (1711ms)
+			InitializePlatformSupportModulesInManaged (607ms)
 			SetLoadedEditorAssemblies (5ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (3ms)
-			ProcessInitializeOnLoadAttributes (160ms)
-			ProcessInitializeOnLoadMethodAttributes (86ms)
+			BeforeProcessingInitializeOnLoad (2ms)
+			ProcessInitializeOnLoadAttributes (142ms)
+			ProcessInitializeOnLoadMethodAttributes (56ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -118,52 +118,52 @@ Domain Reload Profiling: 2541ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.902 seconds
-Refreshing native plugins compatible for Editor in 3.20 ms, found 3 plugins.
+- Loaded All Assemblies, in  0.773 seconds
+Refreshing native plugins compatible for Editor in 3.72 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.747 seconds
-Domain Reload Profiling: 1648ms
-	BeginReloadAssembly (178ms)
+- Finished resetting the current domain, in  0.784 seconds
+Domain Reload Profiling: 1557ms
+	BeginReloadAssembly (160ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (8ms)
+		DisableScriptedObjects (6ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (29ms)
-	RebuildCommonClasses (53ms)
-	RebuildNativeTypeToScriptingClass (11ms)
-	initialDomainReloadingComplete (54ms)
-	LoadAllAssembliesAndSetupDomain (604ms)
-		LoadAssemblies (427ms)
+	RebuildCommonClasses (47ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (42ms)
+	LoadAllAssembliesAndSetupDomain (512ms)
+		LoadAssemblies (349ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (267ms)
-			TypeCache.Refresh (241ms)
-				TypeCache.ScanAssembly (219ms)
-			ScanForSourceGeneratedMonoScriptInfo (20ms)
+		AnalyzeDomain (252ms)
+			TypeCache.Refresh (224ms)
+				TypeCache.ScanAssembly (197ms)
+			ScanForSourceGeneratedMonoScriptInfo (21ms)
 			ResolveRequiredComponents (5ms)
-	FinalizeReload (748ms)
+	FinalizeReload (785ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (502ms)
+		SetupLoadedEditorAssemblies (539ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (30ms)
-			SetLoadedEditorAssemblies (6ms)
+			InitializePlatformSupportModulesInManaged (29ms)
+			SetLoadedEditorAssemblies (10ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (67ms)
-			ProcessInitializeOnLoadAttributes (363ms)
-			ProcessInitializeOnLoadMethodAttributes (29ms)
-			AfterProcessingInitializeOnLoad (6ms)
+			BeforeProcessingInitializeOnLoad (75ms)
+			ProcessInitializeOnLoadAttributes (389ms)
+			ProcessInitializeOnLoadMethodAttributes (28ms)
+			AfterProcessingInitializeOnLoad (7ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (9ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
-Refreshing native plugins compatible for Editor in 2.57 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.10 seconds
+Refreshing native plugins compatible for Editor in 3.28 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3189 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 29 unused Assets / (29.7 KB). Loaded Objects now: 3678.
 Memory consumption went from 149.4 MB to 149.4 MB.
-Total: 5.212400 ms (FindLiveObjects: 0.520400 ms CreateObjectMapping: 0.179600 ms MarkObjects: 4.435700 ms  DeleteObjects: 0.074000 ms)
+Total: 4.560700 ms (FindLiveObjects: 0.613200 ms CreateObjectMapping: 0.224000 ms MarkObjects: 3.626600 ms  DeleteObjects: 0.094500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -178,3 +178,408 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 382640.146932 seconds.
+  path: Assets/Fuentes/Helwa.ttf
+  artifactKey: Guid(aab4b0a1fa6876145ab110a398b08f6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fuentes/Helwa.ttf using Guid(aab4b0a1fa6876145ab110a398b08f6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02f68a5c23082b18112a0b6e58fe1dc2') in 0.119758 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 112.965746 seconds.
+  path: Assets/Modelos/TextPasillo/Bombilla_BaseColor.1001.png
+  artifactKey: Guid(52920415ab143984f8c075c885d364ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextPasillo/Bombilla_BaseColor.1001.png using Guid(52920415ab143984f8c075c885d364ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d6794aae90a8639324c1d326d45f8e7') in 0.021700 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.008336 seconds.
+  path: Assets/Modelos/TextPasillo/Bombilla_Emission.1001.png
+  artifactKey: Guid(505c440dbe2a6bb4392987f1338d81c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextPasillo/Bombilla_Emission.1001.png using Guid(505c440dbe2a6bb4392987f1338d81c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65352a24bb20d0b31e951c160d1f8853') in 0.017655 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.005701 seconds.
+  path: Assets/Modelos/TextPasillo/Bombilla_Normal.1001.png
+  artifactKey: Guid(0c879c6bd4639744e85d36cb15f2843c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextPasillo/Bombilla_Normal.1001.png using Guid(0c879c6bd4639744e85d36cb15f2843c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41e6030e5485cd1e69b791073c4f31ef') in 0.016923 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Modelos/TextPasillo/MuroPasillo_Metallic.1001.png
+  artifactKey: Guid(0668b2af33ce56c4cb65f9a8cb305be0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextPasillo/MuroPasillo_Metallic.1001.png using Guid(0668b2af33ce56c4cb65f9a8cb305be0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2751e5db32bcdb78da6713858aa439ef') in 0.062318 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/Modelos/TextPasillo/FelpudoPasillo_BaseColor.1001.png
+  artifactKey: Guid(05f0890d8093232469894dddf8efe945) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextPasillo/FelpudoPasillo_BaseColor.1001.png using Guid(05f0890d8093232469894dddf8efe945) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a8a21d9df38150d04bf2486e377a457') in 0.039668 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Modelos/TextPasillo/MuroPasillo_Emission.1001.png
+  artifactKey: Guid(90dda74711cafc24c9b84f8c83ca6ad4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextPasillo/MuroPasillo_Emission.1001.png using Guid(90dda74711cafc24c9b84f8c83ca6ad4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b15fb6e810bc024cce30244c5157891') in 0.039349 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/Modelos/TextPasillo/Extractor_Emission.1001.png
+  artifactKey: Guid(9008c31c9e7e3b949b6704cb5d9fbbaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextPasillo/Extractor_Emission.1001.png using Guid(9008c31c9e7e3b949b6704cb5d9fbbaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f787c6cd9731c01656f17421f2b51fd') in 0.014868 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000107 seconds.
+  path: Assets/Modelos/TextPasillo/FelpudoPasillo_Metallic.1001.png
+  artifactKey: Guid(4f26ec36f8d98cd4bb28a6645118d229) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextPasillo/FelpudoPasillo_Metallic.1001.png using Guid(4f26ec36f8d98cd4bb28a6645118d229) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73327bcfdd14165e7629365611e56478') in 0.022158 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000069 seconds.
+  path: Assets/Modelos/TextPasillo/Extractor_BaseColor.1001.png
+  artifactKey: Guid(018efc298cd8a8541a0d78a1773f328a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextPasillo/Extractor_BaseColor.1001.png using Guid(018efc298cd8a8541a0d78a1773f328a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5358e87956ff07dc5b0cd4b675fd3c0') in 0.034316 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Modelos/TextPasillo/FelpudoPasillo_Normal.1001.png
+  artifactKey: Guid(c70309dbdb468884faf4d913da286fba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextPasillo/FelpudoPasillo_Normal.1001.png using Guid(c70309dbdb468884faf4d913da286fba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de87d970682e2065bcbad3ce9a0a7e4e') in 0.015562 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000060 seconds.
+  path: Assets/Modelos/TextPasillo/MuroPasillo_BaseColor.1001.png
+  artifactKey: Guid(d12991171e3f1e841aa300e75858e160) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextPasillo/MuroPasillo_BaseColor.1001.png using Guid(d12991171e3f1e841aa300e75858e160) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1674f7f3a57c58a7a079be6390413e4') in 0.027267 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Modelos/TextPasillo/MuroPasillo_Roughness.1001.png
+  artifactKey: Guid(847b4d5a1e0e976428feef12c959e9ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextPasillo/MuroPasillo_Roughness.1001.png using Guid(847b4d5a1e0e976428feef12c959e9ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e923554555cd924fd33051fe8dd864b2') in 0.036278 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Modelos/TextPasillo/Extractor_Normal.1001.png
+  artifactKey: Guid(db27738125d55834e9d4e7c98e440017) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextPasillo/Extractor_Normal.1001.png using Guid(db27738125d55834e9d4e7c98e440017) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f930accdc5b01222613bf866bf98e5dc') in 0.014502 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Modelos/TextPasillo/FelpudoPasillo_Emission.1001.png
+  artifactKey: Guid(d5987d8f9244fcd4e8a05f36edb48093) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextPasillo/FelpudoPasillo_Emission.1001.png using Guid(d5987d8f9244fcd4e8a05f36edb48093) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52203b3c143b3ad891294fd3682ee8be') in 0.035034 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 2.500607 seconds.
+  path: Assets/Modelos/TextPasillo/PuertaMetalPasillo_BaseColor.1001.png
+  artifactKey: Guid(4142f10655748df458369f4298a2895b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextPasillo/PuertaMetalPasillo_BaseColor.1001.png using Guid(4142f10655748df458369f4298a2895b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e8c2f7eabe29b0cad94ccff8d034050') in 0.022655 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/Modelos/TextPasillo/PuertaMetalPasillo_Roughness.1001.png
+  artifactKey: Guid(7cdaf03156934d0468e627c989dc9520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextPasillo/PuertaMetalPasillo_Roughness.1001.png using Guid(7cdaf03156934d0468e627c989dc9520) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c14adf0301a05150723a57cff3c61e32') in 0.042500 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Modelos/TextPasillo/PuertaMetalPasillo_Normal.1001.png
+  artifactKey: Guid(cdb1798f1555c2e499eb02dfed704880) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextPasillo/PuertaMetalPasillo_Normal.1001.png using Guid(cdb1798f1555c2e499eb02dfed704880) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5f8b283d2e975321c42819609755135') in 0.040708 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Modelos/TextPasillo/PuertaMetalPasillo_Metallic.1001.png
+  artifactKey: Guid(ef957a62373ee3c4d81502b10fec1664) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextPasillo/PuertaMetalPasillo_Metallic.1001.png using Guid(ef957a62373ee3c4d81502b10fec1664) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73edc1e335a96258c7afd3169486bf47') in 0.026184 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.029685 seconds.
+  path: Assets/Modelos/TextPasillo/PuertasPasillo_Emission.1001.png
+  artifactKey: Guid(c3ec104d8ccf8da4fa508bc20b53d4d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextPasillo/PuertasPasillo_Emission.1001.png using Guid(c3ec104d8ccf8da4fa508bc20b53d4d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a32ed42d53b5be83dad05a6143275f02') in 0.025814 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000150 seconds.
+  path: Assets/Modelos/TextPasillo/PuertasPasillo_Roughness.1001.png
+  artifactKey: Guid(a06f2de2a7d4004449b743de7639ff0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextPasillo/PuertasPasillo_Roughness.1001.png using Guid(a06f2de2a7d4004449b743de7639ff0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20f6b2c1f18a1c0fbfec1f31e880e723') in 0.023424 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Modelos/TextPasillo/SeñalPasillo_Alpha.1001.png
+  artifactKey: Guid(0f2a620b9d79b5f4eb477e3129924031) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextPasillo/SeñalPasillo_Alpha.1001.png using Guid(0f2a620b9d79b5f4eb477e3129924031) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '291efb5d654a552f7ab1a5708c112429') in 0.011350 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Modelos/TextPasillo/PuertasPasillo_Normal.1001.png
+  artifactKey: Guid(1e6bf070d49351641b802a597edae951) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextPasillo/PuertasPasillo_Normal.1001.png using Guid(1e6bf070d49351641b802a597edae951) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d261926af41cc7e9fc1fa88c7714b11') in 0.013935 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Modelos/TextPasillo/SeñalPasillo_Displacement.1001.png
+  artifactKey: Guid(44ececa25d541f94bb75bb8028d3b652) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextPasillo/SeñalPasillo_Displacement.1001.png using Guid(44ececa25d541f94bb75bb8028d3b652) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5e5d98f313dd58621205297546aa66a') in 0.029597 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Modelos/TextPasillo/SeñalPasillo_BaseColor.1001.png
+  artifactKey: Guid(133418757b4d675429fec186f4d32155) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextPasillo/SeñalPasillo_BaseColor.1001.png using Guid(133418757b4d675429fec186f4d32155) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbe307050fe38a8cdde7faf070643ebb') in 0.027889 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 12.180581 seconds.
+  path: Assets/Modelos/Materiales/Pasillo/Bombilla.mat
+  artifactKey: Guid(57f4392e094e03d4da338eb562550c5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/Materiales/Pasillo/Bombilla.mat using Guid(57f4392e094e03d4da338eb562550c5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4633f5c5ad7931fa72b765bea06f5a0c') in 0.027113 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Modelos/Materiales/Pasillo/Escalera.mat
+  artifactKey: Guid(df9f60f6b902c3041beef9d1aef5a608) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/Materiales/Pasillo/Escalera.mat using Guid(df9f60f6b902c3041beef9d1aef5a608) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ead172690308b87e65536fc02441530') in 0.041244 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Modelos/Materiales/Pasillo/PuertaAscensor.mat
+  artifactKey: Guid(4b07ab749977a664abcee1a8800fa946) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/Materiales/Pasillo/PuertaAscensor.mat using Guid(4b07ab749977a664abcee1a8800fa946) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d2ea39de9a6b92ebd292257f92610ea') in 0.031926 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000062 seconds.
+  path: Assets/Modelos/Materiales/Pasillo/PuertaMetalPasillo.mat
+  artifactKey: Guid(4af3d1a49092ac5409a6a913a0645969) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/Materiales/Pasillo/PuertaMetalPasillo.mat using Guid(4af3d1a49092ac5409a6a913a0645969) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eff574a794099b7674150731c626f8f4') in 0.010483 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/Modelos/Materiales/Pasillo/Timbre.mat
+  artifactKey: Guid(83cc0a3f5e6de0149a994f40ff7239b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/Materiales/Pasillo/Timbre.mat using Guid(83cc0a3f5e6de0149a994f40ff7239b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17604f4f3d6b52da938f7d8c3ef292e9') in 0.027335 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Modelos/Materiales/Pasillo/Pared.001.mat
+  artifactKey: Guid(359aac7aec6a8fd44ac559c05219dfc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/Materiales/Pasillo/Pared.001.mat using Guid(359aac7aec6a8fd44ac559c05219dfc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2a11487a3b5c1d3cc59ecb20c1e8035') in 0.021333 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 159.096085 seconds.
+  path: Assets/TextPasillo/Bombilla_BaseColor.1001.png
+  artifactKey: Guid(0ace3505a93d0fa49a743d2d0ba6c719) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextPasillo/Bombilla_BaseColor.1001.png using Guid(0ace3505a93d0fa49a743d2d0ba6c719) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e453a408b94cbdd76d8fb29c1534d6e') in 0.014607 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.003723 seconds.
+  path: Assets/TextPasillo/Bombilla_Displacement.1001.png
+  artifactKey: Guid(a992cd0c41ef9984aa7e23c0b6282177) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextPasillo/Bombilla_Displacement.1001.png using Guid(a992cd0c41ef9984aa7e23c0b6282177) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e89aee2b0501d3e82eb02d896466859') in 0.017591 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.004037 seconds.
+  path: Assets/TextPasillo/Extractor_BaseColor.1001.png
+  artifactKey: Guid(9fd280b9295878c4e8abf82eda6f6ba8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextPasillo/Extractor_BaseColor.1001.png using Guid(9fd280b9295878c4e8abf82eda6f6ba8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c59d60f2d7d2b520aa23a96b460749e') in 0.016196 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/TextPasillo/MuroPasillo_Normal.1001.png
+  artifactKey: Guid(6c62ef205c591ea46ae38b65f71175f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextPasillo/MuroPasillo_Normal.1001.png using Guid(6c62ef205c591ea46ae38b65f71175f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db930d2e28c0003b48362f0507d5e485') in 0.016506 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000096 seconds.
+  path: Assets/TextPasillo/Extractor_Metallic.1001.png
+  artifactKey: Guid(5821a304bbd8515438c182e58d470df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextPasillo/Extractor_Metallic.1001.png using Guid(5821a304bbd8515438c182e58d470df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71ef10c85feb19ef51571975dd93cd4d') in 0.037129 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000075 seconds.
+  path: Assets/TextPasillo/Extractor_Normal.1001.png
+  artifactKey: Guid(b92de351253bdfb41b6f5004577c034c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextPasillo/Extractor_Normal.1001.png using Guid(b92de351253bdfb41b6f5004577c034c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da8c8cb329659a703015ccfbf351ff0d') in 0.013374 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/TextPasillo/MuroPasillo_BaseColor.1001.png
+  artifactKey: Guid(45fe06df528d7544fb39aacd5df1abb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextPasillo/MuroPasillo_BaseColor.1001.png using Guid(45fe06df528d7544fb39aacd5df1abb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd772242a633fc6fc537f3ab6ad2a84b7') in 0.040877 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/TextPasillo/FelpudoPasillo_Displacement.1001.png
+  artifactKey: Guid(45322daad19055f4bb572703168e7c97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextPasillo/FelpudoPasillo_Displacement.1001.png using Guid(45322daad19055f4bb572703168e7c97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '328f4604133d3f06fe500a94affc4842') in 0.041757 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/TextPasillo/Extractor_Alpha.1001.png
+  artifactKey: Guid(ad9676face05fe34ea98fd19a36bb2d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextPasillo/Extractor_Alpha.1001.png using Guid(ad9676face05fe34ea98fd19a36bb2d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48f02456b5f6bbc611a287b45c94cdd1') in 0.036656 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000064 seconds.
+  path: Assets/TextPasillo/PuertaMetalPasillo_Alpha.1001.png
+  artifactKey: Guid(e221004c3665e3648b54648ec82c5d08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextPasillo/PuertaMetalPasillo_Alpha.1001.png using Guid(e221004c3665e3648b54648ec82c5d08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9258b81e2f219c7d3a775935e1f8892') in 0.012699 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000115 seconds.
+  path: Assets/TextPasillo/MuroPasillo_Alpha.1001.png
+  artifactKey: Guid(cb1677978273ecc488a320a7292048ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextPasillo/MuroPasillo_Alpha.1001.png using Guid(cb1677978273ecc488a320a7292048ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd73d06c19e6b3b175b90fc965557d967') in 0.013035 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000097 seconds.
+  path: Assets/TextPasillo/PuertaMetalPasillo_BaseColor.1001.png
+  artifactKey: Guid(9f234521294ef6b4487d42b7ee9b050a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextPasillo/PuertaMetalPasillo_BaseColor.1001.png using Guid(9f234521294ef6b4487d42b7ee9b050a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26d9fb067be4d1c340d477b411f9daf6') in 0.012865 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/TextPasillo/Bombilla_Emission.1001.png
+  artifactKey: Guid(03a8feb42e999f8468a51fdec58f4fe8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextPasillo/Bombilla_Emission.1001.png using Guid(03a8feb42e999f8468a51fdec58f4fe8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26673bf0853d6841d31b24b2fd43fa19') in 0.032019 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/TextPasillo/MuroPasillo_Roughness.1001.png
+  artifactKey: Guid(a6788860cb609534b879607618341154) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextPasillo/MuroPasillo_Roughness.1001.png using Guid(a6788860cb609534b879607618341154) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09dc71d85f1bf5f01fb3aca21202078e') in 0.019047 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000079 seconds.
+  path: Assets/TextPasillo/FelpudoPasillo_BaseColor.1001.png
+  artifactKey: Guid(57bee8f0cd39c8e4494b014bbb117fa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextPasillo/FelpudoPasillo_BaseColor.1001.png using Guid(57bee8f0cd39c8e4494b014bbb117fa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fea6b14caeb8f49380bc753fc4ad5341') in 0.019762 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/TextPasillo/Bombilla_Roughness.1001.png
+  artifactKey: Guid(39b50e790ea93b9499289cc749b1673e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextPasillo/Bombilla_Roughness.1001.png using Guid(39b50e790ea93b9499289cc749b1673e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1b577a7a715c230dfd99860b3693b91') in 0.014899 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/TextPasillo/FelpudoPasillo_Normal.1001.png
+  artifactKey: Guid(c84cc28360c013044b23cc5ff1acd494) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextPasillo/FelpudoPasillo_Normal.1001.png using Guid(c84cc28360c013044b23cc5ff1acd494) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5879c86e64c7327893e480f7f14826ad') in 0.011910 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/TextPasillo/PuertaMetalPasillo_Emission.1001.png
+  artifactKey: Guid(d7dab373e21eae94fa57f4d27fde967f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextPasillo/PuertaMetalPasillo_Emission.1001.png using Guid(d7dab373e21eae94fa57f4d27fde967f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b563b162cd4ff78b80769dcddf2b23c') in 0.012887 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/TextPasillo/Extractor_Roughness.1001.png
+  artifactKey: Guid(12b4f23864db8da4e89841e702f1fbfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextPasillo/Extractor_Roughness.1001.png using Guid(12b4f23864db8da4e89841e702f1fbfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7c551d805002e1512f7802e116f47f7') in 0.011919 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: La operaci�n de E/S se anul� por una salida de subproceso o por una solicitud de aplicaci�n.
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
