@@ -15,7 +15,7 @@ C:/Users/Usuario/Documents/GitHub/PROYECTO1/Proyecto 1
 -logFile
 Logs/AssetImportWorker4.log
 -srvPort
-52963
+53867
 Successfully changed project path to: C:/Users/Usuario/Documents/GitHub/PROYECTO1/Proyecto 1
 C:/Users/Usuario/Documents/GitHub/PROYECTO1/Proyecto 1
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,12 +49,12 @@ C:/Users/Usuario/Documents/GitHub/PROYECTO1/Proyecto 1
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [2628] Host "[IP] 192.168.1.132 [Port] 0 [Flags] 2 [Guid] 3923162153 [EditorId] 3923162153 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-1OD70R12) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [16532] Host "[IP] 10.190.38.25 [Port] 0 [Flags] 2 [Guid] 1245842449 [EditorId] 1245842449 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-1OD70R12) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [2628] Host "[IP] 192.168.1.132 [Port] 0 [Flags] 2 [Guid] 3923162153 [EditorId] 3923162153 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-1OD70R12) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [16532] Host "[IP] 10.190.38.25 [Port] 0 [Flags] 2 [Guid] 1245842449 [EditorId] 1245842449 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-1OD70R12) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 15 workers.
-Refreshing native plugins compatible for Editor in 9.06 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 6.72 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.17f1 (4fc78088f837)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.17f1/Editor/Data/Resources/UnitySubsystems
@@ -70,47 +70,47 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.17f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.17f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.17f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56616
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56600
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.17f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.17f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.007756 seconds.
-- Loaded All Assemblies, in  0.338 seconds
+Registered in 0.008476 seconds.
+- Loaded All Assemblies, in  0.432 seconds
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 356 ms
+Android Extension - Scanning For ADB Devices 434 ms
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.690 seconds
-Domain Reload Profiling: 1027ms
-	BeginReloadAssembly (101ms)
+- Finished resetting the current domain, in  0.807 seconds
+Domain Reload Profiling: 1238ms
+	BeginReloadAssembly (135ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (34ms)
-	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (55ms)
-	LoadAllAssembliesAndSetupDomain (136ms)
-		LoadAssemblies (99ms)
+	RebuildCommonClasses (45ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (65ms)
+	LoadAllAssembliesAndSetupDomain (175ms)
+		LoadAssemblies (132ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (134ms)
-			TypeCache.Refresh (133ms)
-				TypeCache.ScanAssembly (121ms)
-			ScanForSourceGeneratedMonoScriptInfo (0ms)
+		AnalyzeDomain (172ms)
+			TypeCache.Refresh (170ms)
+				TypeCache.ScanAssembly (151ms)
+			ScanForSourceGeneratedMonoScriptInfo (1ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (690ms)
+	FinalizeReload (807ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (631ms)
+		SetupLoadedEditorAssemblies (736ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (475ms)
+			InitializePlatformSupportModulesInManaged (565ms)
 			SetLoadedEditorAssemblies (4ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (2ms)
-			ProcessInitializeOnLoadAttributes (107ms)
-			ProcessInitializeOnLoadMethodAttributes (43ms)
+			ProcessInitializeOnLoadAttributes (116ms)
+			ProcessInitializeOnLoadMethodAttributes (48ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -118,52 +118,52 @@ Domain Reload Profiling: 1027ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.663 seconds
-Refreshing native plugins compatible for Editor in 3.06 ms, found 3 plugins.
+- Loaded All Assemblies, in  0.630 seconds
+Refreshing native plugins compatible for Editor in 2.88 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.684 seconds
-Domain Reload Profiling: 1346ms
-	BeginReloadAssembly (143ms)
+- Finished resetting the current domain, in  0.634 seconds
+Domain Reload Profiling: 1262ms
+	BeginReloadAssembly (144ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (5ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (28ms)
-	RebuildCommonClasses (35ms)
-	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (40ms)
-	LoadAllAssembliesAndSetupDomain (433ms)
-		LoadAssemblies (290ms)
+		CreateAndSetChildDomain (27ms)
+	RebuildCommonClasses (36ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (44ms)
+	LoadAllAssembliesAndSetupDomain (392ms)
+		LoadAssemblies (293ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (223ms)
-			TypeCache.Refresh (199ms)
-				TypeCache.ScanAssembly (181ms)
-			ScanForSourceGeneratedMonoScriptInfo (16ms)
+		AnalyzeDomain (178ms)
+			TypeCache.Refresh (158ms)
+				TypeCache.ScanAssembly (143ms)
+			ScanForSourceGeneratedMonoScriptInfo (14ms)
 			ResolveRequiredComponents (4ms)
-	FinalizeReload (684ms)
+	FinalizeReload (634ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (474ms)
+		SetupLoadedEditorAssemblies (457ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (29ms)
-			SetLoadedEditorAssemblies (6ms)
+			InitializePlatformSupportModulesInManaged (25ms)
+			SetLoadedEditorAssemblies (5ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (63ms)
-			ProcessInitializeOnLoadAttributes (347ms)
+			ProcessInitializeOnLoadAttributes (336ms)
 			ProcessInitializeOnLoadMethodAttributes (22ms)
-			AfterProcessingInitializeOnLoad (6ms)
+			AfterProcessingInitializeOnLoad (5ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (8ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 3.17 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (7ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 3.22 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3189 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 29 unused Assets / (29.7 KB). Loaded Objects now: 3678.
-Memory consumption went from 149.4 MB to 149.4 MB.
-Total: 4.051800 ms (FindLiveObjects: 0.465100 ms CreateObjectMapping: 0.335000 ms MarkObjects: 3.173900 ms  DeleteObjects: 0.075900 ms)
+Memory consumption went from 149.3 MB to 149.3 MB.
+Total: 3.629700 ms (FindLiveObjects: 0.325000 ms CreateObjectMapping: 0.103500 ms MarkObjects: 3.130300 ms  DeleteObjects: 0.069400 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -180,25 +180,126 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 382997.827987 seconds.
-  path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Anton SDF - Drop Shadow.mat
-  artifactKey: Guid(749b9069dc4742c5bfa5c74644049926) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Anton SDF - Drop Shadow.mat using Guid(749b9069dc4742c5bfa5c74644049926) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82d44625f52b1b8cf63545488a530d5c') in 0.106787 seconds
+  Time since last request: 447816.964134 seconds.
+  path: Assets/Modelos/TexHall/Pared/Pared_Alpha.1001.png
+  artifactKey: Guid(f788baa50e75b1b4ca9ecc04952081ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TexHall/Pared/Pared_Alpha.1001.png using Guid(f788baa50e75b1b4ca9ecc04952081ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08708b73ea55949f1a6d42cc4a70ee5d') in 0.072516 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000060 seconds.
-  path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Anton SDF.asset
-  artifactKey: Guid(8a89fa14b10d46a99122fd4f73fca9a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Anton SDF.asset using Guid(8a89fa14b10d46a99122fd4f73fca9a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b850b0ee8c491d6d4f1a1c266ba3212') in 0.061130 seconds
+  Time since last request: 0.261595 seconds.
+  path: Assets/Modelos/TexHall/Pared/Pared_BaseColor.1001.png
+  artifactKey: Guid(2f24839d66b7bec4fa4049e89789e370) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TexHall/Pared/Pared_BaseColor.1001.png using Guid(2f24839d66b7bec4fa4049e89789e370) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '022c651428e898a3647d0e5e09e63d56') in 0.019843 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 6
+Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 1.075810 seconds.
-  path: Assets/Modelos/0 No Def/Blend_PasilloPackIsland_N_v23.fbx
-  artifactKey: Guid(0865c41bbe748fb438a18f7810a00405) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Modelos/0 No Def/Blend_PasilloPackIsland_N_v23.fbx using Guid(0865c41bbe748fb438a18f7810a00405) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8cfcbf445248973130a4984bbc2e17f2') in 0.494513 seconds
+  Time since last request: 1469.192343 seconds.
+  path: Assets/Modelos/Blend_PasilloPackIsland_N_v27 1.fbx
+  artifactKey: Guid(5874f9a217ade8d4b9b2a7cebdac6c7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/Blend_PasilloPackIsland_N_v27 1.fbx using Guid(5874f9a217ade8d4b9b2a7cebdac6c7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e0710097fd6d66764d002b2f6cd9c43') in 0.827203 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 214
+Number of asset objects unloaded after import = 285
+========================================================================
+Received Import Request.
+  Time since last request: 22.537764 seconds.
+  path: Assets/Modelos/Blend_PasilloPackIsland_N_v27 1.fbx
+  artifactKey: Guid(5874f9a217ade8d4b9b2a7cebdac6c7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/Blend_PasilloPackIsland_N_v27 1.fbx using Guid(5874f9a217ade8d4b9b2a7cebdac6c7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '903dab0bb051e97c0b7fd6bb50729a56') in 0.601295 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 285
+========================================================================
+Received Import Request.
+  Time since last request: 80.477584 seconds.
+  path: Assets/Modelos/Materiales/Pasillo/Ascensor 1.mat
+  artifactKey: Guid(50f45b6cf974c8e41b696f90db21cb79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/Materiales/Pasillo/Ascensor 1.mat using Guid(50f45b6cf974c8e41b696f90db21cb79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16cede1f81c5718e596c5edf58b5dac7') in 0.010438 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.022188 seconds.
+  path: Assets/Modelos/Materiales/Pasillo/Escalera 1.mat
+  artifactKey: Guid(9fdeed7b748e70a49867d1f4f7da626c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/Materiales/Pasillo/Escalera 1.mat using Guid(9fdeed7b748e70a49867d1f4f7da626c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ff16e590365e87f0763b8d73f3706b0') in 0.012393 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.010755 seconds.
+  path: Assets/Modelos/Materiales/Pasillo/Extractor 1.mat
+  artifactKey: Guid(e131be27b917be04288f656028dcb5e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/Materiales/Pasillo/Extractor 1.mat using Guid(e131be27b917be04288f656028dcb5e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4242fda1c744f50a22dd335e9c6bda8') in 0.014228 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Modelos/Materiales/Pasillo/FelpudoPasillo 1.mat
+  artifactKey: Guid(e8be9d1757d657c43a3e904476be1c67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/Materiales/Pasillo/FelpudoPasillo 1.mat using Guid(e8be9d1757d657c43a3e904476be1c67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3636601415c240103ccc8ee8da2866b6') in 0.018010 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Modelos/Materiales/Pasillo/Planta.001 1.mat
+  artifactKey: Guid(d8176ebdad7646a4d97ca6f3f8022f88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/Materiales/Pasillo/Planta.001 1.mat using Guid(d8176ebdad7646a4d97ca6f3f8022f88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5dd07808a32e21fe87b067f8b2b2155') in 0.032505 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Modelos/Materiales/Pasillo/PuertaMetalPasillo 1.mat
+  artifactKey: Guid(14f5639fa33db3040890169540ef9f05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/Materiales/Pasillo/PuertaMetalPasillo 1.mat using Guid(14f5639fa33db3040890169540ef9f05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6e49e1ad1f434c232ef96e18be08284') in 0.033686 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Modelos/Materiales/Pasillo/Pared 1.mat
+  artifactKey: Guid(b167174908bae804e82189d52954702b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/Materiales/Pasillo/Pared 1.mat using Guid(b167174908bae804e82189d52954702b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3fa220f6c93ebc6c21215e1775e28ffe') in 0.036036 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Modelos/Materiales/Pasillo/PuertasPasillo 1.mat
+  artifactKey: Guid(854859ccea4504d408603bd206dc381e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/Materiales/Pasillo/PuertasPasillo 1.mat using Guid(854859ccea4504d408603bd206dc381e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b990deeb15f201703c40043b9884f43') in 0.024855 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Modelos/Materiales/Pasillo/PuertaAscensor 1.mat
+  artifactKey: Guid(946b23342fec7144aa19d5da348e8bb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/Materiales/Pasillo/PuertaAscensor 1.mat using Guid(946b23342fec7144aa19d5da348e8bb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1aeb4f0c43cad3f0bf1a6c24825c4780') in 0.023322 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Modelos/Materiales/Pasillo/NumAscensor 1.mat
+  artifactKey: Guid(1ded2f1ca859bb740ba208181f547605) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/Materiales/Pasillo/NumAscensor 1.mat using Guid(1ded2f1ca859bb740ba208181f547605) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b1b3eaea4ba24128c815b8bcae79eeb') in 0.023266 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Modelos/Materiales/Pasillo/SueloPasillo 1.mat
+  artifactKey: Guid(389917c75ffeeed4c90b545ba6b1f711) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/Materiales/Pasillo/SueloPasillo 1.mat using Guid(389917c75ffeeed4c90b545ba6b1f711) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b4a292bb5141558b99d60713d969b22') in 0.025503 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: La operación de E/S se anuló por una salida de subproceso o por una solicitud de aplicación.
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
