@@ -10,12 +10,14 @@ public class AnimacionesMenus : MonoBehaviour
     RectTransform RectJugar;
     RectTransform RectOpciones;
     RectTransform RectSalir;
+    RectTransform RectAtras;
 
     [Header("Botones")]
     [SerializeField] Image ITitulo;
     [SerializeField] Button BJugar;
     [SerializeField] Button BOpciones;
     [SerializeField] Button BSalir;
+    [SerializeField] Button BAtras;
 
     [Header("Vectores")]
     Vector2 Tamaño = new Vector2(81,35);
@@ -31,6 +33,7 @@ public class AnimacionesMenus : MonoBehaviour
         RectJugar = BJugar.GetComponent<RectTransform>();
         RectOpciones = BOpciones.GetComponent<RectTransform>();   
         RectSalir = BSalir.GetComponent<RectTransform>();
+        RectAtras = BAtras.GetComponent<RectTransform>();
 
         controladorSFX = FindObjectOfType<ControladorSFX>();
     }
@@ -66,5 +69,16 @@ public class AnimacionesMenus : MonoBehaviour
     public void DeCrecerSalir()
     {
         RectSalir.sizeDelta = Tamaño;
+    }
+
+    //Atras
+    public void CrecerAtras()
+    {
+        RectAtras.sizeDelta = NTamaño;
+        controladorSFX.PlopBotones();
+    }
+    public void DeCrecerAtras()
+    {
+        RectAtras.sizeDelta = Tamaño; 
     }
 }
