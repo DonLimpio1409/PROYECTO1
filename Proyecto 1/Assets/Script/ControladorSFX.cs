@@ -13,6 +13,7 @@ public class ControladorSFX : MonoBehaviour
     [SerializeField] AudioClip Pasos;
     [SerializeField] AudioClip Puertas; 
     [SerializeField] AudioClip Ruido1;
+    [SerializeField] AudioClip plopBotones;
 
     [Header("Variables")]
     float duracionFadeOut = 2.5f;
@@ -46,6 +47,11 @@ public class ControladorSFX : MonoBehaviour
 
         //Primer sonido de ruido
         PrimerSonidoRuido();
+    }
+
+    public void PlopBotones()
+    {
+        SFX.PlayOneShot(plopBotones);   
     }
     public void PulsarBoton()
     {

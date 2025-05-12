@@ -31,6 +31,7 @@ public class ControlCanva : MonoBehaviour
     [Header("Animators")]
     [SerializeField] Animator PuertaDer;
     [SerializeField] Animator PuertaId;
+    [SerializeField] Animator AnimMovilPausa;
 
     void Start()
     {
@@ -107,7 +108,7 @@ public class ControlCanva : MonoBehaviour
     //Menu de pausa
     void Pausar()
     {
-        if(Input.GetKey(KeyCode.P) && estoyEnOtroMenu == false)
+        if(Input.GetKey(KeyCode.Escape) && estoyEnOtroMenu == false)
         {
             estoyEnMenuPausa = true;
             MenuDePausa.SetActive(true);
@@ -115,6 +116,9 @@ public class ControlCanva : MonoBehaviour
             //Descentrar raton
             Cursor.lockState = CursorLockMode.None  ;
             Cursor.visible = true;  
+
+            //Animacion
+            AnimMovilPausa.SetBool("Pausado", true);
         }
     }
 
@@ -123,6 +127,8 @@ public class ControlCanva : MonoBehaviour
         MenuDePausa.SetActive(false);
         ScrJugador.CentrarRaton();
         estaJugando = true;
+
+        AnimMovilPausa.SetBool("Pausado", false);
     }
 
     public void Atras()

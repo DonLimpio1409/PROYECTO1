@@ -78,8 +78,6 @@ public class DialogosNPCs : MonoBehaviour
                     return;
                 }
 
-                CuadroDialogo.SetActive(true);
-
                 // Si está escribiéndose el texto, interrumpimos y lo mostramos completo
                 if (mostrandoTexto == true)
                 {
