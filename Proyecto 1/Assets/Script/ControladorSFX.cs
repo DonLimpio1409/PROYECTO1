@@ -6,7 +6,7 @@ public class ControladorSFX : MonoBehaviour
 {
     [Header("Audios Sources")]
     [SerializeField] AudioSource SFX;
-    [SerializeField] AudioSource PantallaDeTitulo;
+    [SerializeField] AudioSource Musicas;
 
     [Header("Audios Clips")]
     [SerializeField] AudioClip SonidoPulsarBoton;
@@ -60,7 +60,7 @@ public class ControladorSFX : MonoBehaviour
 
     public void CallarPantallaTitulo()
     {
-        StartCoroutine(FadeOut(PantallaDeTitulo, duracionFadeOut));
+        StartCoroutine(FadeOut(Musicas, duracionFadeOut));
 
         if(controlCanva.estoyEnMenuPrincipal == false)
         {

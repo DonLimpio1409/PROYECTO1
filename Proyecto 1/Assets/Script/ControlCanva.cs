@@ -124,7 +124,6 @@ public class ControlCanva : MonoBehaviour
 
     public void Volver()
     {
-        MenuDePausa.SetActive(false);
         ScrJugador.CentrarRaton();
         estaJugando = true;
 
