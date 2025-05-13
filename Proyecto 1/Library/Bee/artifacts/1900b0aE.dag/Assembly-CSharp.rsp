@@ -373,6 +373,7 @@
 "Assets/Script/Puzzles.cs"
 "Assets/Script/Reloj.cs"
 "Assets/Script/TpObjNpc.cs"
+"Assets/Script/TrigersMusicas.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01_UGUI.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark02.cs"

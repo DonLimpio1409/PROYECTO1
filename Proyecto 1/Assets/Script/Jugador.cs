@@ -41,14 +41,16 @@ public class Jugador : MonoBehaviour
     public string nombrePuzzle;
 
     [Header("Scripts")]
-
     ControlCanva ScrControlCanva;
     Puzzles ScrPuzzles;
 
+    [Header("Control de Hit")]
+    public GameObject objetoContactado;
     
     // Start is called before the first frame update
     void Start()
     {
+
         controlador = GetComponent<CharacterController>();
 
         ScrControlCanva = FindObjectOfType<ControlCanva>();
@@ -244,8 +246,13 @@ public class Jugador : MonoBehaviour
         }
         else
         {
-            // Si el raycast no toca nada, desactiva la acci�n de tocar el puzzle
+            // Si el raycast no toca nada, desactiva la accion de tocar el puzzle
             rayoPuzzleToca = false;
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        objetoContactado = other.gameObject; 
     }
 }

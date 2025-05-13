@@ -9,29 +9,44 @@ public class ControladorSFX : MonoBehaviour
     [SerializeField] AudioSource Musicas;
 
     [Header("Audios Clips")]
-    [SerializeField] AudioClip SonidoPulsarBoton;
-    [SerializeField] AudioClip Pasos;
-    [SerializeField] AudioClip Puertas; 
-    [SerializeField] AudioClip Ruido1;
+    //SFX
+    [SerializeField] AudioClip sonidoPulsarBoton;
+    [SerializeField] AudioClip pasos;
+    [SerializeField] AudioClip puertas; 
+    [SerializeField] AudioClip ruido1;
     [SerializeField] AudioClip plopBotones;
+
+    //Musicas
+    [SerializeField] AudioClip MusicaPasilloDia1;
 
     [Header("Variables")]
     float duracionFadeOut = 2.5f;
     int contador = 0;
     bool yaReproducido = false;
+    bool SonandoAlgo = false;
 
     [Header("Script")]
     ControlCanva controlCanva;
     DialogosNPCs dialogosNPCs;
+    Jugador jugador;
+
+    [Header("Sistema para musicas")]
+    [SerializeField] GameObject Jugador;
+    GameObject trigerActual;
 
     void Start()
     {
+        //Script
         controlCanva = FindObjectOfType<ControlCanva>();
         dialogosNPCs = FindObjectOfType<DialogosNPCs>();
+        jugador = FindObjectOfType<Jugador>();
     }
 
     void Update()
     {
+        //Deteccion de triger
+        trigerActual = jugador.objetoContactado;
+
         //Control inicial
         if(controlCanva.estaJugando == true && contador == 0)
         {
@@ -41,12 +56,15 @@ public class ControladorSFX : MonoBehaviour
 
         if(controlCanva.abrirPuertas == true)
         {
-            SFX.PlayOneShot(Puertas);
+            SFX.PlayOneShot(puertas);
             controlCanva.abrirPuertas = false;
         }
 
         //Primer sonido de ruido
         PrimerSonidoRuido();
+
+        //Musica general del juego
+        ReproductorDeMusica();
     }
 
     public void PlopBotones()
@@ -55,7 +73,7 @@ public class ControladorSFX : MonoBehaviour
     }
     public void PulsarBoton()
     {
-        SFX.PlayOneShot(SonidoPulsarBoton); 
+        SFX.PlayOneShot(sonidoPulsarBoton); 
     }
 
     public void CallarPantallaTitulo()
@@ -64,7 +82,7 @@ public class ControladorSFX : MonoBehaviour
 
         if(controlCanva.estoyEnMenuPrincipal == false)
         {
-            SFX.PlayOneShot(Pasos);
+            SFX.PlayOneShot(pasos);
         }
     }
 
@@ -93,7 +111,22 @@ public class ControladorSFX : MonoBehaviour
     {    
         yaReproducido = true; 
         yield return new WaitForSeconds(0.5f);
-        SFX.PlayOneShot(Ruido1);
+        SFX.PlayOneShot(ruido1);
         
+    }
+
+    public void ReproductorDeMusica()
+    {
+
+        switch(trigerActual.name)
+        {
+            case "TrigerMusicaPasillo":
+            if(SonandoAlgo == false)
+            {
+                Musicas.PlayOneShot(MusicaPasilloDia1);
+                SonandoAlgo = true;
+            }
+            break;
+        }
     }
 }

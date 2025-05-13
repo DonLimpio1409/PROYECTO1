@@ -5956,6 +5956,59 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7165578496416952861, guid: 5874f9a217ade8d4b9b2a7cebdac6c7b, type: 3}
+--- !u!1 &530966279
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 530966280}
+  - component: {fileID: 530966281}
+  m_Layer: 0
+  m_Name: TrigerMusicaPasillo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &530966280
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530966279}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -129.007, y: -0.976, z: -54.44}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1978028807}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &530966281
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530966279}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 0.3628826, z: 1}
+  m_Center: {x: 0, y: -0.3185587, z: 0}
 --- !u!1 &533342972 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2570771358626633291, guid: 5874f9a217ade8d4b9b2a7cebdac6c7b, type: 3}
@@ -8775,6 +8828,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 868067169}
   m_CullTransparentMesh: 1
+--- !u!1 &871312704
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 871312705}
+  m_Layer: 0
+  m_Name: Vacio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &871312705
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871312704}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 899324677}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &879358416 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7744831164350785154, guid: 8beaf63491a0007419d391fa9d8c2157, type: 3}
@@ -8907,7 +8991,8 @@ Transform:
   m_LocalPosition: {x: -248.08672, y: -12.006316, z: -44.39912}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 871312705}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &899324678
@@ -8924,7 +9009,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -9632,7 +9717,7 @@ GameObject:
   - component: {fileID: 1036136345}
   - component: {fileID: 1036136346}
   m_Layer: 0
-  m_Name: ControladorSFX
+  m_Name: ControladorSonidoGeneral
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9667,11 +9752,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SFX: {fileID: 1204115023}
   Musicas: {fileID: 899324678}
-  SonidoPulsarBoton: {fileID: 8300000, guid: 1576dc998eca92040911776b570da578, type: 3}
-  Pasos: {fileID: 8300000, guid: 1b90f4aecf7261b439fd7c73aa870d40, type: 3}
-  Puertas: {fileID: 8300000, guid: c1bc8f64457b47845a3cd3f2e976ac61, type: 3}
-  Ruido1: {fileID: 8300000, guid: 6fa24d505a43f8d42822510f761de979, type: 3}
+  sonidoPulsarBoton: {fileID: 8300000, guid: 1576dc998eca92040911776b570da578, type: 3}
+  pasos: {fileID: 8300000, guid: 1b90f4aecf7261b439fd7c73aa870d40, type: 3}
+  puertas: {fileID: 8300000, guid: c1bc8f64457b47845a3cd3f2e976ac61, type: 3}
+  ruido1: {fileID: 8300000, guid: 6fa24d505a43f8d42822510f761de979, type: 3}
   plopBotones: {fileID: 8300000, guid: 9f520a6d0f91e3746a488eee53e14a0b, type: 3}
+  MusicaPasilloDia1: {fileID: 8300000, guid: 172609328edc5444fa875d46365c327b, type: 3}
+  Jugador: {fileID: 1049124020}
 --- !u!1 &1037544085 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4604114725539166134, guid: 5874f9a217ade8d4b9b2a7cebdac6c7b, type: 3}
@@ -9822,6 +9909,7 @@ MonoBehaviour:
   nombreObjActivable: 
   rayoPuzzleToca: 0
   nombrePuzzle: 
+  objetoContactado: {fileID: 871312704}
 --- !u!143 &1049124022
 CharacterController:
   m_ObjectHideFlags: 0
@@ -19213,6 +19301,7 @@ Transform:
   - {fileID: 335954194}
   - {fileID: 1271901420}
   - {fileID: 496751795}
+  - {fileID: 530966280}
   m_Father: {fileID: 1192553691}
   m_LocalEulerAnglesHint: {x: 0, y: -0.811, z: 0}
 --- !u!1 &1982219682
