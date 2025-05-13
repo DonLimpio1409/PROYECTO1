@@ -123,7 +123,8 @@ public class ControladorSFX : MonoBehaviour
             case "TrigerMusicaPasillo":
             if(SonandoAlgo == false)
             {
-                Musicas.PlayOneShot(MusicaPasilloDia1);
+                Musicas.clip = MusicaPasilloDia1;
+                Musicas.Play();
                 SonandoAlgo = true;
             }
             break;

@@ -29,9 +29,9 @@ public class ControlCanva : MonoBehaviour
     CambioDePlanta cambioDePlanta;
 
     [Header("Animators")]
-    [SerializeField] Animator PuertaDer;
-    [SerializeField] Animator PuertaId;
-    [SerializeField] Animator AnimMovilPausa;
+    [SerializeField] Animator animPuertaDer;
+    [SerializeField] Animator animPuertaId;
+    [SerializeField] Animator animMovilPausa;
 
     void Start()
     {
@@ -73,7 +73,7 @@ public class ControlCanva : MonoBehaviour
     public void Opciones()
     {
         MenuPrincipal.SetActive(false);
-        MenuDePausa.SetActive(false);
+        animMovilPausa.SetBool("EnOpciones", true);
         MenuDeOpciones.SetActive(true);
         estoyEnOtroMenu = true;
     }
@@ -118,7 +118,7 @@ public class ControlCanva : MonoBehaviour
             Cursor.visible = true;  
 
             //Animacion
-            AnimMovilPausa.SetBool("Pausado", true);
+            animMovilPausa.SetBool("Pausado", true);
         }
     }
 
@@ -127,7 +127,7 @@ public class ControlCanva : MonoBehaviour
         ScrJugador.CentrarRaton();
         estaJugando = true;
 
-        AnimMovilPausa.SetBool("Pausado", false);
+        animMovilPausa.SetBool("Pausado", false);
     }
 
     public void Atras()
@@ -141,7 +141,7 @@ public class ControlCanva : MonoBehaviour
         }
         else 
         {
-            MenuDePausa.SetActive(true);
+            animMovilPausa.SetBool("EnOpciones", false);
             estoyEnMenuPausa = false;
         }
     }
@@ -162,8 +162,8 @@ public class ControlCanva : MonoBehaviour
         float animDuracion = animJugador.GetCurrentAnimatorStateInfo(0).length;
         
         //Iniciar las animaciones de las puertas
-        PuertaDer.SetBool("Abrir",true);
-        PuertaId.SetBool("Abrir",true);
+        animPuertaDer.SetBool("Abrir",true);
+        animPuertaId.SetBool("Abrir",true);
         abrirPuertas = true;
         
         // Esperar el tiempo de duración
