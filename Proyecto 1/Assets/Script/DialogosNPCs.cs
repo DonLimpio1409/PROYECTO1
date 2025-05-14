@@ -13,6 +13,7 @@ public class DialogosNPCs : MonoBehaviour
     [SerializeField] Sprite CuadroMario;
     [SerializeField] Sprite CuadroJavier;
     [SerializeField] Sprite CuadroPaul;
+    [SerializeField] Sprite CuadroPensamientoLayla;
 
     [Header("Contadores dialogos")]
     public int contadorPresi = 1;
@@ -21,6 +22,7 @@ public class DialogosNPCs : MonoBehaviour
     public int contadorMario = 1;
     public int contadorJavier = 1;
     public int contadorPaul = 1;
+    public int contadorPensarLayla = 1; 
 
     [Header("Boolleanos dialogos")]
     public bool PuedeHablarPresi = true;
@@ -29,6 +31,7 @@ public class DialogosNPCs : MonoBehaviour
     public bool PuedeHablarMario = true;
     public bool PuedeHablarJavier = true;
     public bool PuedeHablarPaul = true;
+    public bool PuedePensarLayla = false;
 
     [Header("Scripts")]
     Jugador ScrJugador;
@@ -47,7 +50,8 @@ public class DialogosNPCs : MonoBehaviour
 
     // Cooldowns individuales para cada personaje
     Dictionary<string, float> cooldownsNPC = new Dictionary<string, float>();
-    [SerializeField] float tiempoCooldown = 120f;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -61,6 +65,7 @@ public class DialogosNPCs : MonoBehaviour
     void Update()
     {
         Hablar();
+        PiensaLayla();
     }
 
    void Hablar()
@@ -69,15 +74,6 @@ public class DialogosNPCs : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E) && ScrJugador.rayoAccionToca == true)
             {
-                string nombreNPC = ScrJugador.nombreObjActivable;
-
-                // Comprobar si el NPC está en cooldown
-                if (cooldownsNPC.ContainsKey(nombreNPC) && Time.time < cooldownsNPC[nombreNPC])
-                {
-                    Debug.Log($"{nombreNPC} todavía está en cooldown.");
-                    return;
-                }
-
                 // Si está escribiéndose el texto, interrumpimos y lo mostramos completo
                 if (mostrandoTexto == true)
                 {
@@ -99,7 +95,7 @@ public class DialogosNPCs : MonoBehaviour
                             CuadroDialogo.GetComponent<Image>().sprite = CuadroPresidenta;
                             CuadroDialogo.SetActive(true);
 
-                            StartCoroutine(EnseñarTexto(nombreNPC));
+                            StartCoroutine(EnseñarTexto());
                             
                             break;
                         }
@@ -114,7 +110,7 @@ public class DialogosNPCs : MonoBehaviour
                             CuadroDialogo.GetComponent<Image>().sprite = CuadroIsrrael;
                             CuadroDialogo.SetActive(true);
 
-                            StartCoroutine(EnseñarTexto(nombreNPC));
+                            StartCoroutine(EnseñarTexto());
 
                             break;
                         }
@@ -129,7 +125,7 @@ public class DialogosNPCs : MonoBehaviour
                             CuadroDialogo.GetComponent<Image>().sprite = CuadroNestor;
                             CuadroDialogo.SetActive(true);
 
-                            StartCoroutine(EnseñarTexto(nombreNPC));
+                            StartCoroutine(EnseñarTexto());
 
                             break;  
                         }  
@@ -143,7 +139,7 @@ public class DialogosNPCs : MonoBehaviour
                             CuadroDialogo.GetComponent<Image>().sprite = CuadroMario;
                             CuadroDialogo.SetActive(true);
 
-                            StartCoroutine(EnseñarTexto(nombreNPC));
+                            StartCoroutine(EnseñarTexto());
 
                             break;
                         }
@@ -158,7 +154,7 @@ public class DialogosNPCs : MonoBehaviour
                             CuadroDialogo.GetComponent<Image>().sprite = CuadroJavier;
                             CuadroDialogo.SetActive(true);
 
-                            StartCoroutine(EnseñarTexto(nombreNPC));
+                            StartCoroutine(EnseñarTexto());
 
                             break;
                         }
@@ -173,7 +169,7 @@ public class DialogosNPCs : MonoBehaviour
                             CuadroDialogo.GetComponent<Image>().sprite = CuadroJavier;
                             CuadroDialogo.SetActive(true);
 
-                            StartCoroutine(EnseñarTexto(nombreNPC));
+                            StartCoroutine(EnseñarTexto());
 
                             break;
                         }
@@ -187,7 +183,21 @@ public class DialogosNPCs : MonoBehaviour
             }
         }
     }
-    IEnumerator EnseñarTexto(string nombreNPC)
+
+    void PiensaLayla()
+    {
+        if(PuedePensarLayla == true)
+        {
+            contadorPensarLayla++;
+            textoAEnseñar = ScrDialogos.ObtenerDialogo(4, contadorPensarLayla);
+            textoDialogo.text = "";
+            CuadroDialogo.GetComponent<Image>().sprite = CuadroPensamientoLayla;
+            CuadroDialogo.SetActive(true);
+
+            StartCoroutine(EnseñarTexto());
+        }
+    }
+    IEnumerator EnseñarTexto()
     {
         mostrandoTexto = true;
         foreach (char caracter in textoAEnseñar)

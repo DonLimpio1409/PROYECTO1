@@ -33,7 +33,7 @@ public class Jugador : MonoBehaviour
 
     [Header("Accion")]
     public bool rayoAccionToca;
-    [SerializeField] GameObject textoAccion;
+    public GameObject textoAccion;
     public string nombreObjActivable;
 
     [Header("Puzzle")]
