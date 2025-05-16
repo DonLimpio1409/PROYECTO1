@@ -15,6 +15,9 @@ public class ControladorSFX : MonoBehaviour
     [SerializeField] AudioClip puertas; 
     [SerializeField] AudioClip ruido1;
     [SerializeField] AudioClip plopBotones;
+    [SerializeField] AudioClip abrrirPuerta;
+    [SerializeField] AudioClip cerrarPuerta;
+    [SerializeField] AudioClip puertaCerrada;
 
     //Musicas
     [SerializeField] AudioClip MusicaPasilloDia1;
@@ -60,9 +63,6 @@ public class ControladorSFX : MonoBehaviour
             controlCanva.abrirPuertas = false;
         }
 
-        //Primer sonido de ruido
-        PrimerSonidoRuido();
-
         //Musica general del juego
         ReproductorDeMusica();
     }
@@ -74,6 +74,16 @@ public class ControladorSFX : MonoBehaviour
     public void PulsarBoton()
     {
         SFX.PlayOneShot(sonidoPulsarBoton); 
+    }
+
+    public void SonidoAbrePuerta()
+    {
+        SFX.PlayOneShot(abrrirPuerta);
+    }
+
+    public void SonidoCierraPuerta()
+    {
+        SFX.PlayOneShot(cerrarPuerta);
     }
 
     public void CallarPantallaTitulo()
@@ -100,7 +110,7 @@ public class ControladorSFX : MonoBehaviour
         audioSource.volume = inicioVolumen; // Por si quieres volver a usarlo
     }
 
-    void PrimerSonidoRuido()
+    public void PrimerSonidoRuido()
     {
         if(dialogosNPCs.contadorPresi == 5 && yaReproducido == false)
         {
@@ -129,5 +139,9 @@ public class ControladorSFX : MonoBehaviour
             }
             break;
         }
+    }
+    public void PuertaCerrada()
+    {
+        SFX.PlayOneShot(puertaCerrada);
     }
 }

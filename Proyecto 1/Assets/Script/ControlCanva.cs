@@ -19,7 +19,6 @@ public class ControlCanva : MonoBehaviour
     [Header("Variables")]
     public bool estaJugando;
     float contador;
-    bool estoyEnMenuPausa = false;
     public bool estoyEnMenuPrincipal = true;
     public bool abrirPuertas = false;
     bool estoyEnOtroMenu = true;
@@ -108,9 +107,8 @@ public class ControlCanva : MonoBehaviour
     //Menu de pausa
     void Pausar()
     {
-        if(Input.GetKey(KeyCode.Escape) && estoyEnOtroMenu == false)
-        {
-            estoyEnMenuPausa = true;
+        if(Input.GetKeyDown(KeyCode.Escape) && estoyEnOtroMenu == false)
+        {   
             MenuDePausa.SetActive(true);
             estaJugando = false;
             //Descentrar raton
@@ -142,7 +140,6 @@ public class ControlCanva : MonoBehaviour
         else 
         {
             animMovilPausa.SetBool("EnOpciones", false);
-            estoyEnMenuPausa = false;
         }
     }
 

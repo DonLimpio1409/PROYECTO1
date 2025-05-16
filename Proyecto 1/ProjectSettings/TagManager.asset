@@ -15,13 +15,13 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Jugador
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Puerta
+  - PuertaCerrada
+  - RayCast
+  - Camara
   - 
   - 
   - 

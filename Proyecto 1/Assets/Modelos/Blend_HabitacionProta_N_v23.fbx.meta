@@ -3,7 +3,222 @@ guid: e66dbf7a2a914cf49907cab499c6defd
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Alfombra
+    second: {fileID: 2100000, guid: fbc313c660befc24383137d4e651dbc5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Alfombra.001
+    second: {fileID: 2100000, guid: a2f977ba40446ec4d99c7f7994d7af62, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Balda
+    second: {fileID: 2100000, guid: 6434776e8d53af74685e38ba534acd00, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bombilla
+    second: {fileID: 2100000, guid: 28099a82a296bfb489caaa3dbe5fec06, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Boton
+    second: {fileID: 2100000, guid: b0f38459ac971394db7ce15053756e9e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cable
+    second: {fileID: 2100000, guid: 7f1c32df2168184468443c596095f7f7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cojin.001
+    second: {fileID: 2100000, guid: 6f2ce77d794b5cc46a4e28a742f46f46, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Colchon
+    second: {fileID: 2100000, guid: 22cc8b052b629bc408e471bbe257356a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dispositivos
+    second: {fileID: 2100000, guid: 4451a722e8b44dc45936d30826c28668, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Electro
+    second: {fileID: 2100000, guid: d8549f5d3b7f1d944a5d03d9b7ed382d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Electro.001
+    second: {fileID: 2100000, guid: 5abc81e864405604e926aea4ebd0bf35, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Juego
+    second: {fileID: 2100000, guid: 3f29dc2af6c199b4e80150df0655c505, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LampSalon.001
+    second: {fileID: 2100000, guid: a1abcb7a610b96d4787409eaaf5d29c7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lampara
+    second: {fileID: 2100000, guid: a8104f64fc108274cbcf3a5a93a81b6f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LamparaSofa.001
+    second: {fileID: 2100000, guid: 1757777f86033494eb77f186105b66a8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lapiz
+    second: {fileID: 2100000, guid: a546f79039ef4344985ea7558d0265b6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lata
+    second: {fileID: 2100000, guid: aafa5282e94229844b4793779195b259, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Libro
+    second: {fileID: 2100000, guid: 2b94bd30bd0d5664984e8736ea4f729d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lienzo.001
+    second: {fileID: 2100000, guid: 694f16b804a360a46ade10b4d4568750, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maceta
+    second: {fileID: 2100000, guid: 5a3f407f5c7f93c4f96b6ba125aa19f6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maceta.001
+    second: {fileID: 2100000, guid: ea301c4862e20684b8199910b59b0afc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Madera
+    second: {fileID: 2100000, guid: 3eb58d8bdf4c8a144836309baf31e519, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Madera.001
+    second: {fileID: 2100000, guid: 3546861dd175fce4f9b1e1814f07c182, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: fa01c36fe0b32694e961293b8ed7e4ff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal
+    second: {fileID: 2100000, guid: 4db6ed2f8d40dfb42a0fdf36619ccd5b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal.001
+    second: {fileID: 2100000, guid: 490cc7413d29c9a429630e232e4875da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pared
+    second: {fileID: 2100000, guid: 2acbc81d170dec74d8a48ff2a6dfc15a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pared.001
+    second: {fileID: 2100000, guid: 0ed7c78554df8e44bac748a1af65a03b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Peluche
+    second: {fileID: 2100000, guid: e4d69fb2132da5a4a91d894a77149a72, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Persiana.001
+    second: {fileID: 2100000, guid: 9530363b2a090cc419db113a47f74b2e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Planta.001
+    second: {fileID: 2100000, guid: e8e8c4ea9a0edc64e87dfc70b8b8a968, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Puerta
+    second: {fileID: 2100000, guid: ea2c0bf0c6e68294cbe9ccd977f66ba8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Puerta.001
+    second: {fileID: 2100000, guid: 5a6bb9c11ee1a3d4e9d4721f6d8647a0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Silla
+    second: {fileID: 2100000, guid: 4cbde44fbc38e1842ba074cc982c63d6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Silla.001
+    second: {fileID: 2100000, guid: 9f01b08025d9ecf438ead50ac179a797, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sofa.001
+    second: {fileID: 2100000, guid: 98cc1656244fd50498d880184f61a447, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Suelo.001
+    second: {fileID: 2100000, guid: 86ada8a70f46f284ca5348736f28f0d6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Techo.001
+    second: {fileID: 2100000, guid: e07a83e2544233643a4ee82eb4bc28d1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Vaso
+    second: {fileID: 2100000, guid: ae056363d4a9c5745bb6d80e74490d0a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Vela
+    second: {fileID: 2100000, guid: 88755c5beef805a4fbb15de7f1b69bda, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ventana
+    second: {fileID: 2100000, guid: f41df159bcbe99a45a7d6e5623d70bdb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ventana.001
+    second: {fileID: 2100000, guid: 020bfc4bf3f7388458baed9a8188c0e0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pref.001
+    second: {fileID: 2100000, guid: 48950a8c1a9ae6f4ba6d7532e32e774d, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
