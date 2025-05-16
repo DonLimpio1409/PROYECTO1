@@ -4191,6 +4191,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Activable
       objectReference: {fileID: 0}
+    - target: {fileID: -5189783684943906492, guid: 5874f9a217ade8d4b9b2a7cebdac6c7b, type: 3}
+      propertyPath: m_TagString
+      value: Activable
+      objectReference: {fileID: 0}
     - target: {fileID: -5076484507258936684, guid: 5874f9a217ade8d4b9b2a7cebdac6c7b, type: 3}
       propertyPath: m_Lightmapping
       value: 2
@@ -4391,6 +4395,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -5189783684943906492, guid: 5874f9a217ade8d4b9b2a7cebdac6c7b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 344645550}
+    - targetCorrespondingSourceObject: {fileID: -5189783684943906492, guid: 5874f9a217ade8d4b9b2a7cebdac6c7b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 344645554}
+    - targetCorrespondingSourceObject: {fileID: -5189783684943906492, guid: 5874f9a217ade8d4b9b2a7cebdac6c7b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 344645555}
     - targetCorrespondingSourceObject: {fileID: -7773959466084806447, guid: 5874f9a217ade8d4b9b2a7cebdac6c7b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 345410352}
@@ -5861,6 +5871,39 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4184606831378676630, guid: 5874f9a217ade8d4b9b2a7cebdac6c7b, type: 3}
+--- !u!95 &344645554
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 344645546}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c78c2d2e4e330c14ab84586a477deb94, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &344645555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 344645546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3f6b5bafc288894ebf976b445fa1539, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &345410348 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7773959466084806447, guid: 5874f9a217ade8d4b9b2a7cebdac6c7b, type: 3}
@@ -12691,7 +12734,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 11d6abe2bb6123c4b8b1d7124ba73bf1, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4678659ae4792034d84ad3ecde66b7a2, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
