@@ -25,19 +25,18 @@ public class Eventos : MonoBehaviour
         if (dialogosNPCs.contadorPresi == 2)
         {
             dialogosNPCs.PuedeHablarLayla = true;
-            dialogosNPCs.PuedeHablarPresi = false;
         }
 
         if (dialogosNPCs.contadorLayla == 2)
         {
             dialogosNPCs.PuedeHablarPresi = true;
-            dialogosNPCs.PuedeHablarLayla = false;
         }
 
         if (dialogosNPCs.contadorPresi == 8)
         {
             Destroy(paredSubirEscaleras);
             dialogosNPCs.PuedeHablarLayla = true;
+            Debug.Log("Layla tur");
         }
     }
 }
