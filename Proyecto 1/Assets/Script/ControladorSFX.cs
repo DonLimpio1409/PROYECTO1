@@ -112,7 +112,7 @@ public class ControladorSFX : MonoBehaviour
 
     public void PrimerSonidoRuido()
     {
-        if(dialogosNPCs.contadorPresi == 5 && yaReproducido == false)
+        if(yaReproducido == false)
         {
             StartCoroutine(Ruido1Tiempo());
         }

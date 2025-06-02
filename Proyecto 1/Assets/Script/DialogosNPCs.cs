@@ -14,8 +14,6 @@ public class DialogosNPCs : MonoBehaviour
     [SerializeField] Sprite CuadroMario;
     [SerializeField] Sprite CuadroJavier;
     [SerializeField] Sprite CuadroPaul;
-    [SerializeField] Sprite CuadroLayla;
-    [SerializeField] Sprite CuadroPensamientoLayla;
 
     [Header("Contadores dialogos")]
     public int contadorPresi = 1;
@@ -24,8 +22,6 @@ public class DialogosNPCs : MonoBehaviour
     public int contadorMario = 1;
     public int contadorJavier = 1;
     public int contadorPaul = 1;
-    public int contadorLayla = 1;
-    public int contadorPensarLayla = 1;
 
     [Header("Boolleanos dialogos")]
     public bool PuedeHablarPresi = true;
@@ -34,14 +30,11 @@ public class DialogosNPCs : MonoBehaviour
     public bool PuedeHablarMario = true;
     public bool PuedeHablarJavier = true;
     public bool PuedeHablarPaul = true;
-    public bool PuedeHablarLayla = false;
-    public bool PuedePensarLayla = false;
 
     [Header("Scripts")]
     Jugador ScrJugador;
     ObtDialogos ScrDialogos;
     ControlCanva ScrControlCanva;
-    TpObjNpc ScrtpObjNpc;
 
     [Header("Obgetos")]
     [SerializeField] TextMeshProUGUI textoDialogo;
@@ -51,12 +44,6 @@ public class DialogosNPCs : MonoBehaviour
     string textoAEnseñar;
     [SerializeField] float tiempoTipeado = 0.5f;
     bool mostrandoTexto;
-    bool enConversacion= false;
-    
-    // Cooldowns individuales para cada personaje
-    Dictionary<string, float> cooldownsNPC = new Dictionary<string, float>();
-
-
 
     // Start is called before the first frame update
     void Start()
@@ -69,18 +56,11 @@ public class DialogosNPCs : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PiensaLayla();
         Hablar();
-        HablaLayla();
     }
 
     void Hablar()
     {
-        if (enConversacion == true)
-        {
-            return;   
-        }
-
         if (ScrControlCanva.estaJugando == true)
         {
             if (Input.GetKeyDown(KeyCode.E) && ScrJugador.rayoAccionToca == true)
@@ -102,6 +82,9 @@ public class DialogosNPCs : MonoBehaviour
                         {
                             contadorPresi++;
                             textoAEnseñar = ScrDialogos.ObtenerDialogo(1, contadorPresi);
+                            textoDialogo.text = "";
+                            CuadroDialogo.GetComponent<Image>().sprite = CuadroPresidenta;
+                            CuadroDialogo.SetActive(true);
 
                             if (textoAEnseñar == "#")
                             {
@@ -110,10 +93,6 @@ public class DialogosNPCs : MonoBehaviour
                                 CuadroDialogo.SetActive(false);
                                 return;
                             }
-
-                            textoDialogo.text = "";
-                            CuadroDialogo.GetComponent<Image>().sprite = CuadroPresidenta;
-                            CuadroDialogo.SetActive(true);
 
                             StartCoroutine(EnseñarTexto());
                         }
@@ -256,69 +235,9 @@ public class DialogosNPCs : MonoBehaviour
             }
         }
     }
-
-    void PiensaLayla()
-    {
-        if (PuedePensarLayla == true)
-        {
-            contadorPensarLayla++;
-            textoAEnseñar = ScrDialogos.ObtenerDialogo(0, contadorPensarLayla);
-            textoDialogo.text = "";
-            CuadroDialogo.GetComponent<Image>().sprite = CuadroPensamientoLayla;
-            CuadroDialogo.SetActive(true);
-
-            if (textoAEnseñar.Contains('*'))
-            {
-                PuedePensarLayla = false;
-                CuadroDialogo.SetActive(false);
-            }
-
-            StartCoroutine(EnseñarTexto());
-        }
-    }
-
-    void HablaLayla()
-    {
-        if (enConversacion == true)
-        {
-            return;   
-        }
-
-        if (Input.GetKeyDown(KeyCode.E) && PuedeHablarLayla == true)
-        {
-            Debug.Log("Esta");
-            // Si está escribiéndose el texto, interrumpimos y lo mostramos completo
-            if (mostrandoTexto == true)
-            {
-                StopAllCoroutines();
-                textoDialogo.text = textoAEnseñar;
-                mostrandoTexto = false;
-                return;
-            }
-
-            Debug.Log("Esta");
-            contadorLayla++;
-            textoAEnseñar = ScrDialogos.ObtenerDialogo(2, contadorLayla);
-
-            if (textoAEnseñar == "%")
-            {
-                Debug.Log("Dentro");
-                PuedeHablarLayla = false;
-                CuadroDialogo.SetActive(false);
-                return;
-            }
-
-            textoDialogo.text = "";
-            CuadroDialogo.GetComponent<Image>().sprite = CuadroLayla;
-            CuadroDialogo.SetActive(true);
-
-            StartCoroutine(EnseñarTexto());
-        }
-    }
     IEnumerator EnseñarTexto()
     {
         mostrandoTexto = true;
-        enConversacion = true;
         textoDialogo.text = "";
 
         for (int i = 0; i < textoAEnseñar.Length; i++)
@@ -329,7 +248,6 @@ public class DialogosNPCs : MonoBehaviour
         }
 
         mostrandoTexto = false;
-        enConversacion = false;
     }
 }
 

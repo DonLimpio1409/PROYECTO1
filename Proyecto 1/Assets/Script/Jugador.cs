@@ -36,6 +36,8 @@ public class Jugador : MonoBehaviour
     public GameObject textoAccion;
     public string nombreObjActivable;
     public RaycastHit rayoTocando;
+    [SerializeField] GameObject Puntero;
+    public int objcogidos;
 
     [Header("Puzzle")]
     public bool rayoPuzzleToca;
@@ -117,22 +119,22 @@ public class Jugador : MonoBehaviour
 
     void CogerObjeto()
     {
+        RaycastHit rayoTocando;
+        Vector3 direccion = camara.transform.forward; //Siempre hacia delante pero en un vertor 3 para tener en cuenta la rotacion
+        Vector3 origen = OrigenRaycast.transform.position; //Lo mismo del vector
+        float alcanceCoger = 2f;
+        
+        Ray rayoCoger = new Ray(origen, direccion);//Definir RayCast de coger
         //Cojer Objetos
         if (Input.GetMouseButton(0))
         {
-            RaycastHit rayoTocando;
-            Vector3 direccion = camara.transform.forward; //Siempre hacia delante pero en un vertor 3 para tener en cuenta la rotacion
-            Vector3 origen = OrigenRaycast.transform.position; //Lo mismo del vector
-            float alcanceCoger = 2f;
-
-            Ray rayoCoger = new Ray(origen, direccion);//Definir RayCast de coger
-
             Debug.DrawRay(origen, direccion * alcanceCoger, Color.red);//Dibujar raycast
 
             if (Physics.Raycast(rayoCoger, out rayoTocando, alcanceCoger))//Lanzamos un RayCast
             {
                 if (rayoTocando.collider.gameObject.CompareTag("ObjInteractuable") && manoLlena == false)
                 {
+
                     ObjOriginal = rayoTocando.collider.gameObject;
 
                     ObjOriginal.transform.position = manoVacia.transform.position;
@@ -143,9 +145,22 @@ public class Jugador : MonoBehaviour
 
                     ObjMano = ObjOriginal;
 
+                    objcogidos++;
+
                     manoLlena = true;
                 }
+            }
+        }
 
+        if (Physics.Raycast(rayoCoger, out rayoTocando, alcanceCoger))
+        {
+            if (rayoTocando.collider.gameObject.CompareTag("ObjInteractuable"))
+            {
+                Puntero.transform.localScale = new Vector2(0.04f, 0.04f);
+            }
+            else
+            {
+                Puntero.transform.localScale = new Vector2(0.02f, 0.02f);
             }
         }
     }
