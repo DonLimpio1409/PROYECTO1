@@ -376,6 +376,7 @@
 "Assets/Script/OrigenRaycast.cs"
 "Assets/Script/Portal.cs"
 "Assets/Script/PuertaCerrada.cs"
+"Assets/Script/PuzleCajon.cs"
 "Assets/Script/Puzzles.cs"
 "Assets/Script/Reloj.cs"
 "Assets/Script/SeguimientoObjMano.cs"

@@ -11,6 +11,9 @@ TagManager:
   - Puzzle
   - Jugador
   - Puerta
+  - SombraBoli
+  - SombraLapiz
+  - SombraRopa
   layers:
   - Default
   - TransparentFX

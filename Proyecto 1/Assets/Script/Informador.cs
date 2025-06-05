@@ -23,6 +23,7 @@ public class Informador : MonoBehaviour
         {
             anim.SetBool("HaPasado", true);
             StartCoroutine(Esperar());
+            gameObject.transform.position = new Vector3(0,0, 200);
         }
     }
 

@@ -5,21 +5,21 @@ public class MecanicasPuzzle : MonoBehaviour
     private Vector3 offset;
     private float fixedY;       // Valor fijo para el eje Y
     private Puzzles ScrPuzzles; // Variable para el script Puzzles
-    private Camera puzzleCamera; // Variable para la cámara de puzzles
+    private Camera puzzleCamera; // Variable para la cï¿½mara de puzzles
     private Renderer objetoRenderer; // Acceso al renderer del objeto
     private Color colorOriginal; // Color original del objeto
     private bool colorCambiado = false; // Flag para verificar si el color ha cambiado
 
     void Start()
     {
-        // Encuentra el script Puzzles y la cámara de puzzles
+        // Encuentra el script Puzzles y la cï¿½mara de puzzles
         ScrPuzzles = FindObjectOfType<Puzzles>();  // Encuentra el script Puzzles
         if (ScrPuzzles != null)
         {
-            puzzleCamera = ScrPuzzles.camaraPuzzle.GetComponent<Camera>();  // Obtén el componente Camera del GameObject camaraPuzzle
+            puzzleCamera = ScrPuzzles.camaraPuzzle.GetComponent<Camera>();  // Obtï¿½n el componente Camera del GameObject camaraPuzzle
         }
 
-        // Guardamos el valor de Y que se mantendrá fijo
+        // Guardamos el valor de Y que se mantendrï¿½ fijo
         fixedY = transform.position.y;
 
         // Guardar el renderer y el color original del objeto
@@ -33,7 +33,7 @@ public class MecanicasPuzzle : MonoBehaviour
     void Update()
     {
         // Detectar clic derecho para cambiar el color
-        if (Input.GetMouseButtonDown(1))  // Botón derecho del ratón
+        if (Input.GetMouseButtonDown(1))  // Botï¿½n derecho del ratï¿½n
         {
             CambiarColorConClickDerecho();
         }
@@ -43,10 +43,10 @@ public class MecanicasPuzzle : MonoBehaviour
     {
         if (puzzleCamera != null)
         {
-            // Al hacer clic, obtenemos la posición del ratón en coordenadas del mundo
+            // Al hacer clic, obtenemos la posiciï¿½n del ratï¿½n en coordenadas del mundo
             Vector3 mouseWorld = puzzleCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, puzzleCamera.WorldToScreenPoint(transform.position).z));
 
-            // Calculamos el offset (diferencia) entre la posición del objeto y la del ratón
+            // Calculamos el offset (diferencia) entre la posiciï¿½n del objeto y la del ratï¿½n
             offset = transform.position - mouseWorld;
         }
     }
@@ -55,16 +55,16 @@ public class MecanicasPuzzle : MonoBehaviour
     {
         if (puzzleCamera != null)
         {
-            // Obtenemos la nueva posición del ratón en coordenadas del mundo
+            // Obtenemos la nueva posiciï¿½n del ratï¿½n en coordenadas del mundo
             Vector3 mouseWorld = puzzleCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, puzzleCamera.WorldToScreenPoint(transform.position).z));
 
             // Aplicamos el offset
             Vector3 newPos = mouseWorld + offset;
 
-            // Mantenemos la posición Y fija
+            // Mantenemos la posiciï¿½n Y fija
             newPos.y = fixedY;
 
-            // Actualizamos la posición del objeto
+            // Actualizamos la posiciï¿½n del objeto
             transform.position = newPos;
         }
     }
@@ -72,7 +72,7 @@ public class MecanicasPuzzle : MonoBehaviour
     void CambiarColorConClickDerecho()
     {
         RaycastHit hit;
-        Ray ray = puzzleCamera.ScreenPointToRay(Input.mousePosition); // Hacemos un rayo desde la cámara hacia el punto donde se hace clic
+        Ray ray = puzzleCamera.ScreenPointToRay(Input.mousePosition); // Hacemos un rayo desde la cï¿½mara hacia el punto donde se hace clic
 
         // Si el rayo golpea un objeto
         if (Physics.Raycast(ray, out hit))
@@ -90,7 +90,7 @@ public class MecanicasPuzzle : MonoBehaviour
                     }
                     else
                     {
-                        // Si el color ya se cambió, restaurarlo al color original
+                        // Si el color ya se cambiï¿½, restaurarlo al color original
                         objetoRenderer.material.color = colorOriginal;
                         colorCambiado = false;
                     }

@@ -5,15 +5,17 @@ using UnityEngine;
 public class Eventos : MonoBehaviour
 {
     [SerializeField] GameObject paredSubirEscaleras;
-    [SerializeField] GameObject Presi1;
-    [SerializeField] Animator mision1;
-    [SerializeField] Animator mision2;
+    [SerializeField] GameObject presi1;
+    [SerializeField] GameObject mision1;
+    [SerializeField] GameObject mision2;
+    [SerializeField] GameObject cajon;
 
     [Header("Scripts")]
     DestruirPresi destruirPresi;
     DialogosNPCs dialogosNPCs;
     ControladorSFX controladorSFX;
     Jugador jugador;
+
     void Start()
     {
         dialogosNPCs = FindObjectOfType<DialogosNPCs>();
@@ -37,30 +39,32 @@ public class Eventos : MonoBehaviour
         }
         if (dialogosNPCs.contadorPresi == 9)
         {
-            Destroy(paredSubirEscaleras);
-            mision1.SetBool("HaPasado", true);
+            paredSubirEscaleras.transform.position = new Vector3(0, 0, 200);
+            mision1.GetComponent<Animator>().SetBool("HaPasado", true);
             StartCoroutine(Esperar());
+            dialogosNPCs.contadorPresi++;
         }
         if (destruirPresi.destPresi == true)
         {
-            Destroy(Presi1);
+            presi1.transform.position = new Vector3(0, 0, 200);
         }
     }
 
     void TutorialObjetos()
     {
-        if (jugador.objcogidos >= 5)
+        if (jugador.objcogidos == 5)
         {
-            mision2.SetBool("HaPasado", true);
+            mision2.GetComponent<Animator>().SetBool("HaPasado", true);
+            cajon.GetComponent<Animator>().SetBool("Abrir", true);
             StartCoroutine(Esperar());
+            jugador.objcogidos++;
         }
     }
 
     IEnumerator Esperar()
     {
         yield return new WaitForSeconds(2f);
-        mision1.SetBool("HaPasado", false);
-        Destroy(mision1);
-        mision2.SetBool("HaPasado", false);
+        mision1.GetComponent<Animator>().SetBool("HaPasado", false);
+        mision2.GetComponent<Animator>().SetBool("HaPasado", false);
     }
 }

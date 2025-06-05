@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
@@ -34,6 +35,7 @@ public class Jugador : MonoBehaviour
     [Header("Accion")]
     public bool rayoAccionToca;
     public GameObject textoAccion;
+    public GameObject textoAccion1;
     public string nombreObjActivable;
     public RaycastHit rayoTocando;
     [SerializeField] GameObject Puntero;
@@ -238,7 +240,6 @@ public class Jugador : MonoBehaviour
         Vector3 origen = OrigenRaycast.transform.position; //Lo mismo del vector
         float alcanceDejar = 2f;
 
-
         Ray rayoDejar = new Ray(origen, direccion);//Definir RayCast de dejar
 
         Debug.DrawRay(origen, direccion * alcanceDejar, Color.green);//Dibujar raycast
@@ -249,12 +250,13 @@ public class Jugador : MonoBehaviour
             {
                 rayoPuzzleToca = true;
                 nombrePuzzle = rayoTocando.collider.gameObject.name;
+                textoAccion1.SetActive(true);
             }
-
             else
             {
                 rayoPuzzleToca = false;
                 nombrePuzzle = null;
+                textoAccion1.SetActive(false);
             }
 
         }
@@ -262,6 +264,7 @@ public class Jugador : MonoBehaviour
         {
             // Si el raycast no toca nada, desactiva la accion de tocar el puzzle
             rayoPuzzleToca = false;
+            textoAccion1.SetActive(false);
         }
     }
 

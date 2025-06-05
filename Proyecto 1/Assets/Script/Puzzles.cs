@@ -8,14 +8,15 @@ public class Puzzles : MonoBehaviour
     [Header("Scripts")]
     Jugador ScrJugador;
 
-    [Header("Posiciones Camara")]
+    [Header("Camaras")]
     public GameObject camaraPuzzle;
     private Camera camaraPrincipal;
-    public bool enPuzzle;
-    [SerializeField] Transform posicionCamaraPuzzle;
-    [SerializeField] Transform posicion2;
 
-   
+    [Header("Posiciones Camara")]
+    [SerializeField] Transform posicionCajon;
+
+    [Header("")]
+    public bool enPuzzle;
 
     void Start()
     {
@@ -36,8 +37,8 @@ public class Puzzles : MonoBehaviour
         {
             switch (ScrJugador.nombrePuzzle)
             {
-                case "Puzzle":
-                    camaraPuzzle.transform.position = posicionCamaraPuzzle.position;
+                case "Cajon":   
+                    camaraPuzzle.transform.position = posicionCajon.transform.position;
                     break;
             }
 

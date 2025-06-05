@@ -127,7 +127,6 @@ public class ControladorSFX : MonoBehaviour
 
     public void ReproductorDeMusica()
     {
-
         switch(trigerActual.name)
         {
             case "TrigerMusicaPasillo":
