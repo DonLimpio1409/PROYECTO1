@@ -2,16 +2,14 @@ Marcas de conversaciones.
 
 Presidenta: #
 
-Javier: %
-
 Israel: $
-
-Paul: /
-
-Mario: =
 
 Néstor: º
 
-Layla: ·
+Mario: =
 
-LailaPensar: *
+Javier: &
+
+Itziar: ç
+
+Paul: /

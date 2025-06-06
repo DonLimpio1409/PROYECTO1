@@ -18,15 +18,21 @@ public class ControladorSFX : MonoBehaviour
     [SerializeField] AudioClip abrrirPuerta;
     [SerializeField] AudioClip cerrarPuerta;
     [SerializeField] AudioClip puertaCerrada;
+    [SerializeField] AudioClip abrirCajon;
+    [SerializeField] AudioClip cerrarCajon;
 
     //Musicas
     [SerializeField] AudioClip MusicaPasilloDia1;
+    [SerializeField] AudioClip MusicaCuartoPrin;
 
     [Header("Variables")]
     float duracionFadeOut = 2.5f;
     int contador = 0;
     bool yaReproducido = false;
-    bool SonandoAlgo = false;
+
+    //Boolleanos Musica
+    [SerializeField] bool musicaPasilloDia1 = false;
+    [SerializeField] bool musicaCuartoPrin = false;
 
     [Header("Script")]
     ControlCanva controlCanva;
@@ -96,6 +102,26 @@ public class ControladorSFX : MonoBehaviour
         }
     }
 
+    bool Abrir = false;
+    public void AbrirCajon()
+    {
+        if (Abrir == false)
+        {
+            SFX.PlayOneShot(abrirCajon);
+            Abrir = true;
+        }
+    }
+
+    bool Cerrar = false;
+    public void CerrarCajon()
+    {
+        if (Cerrar == false)
+        {
+            SFX.PlayOneShot(cerrarCajon);
+            Cerrar = true;   
+        }
+    }    
+
     private IEnumerator FadeOut(AudioSource audioSource, float duracion)
     {
         float inicioVolumen = audioSource.volume;
@@ -127,16 +153,26 @@ public class ControladorSFX : MonoBehaviour
 
     public void ReproductorDeMusica()
     {
-        switch(trigerActual.name)
+        switch (trigerActual.name)
         {
             case "TrigerMusicaPasillo":
-            if(SonandoAlgo == false)
-            {
-                Musicas.clip = MusicaPasilloDia1;
-                Musicas.Play();
-                SonandoAlgo = true;
-            }
-            break;
+                if (musicaPasilloDia1 == false)
+                {
+                    musicaCuartoPrin = false;
+                    Musicas.clip = MusicaPasilloDia1;
+                    Musicas.Play();
+                    musicaPasilloDia1 = true;
+                }
+                break;
+            case "TrigerMusicaCuartoPrin":
+                if(musicaCuartoPrin == false)
+                {
+                    musicaPasilloDia1 = false;
+                    Musicas.clip = MusicaCuartoPrin;
+                    Musicas.Play();
+                    musicaCuartoPrin = true;
+                }
+                break;
         }
     }
     public void PuertaCerrada()

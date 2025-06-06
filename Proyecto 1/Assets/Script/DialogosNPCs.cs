@@ -14,6 +14,7 @@ public class DialogosNPCs : MonoBehaviour
     [SerializeField] Sprite CuadroMario;
     [SerializeField] Sprite CuadroJavier;
     [SerializeField] Sprite CuadroPaul;
+    [SerializeField] Sprite CuadroItziar;
 
     [Header("Contadores dialogos")]
     public int contadorPresi = 1;
@@ -22,6 +23,7 @@ public class DialogosNPCs : MonoBehaviour
     public int contadorMario = 1;
     public int contadorJavier = 1;
     public int contadorPaul = 1;
+    public int contadorItziar = 1;
 
     [Header("Boolleanos dialogos")]
     public bool PuedeHablarPresi = true;
@@ -30,6 +32,7 @@ public class DialogosNPCs : MonoBehaviour
     public bool PuedeHablarMario = true;
     public bool PuedeHablarJavier = true;
     public bool PuedeHablarPaul = true;
+    public bool PuedeHablarItziar = true;
 
     [Header("Scripts")]
     Jugador ScrJugador;
@@ -107,7 +110,7 @@ public class DialogosNPCs : MonoBehaviour
                             CuadroDialogo.GetComponent<Image>().sprite = CuadroIsrrael;
                             CuadroDialogo.SetActive(true);
 
-                            if (textoAEnseñar.Contains('#'))
+                            if (textoAEnseñar.Contains('$'))
                             {
                                 PuedeHablarPresi = false;
                                 CuadroDialogo.SetActive(false);
@@ -128,16 +131,12 @@ public class DialogosNPCs : MonoBehaviour
                             CuadroDialogo.GetComponent<Image>().sprite = CuadroNestor;
                             CuadroDialogo.SetActive(true);
 
-                            for (int i = 0; i < textoAEnseñar.Length; i++)
+                            if (textoAEnseñar == "#")
                             {
-                                char caracter = textoAEnseñar[i];
-
-                                if (caracter == 'º')
-                                {
-                                    Debug.Log("Dentro");
-                                    PuedeHablarNestor = false;
-                                    CuadroDialogo.SetActive(false);
-                                }
+                                Debug.Log("Dentro");
+                                PuedeHablarPresi = false;
+                                CuadroDialogo.SetActive(false);
+                                return;
                             }
 
                             StartCoroutine(EnseñarTexto());
@@ -155,16 +154,12 @@ public class DialogosNPCs : MonoBehaviour
                             CuadroDialogo.GetComponent<Image>().sprite = CuadroMario;
                             CuadroDialogo.SetActive(true);
 
-                            for (int i = 0; i < textoAEnseñar.Length; i++)
+                            if (textoAEnseñar == "=")
                             {
-                                char caracter = textoAEnseñar[i];
-
-                                if (caracter == '=')
-                                {
-                                    Debug.Log("Dentro");
-                                    PuedeHablarMario = false;
-                                    CuadroDialogo.SetActive(false);
-                                }
+                                Debug.Log("Dentro");
+                                PuedeHablarPresi = false;
+                                CuadroDialogo.SetActive(false);
+                                return;
                             }
 
                             StartCoroutine(EnseñarTexto());
@@ -182,21 +177,38 @@ public class DialogosNPCs : MonoBehaviour
                             CuadroDialogo.GetComponent<Image>().sprite = CuadroJavier;
                             CuadroDialogo.SetActive(true);
 
-                            for (int i = 0; i < textoAEnseñar.Length; i++)
+                            if (textoAEnseñar == "&")
                             {
-                                char caracter = textoAEnseñar[i];
-
-                                if (caracter == '·')
-                                {
-                                    Debug.Log("Dentro");
-                                    PuedeHablarJavier = false;
-                                    CuadroDialogo.SetActive(false);
-                                }
+                                Debug.Log("Dentro");
+                                PuedeHablarPresi = false;
+                                CuadroDialogo.SetActive(false);
+                                return;
                             }
 
                             StartCoroutine(EnseñarTexto());
 
                             break;
+                        }
+                        break;
+                    
+                    case "Itziar":
+                        if (PuedeHablarItziar == true)
+                        {
+                            contadorItziar++;
+                            textoAEnseñar = ScrDialogos.ObtenerDialogo(2, contadorItziar);
+                            textoDialogo.text = "";
+                            CuadroDialogo.GetComponent<Image>().sprite = CuadroItziar;
+                            CuadroDialogo.SetActive(true);
+
+                            if (textoAEnseñar == "ç")
+                            {
+                                Debug.Log("Dentro");
+                                PuedeHablarItziar = false;
+                                CuadroDialogo.SetActive(false);
+                                return;
+                            }
+
+                            StartCoroutine(EnseñarTexto());
                         }
                         break;
 
@@ -209,16 +221,12 @@ public class DialogosNPCs : MonoBehaviour
                             CuadroDialogo.GetComponent<Image>().sprite = CuadroJavier;
                             CuadroDialogo.SetActive(true);
 
-                            for (int i = 0; i < textoAEnseñar.Length; i++)
+                            if (textoAEnseñar == "/")
                             {
-                                char caracter = textoAEnseñar[i];
-
-                                if (caracter == '/')
-                                {
-                                    Debug.Log("Dentro");
-                                    PuedeHablarPaul = false;
-                                    CuadroDialogo.SetActive(false);
-                                }
+                                Debug.Log("Dentro");
+                                PuedeHablarPresi = false;
+                                CuadroDialogo.SetActive(false);
+                                return;
                             }
 
                             StartCoroutine(EnseñarTexto());

@@ -9,11 +9,8 @@ public class Eventos : MonoBehaviour
     [SerializeField] GameObject mision1;
     [SerializeField] GameObject mision2;
     [SerializeField] GameObject cajon;
-
-    //Humos
     [SerializeField] GameObject humo;
-    [SerializeField] GameObject humo1;
-    [SerializeField] GameObject humo2;
+    [SerializeField] GameObject itziarCubo;
 
     [Header("Scripts")]
     DestruirPresi destruirPresi;
@@ -36,7 +33,7 @@ public class Eventos : MonoBehaviour
     {
         PrimeraEscenaPresi();
         TutorialObjetos();
-        DesplegarHumos();
+        EscenaItziar();
     }
 
     void PrimeraEscenaPresi()
@@ -64,25 +61,40 @@ public class Eventos : MonoBehaviour
         {
             mision2.GetComponent<Animator>().SetBool("HaPasado", true);
             cajon.GetComponent<Animator>().SetBool("Abrir", true);
+            controladorSFX.AbrirCajon();
             StartCoroutine(Esperar());
             jugador.objcogidos++;
         }
     }
 
-    void DesplegarHumos()
+    void EscenaItziar()
     {
         if (sombrasCajon.objOrganizados == 7)
         {
+            StartCoroutine(Esperar1());
             humo.GetComponent<Animator>().SetBool("Ahumar", true);
-            humo1.GetComponent<Animator>().SetBool("Ahumar", true);
-            humo2.GetComponent<Animator>().SetBool("Ahumar", true);
+            itziarCubo.transform.position = new Vector3(-323.8378f, 8.95f, -38.61416f);
+        }
+        if (dialogosNPCs.contadorItziar == 5)
+        {
+            humo.GetComponent<Animator>().SetBool("Ahumar", true);
+            itziarCubo.transform.position = new Vector3(0f, 0f, 200f);
         }
     }
 
     IEnumerator Esperar()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
+        //Cuadros de mision
         mision1.GetComponent<Animator>().SetBool("HaPasado", false);
         mision2.GetComponent<Animator>().SetBool("HaPasado", false);
     }
-}
+
+    IEnumerator Esperar1()
+    {
+        yield return new WaitForSeconds(2f);
+        //Cajon cerrar
+        controladorSFX.CerrarCajon();
+        cajon.GetComponent<Animator>().SetBool("Abrir", false);
+    }
+}   

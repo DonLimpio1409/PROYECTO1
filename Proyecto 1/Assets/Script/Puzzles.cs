@@ -7,6 +7,7 @@ public class Puzzles : MonoBehaviour
 {
     [Header("Scripts")]
     Jugador ScrJugador;
+    ControlCanva controlCanvas;
 
     [Header("Camaras")]
     public GameObject camaraPuzzle;
@@ -21,23 +22,23 @@ public class Puzzles : MonoBehaviour
     void Start()
     {
         ScrJugador = FindObjectOfType<Jugador>();
+        controlCanvas = FindObjectOfType<ControlCanva>();
         camaraPrincipal = Camera.main;
     }
 
     void Update()
     {
         PasarCamaraPuzzle();
-        
-
     }
 
     void PasarCamaraPuzzle()
     {
         if (Input.GetKeyDown(KeyCode.E) && ScrJugador.rayoPuzzleToca)
         {
+            controlCanvas.EntrarPuzle();
             switch (ScrJugador.nombrePuzzle)
             {
-                case "Cajon":   
+                case "Cajon":
                     camaraPuzzle.transform.position = posicionCajon.transform.position;
                     break;
             }
@@ -49,6 +50,7 @@ public class Puzzles : MonoBehaviour
             if (camaraPrincipal != null)
             {
                 camaraPrincipal.gameObject.SetActive(!enPuzzle);
+                controlCanvas.SalirPuzle();
             }
 
             Cursor.lockState = CursorLockMode.None;

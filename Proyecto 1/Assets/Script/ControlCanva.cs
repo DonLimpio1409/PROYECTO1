@@ -120,6 +120,16 @@ public class ControlCanva : MonoBehaviour
         }
     }
 
+    public void EntrarPuzle()
+    {
+        Interfaz.SetActive(false);
+    }
+
+    public void SalirPuzle()
+    {
+        Interfaz.SetActive(true);
+    }
+
     public void Volver()
     {
         ScrJugador.CentrarRaton();
