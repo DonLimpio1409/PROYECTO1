@@ -10,11 +10,17 @@ public class Eventos : MonoBehaviour
     [SerializeField] GameObject mision2;
     [SerializeField] GameObject cajon;
 
+    //Humos
+    [SerializeField] GameObject humo;
+    [SerializeField] GameObject humo1;
+    [SerializeField] GameObject humo2;
+
     [Header("Scripts")]
     DestruirPresi destruirPresi;
     DialogosNPCs dialogosNPCs;
     ControladorSFX controladorSFX;
     Jugador jugador;
+    SombrasCajon sombrasCajon;
 
     void Start()
     {
@@ -22,6 +28,7 @@ public class Eventos : MonoBehaviour
         controladorSFX = FindObjectOfType<ControladorSFX>();
         destruirPresi = FindObjectOfType<DestruirPresi>();
         jugador = FindObjectOfType<Jugador>();
+        sombrasCajon = FindObjectOfType<SombrasCajon>();
     }
 
     // Update is called once per frame
@@ -29,6 +36,7 @@ public class Eventos : MonoBehaviour
     {
         PrimeraEscenaPresi();
         TutorialObjetos();
+        DesplegarHumos();
     }
 
     void PrimeraEscenaPresi()
@@ -58,6 +66,16 @@ public class Eventos : MonoBehaviour
             cajon.GetComponent<Animator>().SetBool("Abrir", true);
             StartCoroutine(Esperar());
             jugador.objcogidos++;
+        }
+    }
+
+    void DesplegarHumos()
+    {
+        if (sombrasCajon.objOrganizados == 7)
+        {
+            humo.GetComponent<Animator>().SetBool("Ahumar", true);
+            humo1.GetComponent<Animator>().SetBool("Ahumar", true);
+            humo2.GetComponent<Animator>().SetBool("Ahumar", true);
         }
     }
 

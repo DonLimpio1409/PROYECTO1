@@ -11,9 +11,13 @@ TagManager:
   - Puzzle
   - Jugador
   - Puerta
-  - SombraBoli
-  - SombraLapiz
-  - SombraRopa
+  - Boli
+  - Boli1
+  - Lapiz
+  - Lapiz1
+  - Falda
+  - Polo
+  - Sueter
   layers:
   - Default
   - TransparentFX
