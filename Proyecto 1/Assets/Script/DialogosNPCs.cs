@@ -149,12 +149,12 @@ public class DialogosNPCs : MonoBehaviour
                         if (PuedeHablarMario == true)
                         {
                             contadorMario++;
-                            textoAEnseñar = ScrDialogos.ObtenerDialogo(7, contadorMario);
+                            textoAEnseñar = ScrDialogos.ObtenerDialogo(6, contadorMario);
                             textoDialogo.text = "";
                             CuadroDialogo.GetComponent<Image>().sprite = CuadroMario;
                             CuadroDialogo.SetActive(true);
 
-                            if (textoAEnseñar == "=")
+                            if (textoAEnseñar == "¨")
                             {
                                 Debug.Log("Dentro");
                                 PuedeHablarPresi = false;
@@ -172,7 +172,7 @@ public class DialogosNPCs : MonoBehaviour
                         if (PuedeHablarJavier == true)
                         {
                             contadorJavier++;
-                            textoAEnseñar = ScrDialogos.ObtenerDialogo(4, contadorJavier);
+                            textoAEnseñar = ScrDialogos.ObtenerDialogo(3, contadorJavier);
                             textoDialogo.text = "";
                             CuadroDialogo.GetComponent<Image>().sprite = CuadroJavier;
                             CuadroDialogo.SetActive(true);

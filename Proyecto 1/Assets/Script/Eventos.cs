@@ -11,6 +11,8 @@ public class Eventos : MonoBehaviour
     [SerializeField] GameObject cajon;
     [SerializeField] GameObject humo;
     [SerializeField] GameObject itziarCubo;
+    [SerializeField] GameObject puertaPasillo101;
+    [SerializeField] GameObject puertaPasillo102;
 
     [Header("Scripts")]
     DestruirPresi destruirPresi;
@@ -64,6 +66,9 @@ public class Eventos : MonoBehaviour
             controladorSFX.AbrirCajon();
             StartCoroutine(Esperar());
             jugador.objcogidos++;
+
+            puertaPasillo101.transform.position = new Vector3(0f, 0f, 200f);
+            puertaPasillo102.transform.position = new Vector3(0f, 0f, 200f);
         }
     }
 
@@ -75,16 +80,16 @@ public class Eventos : MonoBehaviour
             humo.GetComponent<Animator>().SetBool("Ahumar", true);
             itziarCubo.transform.position = new Vector3(-323.8378f, 8.95f, -38.61416f);
         }
-        if (dialogosNPCs.contadorItziar == 5)
+        if (dialogosNPCs.contadorItziar == 7)
         {
-            humo.GetComponent<Animator>().SetBool("Ahumar", true);
+            humo.GetComponent<Animator>().SetBool("Ahumar", false);
             itziarCubo.transform.position = new Vector3(0f, 0f, 200f);
         }
     }
 
     IEnumerator Esperar()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(4f);
         //Cuadros de mision
         mision1.GetComponent<Animator>().SetBool("HaPasado", false);
         mision2.GetComponent<Animator>().SetBool("HaPasado", false);

@@ -7,12 +7,11 @@ public class AbrirPuerta : MonoBehaviour
     Jugador ScrJugador;
     Animator ScrAnimPuerta;
     ControladorSFX ScrControladorSFX;
-
+    
     bool puertaAbierta = false;
     void Start()
     {
         ScrJugador = FindObjectOfType<Jugador>();
-        ScrAnimPuerta = GetComponent<Animator>();
         ScrControladorSFX = FindObjectOfType<ControladorSFX>();
 
     }
@@ -23,6 +22,8 @@ public class AbrirPuerta : MonoBehaviour
         {
             if(Input.GetKeyDown(KeyCode.E) && ScrJugador.rayoTocando.collider.gameObject.layer == LayerMask.NameToLayer("Puerta"))
             {
+                ScrAnimPuerta = ScrJugador.rayoTocando.collider.gameObject.GetComponent<Animator>();
+
                 if (puertaAbierta == false)
                 {
                     ScrControladorSFX.SonidoAbrePuerta();

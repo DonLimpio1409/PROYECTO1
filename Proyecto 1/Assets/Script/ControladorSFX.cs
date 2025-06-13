@@ -24,6 +24,8 @@ public class ControladorSFX : MonoBehaviour
     //Musicas
     [SerializeField] AudioClip MusicaPasilloDia1;
     [SerializeField] AudioClip MusicaCuartoPrin;
+    [SerializeField] AudioClip MusicaCuartoJuanjo
+    ;
 
     [Header("Variables")]
     float duracionFadeOut = 2.5f;
@@ -33,6 +35,7 @@ public class ControladorSFX : MonoBehaviour
     //Boolleanos Musica
     [SerializeField] bool musicaPasilloDia1 = false;
     [SerializeField] bool musicaCuartoPrin = false;
+    [SerializeField] bool musicaCuartoJuanjo = false;
 
     [Header("Script")]
     ControlCanva controlCanva;
@@ -158,19 +161,40 @@ public class ControladorSFX : MonoBehaviour
             case "TrigerMusicaPasillo":
                 if (musicaPasilloDia1 == false)
                 {
+                    //Silenciar al resto
+                    musicaCuartoJuanjo = false;
                     musicaCuartoPrin = false;
+
+                    //Accion
                     Musicas.clip = MusicaPasilloDia1;
                     Musicas.Play();
                     musicaPasilloDia1 = true;
                 }
                 break;
             case "TrigerMusicaCuartoPrin":
-                if(musicaCuartoPrin == false)
+                if (musicaCuartoPrin == false)
                 {
+                    //Silenciar al resto
+                    musicaCuartoJuanjo = false;
                     musicaPasilloDia1 = false;
+
+                    //Accion
                     Musicas.clip = MusicaCuartoPrin;
                     Musicas.Play();
                     musicaCuartoPrin = true;
+                }
+                break;
+            case "TrigerMusicaCuartoJuanjo":
+                if(musicaCuartoJuanjo == false)
+                {
+                    //Silenciar al resto
+                    musicaCuartoPrin = false;
+                    musicaPasilloDia1 = false;
+
+                    //Accion
+                    Musicas.clip = MusicaCuartoJuanjo;
+                    Musicas.Play();
+                    musicaCuartoJuanjo = true;
                 }
                 break;
         }
