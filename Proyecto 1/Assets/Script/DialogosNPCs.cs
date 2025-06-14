@@ -94,6 +94,7 @@ public class DialogosNPCs : MonoBehaviour
                                 Debug.Log("Dentro");
                                 PuedeHablarPresi = false;
                                 CuadroDialogo.SetActive(false);
+                                ScrJugador.tagObjetoActivable = "Nada"; 
                                 return;
                             }
 
@@ -105,7 +106,7 @@ public class DialogosNPCs : MonoBehaviour
                         if (PuedeHablarIsrael == true)
                         {
                             contadorIsrael++;
-                            textoAEnseñar = ScrDialogos.ObtenerDialogo(5, contadorIsrael);
+                            textoAEnseñar = ScrDialogos.ObtenerDialogo(4, contadorIsrael);
                             textoDialogo.text = "";
                             CuadroDialogo.GetComponent<Image>().sprite = CuadroIsrrael;
                             CuadroDialogo.SetActive(true);
@@ -114,6 +115,7 @@ public class DialogosNPCs : MonoBehaviour
                             {
                                 PuedeHablarPresi = false;
                                 CuadroDialogo.SetActive(false);
+                                ScrJugador.tagObjetoActivable = "Nada"; 
                             }
 
                             StartCoroutine(EnseñarTexto());
@@ -126,7 +128,7 @@ public class DialogosNPCs : MonoBehaviour
                         if (PuedeHablarNestor == true)
                         {
                             contadorNestor++;
-                            textoAEnseñar = ScrDialogos.ObtenerDialogo(8, contadorNestor);
+                            textoAEnseñar = ScrDialogos.ObtenerDialogo(7, contadorNestor);
                             textoDialogo.text = "";
                             CuadroDialogo.GetComponent<Image>().sprite = CuadroNestor;
                             CuadroDialogo.SetActive(true);
@@ -136,6 +138,7 @@ public class DialogosNPCs : MonoBehaviour
                                 Debug.Log("Dentro");
                                 PuedeHablarPresi = false;
                                 CuadroDialogo.SetActive(false);
+                                ScrJugador.tagObjetoActivable = "Nada"; 
                                 return;
                             }
 
@@ -159,6 +162,7 @@ public class DialogosNPCs : MonoBehaviour
                                 Debug.Log("Dentro");
                                 PuedeHablarPresi = false;
                                 CuadroDialogo.SetActive(false);
+                                ScrJugador.tagObjetoActivable = "Nada"; 
                                 return;
                             }
 
@@ -182,6 +186,7 @@ public class DialogosNPCs : MonoBehaviour
                                 Debug.Log("Dentro");
                                 PuedeHablarPresi = false;
                                 CuadroDialogo.SetActive(false);
+                                ScrJugador.tagObjetoActivable = "Nada"; 
                                 return;
                             }
 
@@ -205,6 +210,7 @@ public class DialogosNPCs : MonoBehaviour
                                 Debug.Log("Dentro");
                                 PuedeHablarItziar = false;
                                 CuadroDialogo.SetActive(false);
+                                ScrJugador.tagObjetoActivable = "Nada"; 
                                 return;
                             }
 
@@ -215,10 +221,10 @@ public class DialogosNPCs : MonoBehaviour
                     case "Paul":
                         if (PuedeHablarPaul == true)
                         {
-                            contadorJavier++;
-                            textoAEnseñar = ScrDialogos.ObtenerDialogo(4, contadorJavier);
+                            contadorPaul++;
+                            textoAEnseñar = ScrDialogos.ObtenerDialogo(5, contadorPaul);
                             textoDialogo.text = "";
-                            CuadroDialogo.GetComponent<Image>().sprite = CuadroJavier;
+                            CuadroDialogo.GetComponent<Image>().sprite = CuadroPaul;
                             CuadroDialogo.SetActive(true);
 
                             if (textoAEnseñar == "/")
@@ -226,6 +232,7 @@ public class DialogosNPCs : MonoBehaviour
                                 Debug.Log("Dentro");
                                 PuedeHablarPresi = false;
                                 CuadroDialogo.SetActive(false);
+                                ScrJugador.tagObjetoActivable = "Nada"; 
                                 return;
                             }
 

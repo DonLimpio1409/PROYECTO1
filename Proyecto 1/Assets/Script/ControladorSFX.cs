@@ -24,8 +24,11 @@ public class ControladorSFX : MonoBehaviour
     //Musicas
     [SerializeField] AudioClip MusicaPasilloDia1;
     [SerializeField] AudioClip MusicaCuartoPrin;
-    [SerializeField] AudioClip MusicaCuartoJuanjo
-    ;
+    [SerializeField] AudioClip MusicaCuartoJuanjo;
+    [SerializeField] AudioClip MusicaCuartoIsma;
+    [SerializeField] AudioClip MusicaCuartoNestor;
+    [SerializeField] AudioClip MusicaCuartoPresi;
+    [SerializeField] AudioClip MusicaCuartoPaul;
 
     [Header("Variables")]
     float duracionFadeOut = 2.5f;
@@ -36,6 +39,10 @@ public class ControladorSFX : MonoBehaviour
     [SerializeField] bool musicaPasilloDia1 = false;
     [SerializeField] bool musicaCuartoPrin = false;
     [SerializeField] bool musicaCuartoJuanjo = false;
+    [SerializeField] bool musicaCuartoIsma = false;
+    [SerializeField] bool musicaCuartoNestor = false;
+    [SerializeField] bool musicaCuartoPresi = false;
+    [SerializeField] bool musicaCuartoPaul = false;
 
     [Header("Script")]
     ControlCanva controlCanva;
@@ -164,6 +171,10 @@ public class ControladorSFX : MonoBehaviour
                     //Silenciar al resto
                     musicaCuartoJuanjo = false;
                     musicaCuartoPrin = false;
+                    musicaCuartoIsma = false;
+                    musicaCuartoNestor = false;
+                    musicaCuartoPresi = false;
+                    musicaCuartoPaul = false;
 
                     //Accion
                     Musicas.clip = MusicaPasilloDia1;
@@ -177,6 +188,10 @@ public class ControladorSFX : MonoBehaviour
                     //Silenciar al resto
                     musicaCuartoJuanjo = false;
                     musicaPasilloDia1 = false;
+                    musicaCuartoIsma = false;
+                    musicaCuartoNestor = false;
+                    musicaCuartoPresi = false;
+                    musicaCuartoPaul = false;
 
                     //Accion
                     Musicas.clip = MusicaCuartoPrin;
@@ -185,16 +200,88 @@ public class ControladorSFX : MonoBehaviour
                 }
                 break;
             case "TrigerMusicaCuartoJuanjo":
-                if(musicaCuartoJuanjo == false)
+                if (musicaCuartoJuanjo == false)
                 {
                     //Silenciar al resto
                     musicaCuartoPrin = false;
                     musicaPasilloDia1 = false;
+                    musicaCuartoIsma = false;
+                    musicaCuartoNestor = false;
+                    musicaCuartoPresi = false;
+                    musicaCuartoPaul = false;
 
                     //Accion
                     Musicas.clip = MusicaCuartoJuanjo;
                     Musicas.Play();
                     musicaCuartoJuanjo = true;
+                }
+                break;
+            case "TrigerMusicaCuartoIsma":
+                if (musicaCuartoIsma == false)
+                {
+                    //Silenciar al resto
+                    musicaCuartoPrin = false;
+                    musicaPasilloDia1 = false;
+                    musicaCuartoJuanjo = false;
+                    musicaCuartoNestor = false;
+                    musicaCuartoPresi = false;
+                    musicaCuartoPaul = false;
+
+                    //Accion
+                    Musicas.clip = MusicaCuartoIsma;
+                    Musicas.Play();
+                    musicaCuartoIsma = true;
+                }
+                break;
+            case "TrigerMusicaCuartoNestor":
+                if (musicaCuartoNestor == false)
+                {
+                    //Silenciar al resto
+                    musicaCuartoPrin = false;
+                    musicaPasilloDia1 = false;
+                    musicaCuartoJuanjo = false;
+                    musicaCuartoIsma = false;
+                    musicaCuartoPresi = false;
+                    musicaCuartoPaul = false;
+
+                    //Accion
+                    Musicas.clip = MusicaCuartoNestor;
+                    Musicas.Play();
+                    musicaCuartoNestor = true;
+                }
+                break;
+            case "TrigerMusicaCuartoPresi":
+                if (musicaCuartoPresi == false)
+                {
+                    //Silenciar al resto
+                    musicaCuartoPrin = false;
+                    musicaPasilloDia1 = false;
+                    musicaCuartoJuanjo = false;
+                    musicaCuartoIsma = false;
+                    musicaCuartoNestor = false;
+                    musicaCuartoPaul = false;
+
+                    //Accion
+                    Musicas.clip = MusicaCuartoPresi;
+                    Musicas.Play();
+                    musicaCuartoPresi = true;
+                }
+                break;
+            case "TrigerMusicaCuartoPaul":
+                if(musicaCuartoPaul == false)
+                {
+                    //Silenciar al resto
+                    musicaCuartoPrin = false;
+                    musicaPasilloDia1 = false;
+                    musicaCuartoJuanjo = false;
+                    musicaCuartoIsma = false;
+                    musicaCuartoNestor = false;
+                    musicaCuartoPresi = false;
+
+                    //Accion
+                    Musicas.clip = MusicaCuartoPaul;
+                    Musicas.Play();
+                    musicaCuartoPaul = true;
                 }
                 break;
         }

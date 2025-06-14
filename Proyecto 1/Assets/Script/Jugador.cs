@@ -37,6 +37,7 @@ public class Jugador : MonoBehaviour
     public GameObject textoAccion;
     public GameObject textoAccion1;
     public string nombreObjActivable;
+    public string tagObjetoActivable;
     public RaycastHit rayoTocando;
     [SerializeField] GameObject Puntero;
     public int objcogidos;
@@ -214,6 +215,7 @@ public class Jugador : MonoBehaviour
             {
                 rayoAccionToca = true;
                 nombreObjActivable = rayoTocando.collider.gameObject.name;
+                rayoTocando.collider.gameObject.tag = tagObjetoActivable;
                 textoAccion.SetActive(true);
 
             }
@@ -221,6 +223,7 @@ public class Jugador : MonoBehaviour
             {
                 rayoAccionToca = false;
                 nombreObjActivable = null;
+                tagObjetoActivable = null;
                 textoAccion.SetActive(false);
             }
         }
