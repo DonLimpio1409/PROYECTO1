@@ -8,11 +8,16 @@ public class Eventos : MonoBehaviour
     [SerializeField] GameObject presi1;
     [SerializeField] GameObject mision1;
     [SerializeField] GameObject mision2;
+    [SerializeField] GameObject mision3;
     [SerializeField] GameObject cajon;
     [SerializeField] GameObject humo;
     [SerializeField] GameObject itziarCubo;
     [SerializeField] GameObject puertaPasillo101;
     [SerializeField] GameObject puertaPasillo102;
+    [SerializeField] GameObject Mario;
+    [SerializeField] GameObject MarioDormido;
+    [SerializeField] GameObject Javier;
+
 
     [Header("Scripts")]
     DestruirPresi destruirPresi;
@@ -36,6 +41,7 @@ public class Eventos : MonoBehaviour
         PrimeraEscenaPresi();
         TutorialObjetos();
         EscenaItziar();
+        EscenaMarioSonambulo();
     }
 
     void PrimeraEscenaPresi()
@@ -87,11 +93,47 @@ public class Eventos : MonoBehaviour
         }
     }
 
+    void EscenaMarioSonambulo()
+    {
+        if (dialogosNPCs.habladoConPersonajes == 6)
+        {
+            //Setup
+            mision3.GetComponent<Animator>().SetBool("HaPasado", true);
+            //REPRODUCIR UN SONIDO DE RUIDO EN ESTA LINEA
+            StartCoroutine(Esperar());
+            Mario.SetActive(false);
+            MarioDormido.SetActive(true);
+            Javier.transform.position = new Vector3(-319.55f, 8.084f, -32.6f);
+            Javier.transform.rotation = Quaternion.Euler(0, 166.89f, 0);
+            Javier.tag = "Activable";
+            dialogosNPCs.PuedeHablarJavier = true;
+        }
+
+        //Inicio del dialogo
+        if (dialogosNPCs.contadorJavier == 11)
+        {
+            MarioDormido.tag = "Activable";
+            dialogosNPCs.PuedeHablarMario = true;
+        }
+        if (dialogosNPCs.contadorMario == 9)
+        {
+            Javier.tag = "Activable";
+            dialogosNPCs.PuedeHablarJavier = true;
+        }
+        if (dialogosNPCs.contadorJavier == 14)
+        {
+            MarioDormido.tag = "Activable";
+            dialogosNPCs.PuedeHablarMario = true;
+        }
+        //Fin del dialogo
+    }
+
     IEnumerator Esperar()
     {
         yield return new WaitForSeconds(4f);
         //Cuadros de mision
         mision1.GetComponent<Animator>().SetBool("HaPasado", false);
+        mision2.GetComponent<Animator>().SetBool("HaPasado", false);
         mision2.GetComponent<Animator>().SetBool("HaPasado", false);
     }
 

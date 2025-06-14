@@ -47,6 +47,7 @@ public class DialogosNPCs : MonoBehaviour
     string textoAEnseñar;
     [SerializeField] float tiempoTipeado = 0.5f;
     bool mostrandoTexto;
+    public int habladoConPersonajes;
 
     // Start is called before the first frame update
     void Start()
@@ -94,7 +95,8 @@ public class DialogosNPCs : MonoBehaviour
                                 Debug.Log("Dentro");
                                 PuedeHablarPresi = false;
                                 CuadroDialogo.SetActive(false);
-                                ScrJugador.tagObjetoActivable = "Nada"; 
+                                ScrJugador.tagObjetoActivable = "Nada";
+                                habladoConPersonajes++;
                                 return;
                             }
 
@@ -115,7 +117,9 @@ public class DialogosNPCs : MonoBehaviour
                             {
                                 PuedeHablarPresi = false;
                                 CuadroDialogo.SetActive(false);
-                                ScrJugador.tagObjetoActivable = "Nada"; 
+                                ScrJugador.tagObjetoActivable = "Nada";
+                                habladoConPersonajes++;
+                                return;
                             }
 
                             StartCoroutine(EnseñarTexto());
@@ -139,6 +143,7 @@ public class DialogosNPCs : MonoBehaviour
                                 PuedeHablarPresi = false;
                                 CuadroDialogo.SetActive(false);
                                 ScrJugador.tagObjetoActivable = "Nada"; 
+                                habladoConPersonajes++;
                                 return;
                             }
 
@@ -160,9 +165,10 @@ public class DialogosNPCs : MonoBehaviour
                             if (textoAEnseñar == "¨")
                             {
                                 Debug.Log("Dentro");
-                                PuedeHablarPresi = false;
+                                PuedeHablarMario = false;
                                 CuadroDialogo.SetActive(false);
                                 ScrJugador.tagObjetoActivable = "Nada"; 
+                                habladoConPersonajes++;
                                 return;
                             }
 
@@ -187,6 +193,7 @@ public class DialogosNPCs : MonoBehaviour
                                 PuedeHablarPresi = false;
                                 CuadroDialogo.SetActive(false);
                                 ScrJugador.tagObjetoActivable = "Nada"; 
+                                habladoConPersonajes++;
                                 return;
                             }
 
@@ -211,6 +218,7 @@ public class DialogosNPCs : MonoBehaviour
                                 PuedeHablarItziar = false;
                                 CuadroDialogo.SetActive(false);
                                 ScrJugador.tagObjetoActivable = "Nada"; 
+                                habladoConPersonajes++;
                                 return;
                             }
 
@@ -233,6 +241,7 @@ public class DialogosNPCs : MonoBehaviour
                                 PuedeHablarPresi = false;
                                 CuadroDialogo.SetActive(false);
                                 ScrJugador.tagObjetoActivable = "Nada"; 
+                                habladoConPersonajes++;
                                 return;
                             }
 
