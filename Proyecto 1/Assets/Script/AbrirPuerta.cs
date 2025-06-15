@@ -5,28 +5,37 @@ using UnityEngine;
 public class AbrirPuerta : MonoBehaviour
 {
     Jugador ScrJugador;
-    Animator animPuerta;
-
+    Animator ScrAnimPuerta;
+    ControladorSFX ScrControladorSFX;
+    
     bool puertaAbierta = false;
     void Start()
     {
         ScrJugador = FindObjectOfType<Jugador>();
-        animPuerta = GetComponent<Animator>();
+        ScrControladorSFX = FindObjectOfType<ControladorSFX>();
+
     }
 
     void Update()
     {
         if(ScrJugador.rayoAccionToca == true)
         {
-            if(Input.GetKey(KeyCode.E) && puertaAbierta == false)
+            if(Input.GetKeyDown(KeyCode.E) && ScrJugador.rayoTocando.collider.gameObject.layer == LayerMask.NameToLayer("Puerta"))
             {
-                animPuerta.SetBool("Abrir",true);
-                puertaAbierta = true;
-            }
-            else if(Input.GetKey(KeyCode.E) && puertaAbierta == true)
-            {
-                animPuerta.SetBool("Abrir",false);
-                puertaAbierta = false;
+                ScrAnimPuerta = ScrJugador.rayoTocando.collider.gameObject.GetComponent<Animator>();
+
+                if (puertaAbierta == false)
+                {
+                    ScrControladorSFX.SonidoAbrePuerta();
+                    ScrAnimPuerta.SetBool("Abrir", true);
+                    puertaAbierta = true;
+                }
+                else
+                {
+                    ScrControladorSFX.SonidoCierraPuerta();
+                    ScrAnimPuerta.SetBool("Abrir", false);
+                    puertaAbierta = false;
+                }
             }
         }
     }

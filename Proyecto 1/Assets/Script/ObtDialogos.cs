@@ -38,7 +38,7 @@ public class ObtDialogos : MonoBehaviour
             ExcelDialogos[id] = values;
         }
     }
-
+    
     public string ObtenerDialogo(int id, int columna)
     {
         if (!ExcelDialogos.ContainsKey(id))

@@ -11,17 +11,25 @@ TagManager:
   - Puzzle
   - Jugador
   - Puerta
+  - Boli
+  - Boli1
+  - Lapiz
+  - Lapiz1
+  - Falda
+  - Polo
+  - Sueter
+  - Nada
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Jugador
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Puerta
+  - PuertaCerrada
+  - RayCast
+  - Camara
   - 
   - 
   - 

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
@@ -16,8 +17,8 @@ public class Jugador : MonoBehaviour
     public float sensibilidadVertical;
     private float horizontal;
     private float vertical;
-    private float verticalAux;   
-    
+    private float verticalAux;
+
     [Header("Objetos/Componentes")]
     public bool manoLlena;
     CharacterController controlador;
@@ -34,7 +35,12 @@ public class Jugador : MonoBehaviour
     [Header("Accion")]
     public bool rayoAccionToca;
     public GameObject textoAccion;
+    public GameObject textoAccion1;
     public string nombreObjActivable;
+    public string tagObjetoActivable;
+    public RaycastHit rayoTocando;
+    [SerializeField] GameObject Puntero;
+    public int objcogidos;
 
     [Header("Puzzle")]
     public bool rayoPuzzleToca;
@@ -46,7 +52,7 @@ public class Jugador : MonoBehaviour
 
     [Header("Control de Hit")]
     public GameObject objetoContactado;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -61,7 +67,7 @@ public class Jugador : MonoBehaviour
     void Update()
     {
         //Se a dado a jugar y no estas en un puzzle
-        if(ScrControlCanva.estaJugando == true && ScrPuzzles.enPuzzle == false)
+        if (ScrControlCanva.estaJugando == true && ScrPuzzles.enPuzzle == false)
         {
             Mirar();
             Mover();
@@ -73,7 +79,7 @@ public class Jugador : MonoBehaviour
 
             Accion();
             TocarPuzzle();
-        }       
+        }
     }
 
     void Mover()
@@ -110,28 +116,28 @@ public class Jugador : MonoBehaviour
     public void CentrarRaton()
     {
         Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;      
+        Cursor.visible = false;
     }
-    
+
 
     void CogerObjeto()
     {
+        RaycastHit rayoTocando;
+        Vector3 direccion = camara.transform.forward; //Siempre hacia delante pero en un vertor 3 para tener en cuenta la rotacion
+        Vector3 origen = OrigenRaycast.transform.position; //Lo mismo del vector
+        float alcanceCoger = 2f;
+        
+        Ray rayoCoger = new Ray(origen, direccion);//Definir RayCast de coger
         //Cojer Objetos
         if (Input.GetMouseButton(0))
         {
-            RaycastHit rayoTocando;
-            Vector3 direccion = camara.transform.forward; //Siempre hacia delante pero en un vertor 3 para tener en cuenta la rotacion
-            Vector3 origen = OrigenRaycast.transform.position; //Lo mismo del vector
-            float alcanceCoger = 2f;
-
-            Ray rayoCoger = new Ray(origen, direccion);//Definir RayCast de coger
-
             Debug.DrawRay(origen, direccion * alcanceCoger, Color.red);//Dibujar raycast
 
-            if(Physics.Raycast(rayoCoger, out rayoTocando, alcanceCoger) )//Lanzamos un RayCast
+            if (Physics.Raycast(rayoCoger, out rayoTocando, alcanceCoger))//Lanzamos un RayCast
             {
-                if(rayoTocando.collider.gameObject.CompareTag("ObjInteractuable") && manoLlena == false)
+                if (rayoTocando.collider.gameObject.CompareTag("ObjInteractuable") && manoLlena == false)
                 {
+
                     ObjOriginal = rayoTocando.collider.gameObject;
 
                     ObjOriginal.transform.position = manoVacia.transform.position;
@@ -142,9 +148,22 @@ public class Jugador : MonoBehaviour
 
                     ObjMano = ObjOriginal;
 
+                    objcogidos++;
+
                     manoLlena = true;
                 }
+            }
+        }
 
+        if (Physics.Raycast(rayoCoger, out rayoTocando, alcanceCoger))
+        {
+            if (rayoTocando.collider.gameObject.CompareTag("ObjInteractuable"))
+            {
+                Puntero.transform.localScale = new Vector2(0.04f, 0.04f);
+            }
+            else
+            {
+                Puntero.transform.localScale = new Vector2(0.02f, 0.02f);
             }
         }
     }
@@ -163,9 +182,9 @@ public class Jugador : MonoBehaviour
 
             Debug.DrawRay(origen, direccion * alcanceDejar, Color.yellow);//Dibujar raycast
 
-            if(Physics.Raycast(rayoDejar, out rayoTocando, alcanceDejar))//Lanzamos un RayCast
+            if (Physics.Raycast(rayoDejar, out rayoTocando, alcanceDejar))//Lanzamos un RayCast
             {
-                if(rayoTocando.collider.gameObject.CompareTag("Suelo"))
+                if (rayoTocando.collider.gameObject.CompareTag("Suelo"))
                 {
                     dejarObjeto.transform.position = rayoTocando.point;//Transportar el Dejar Objeto al punto de choque del raycast dejar
                     ObjMano.GetComponent<BoxCollider>().enabled = true;//Activamos el collider del obj que dejamos
@@ -180,24 +199,23 @@ public class Jugador : MonoBehaviour
 
     public void Accion()
     {
-        RaycastHit rayoTocando;
         Vector3 direccion = camara.transform.forward; //Siempre hacia delante pero en un vertor 3 para tener en cuenta la rotacion
         Vector3 origen = OrigenRaycast.transform.position; //Lo mismo del vector
         float alcanceDejar = 2f;
-        
+
 
         Ray rayoDejar = new Ray(origen, direccion);//Definir RayCast de dejar
 
         Debug.DrawRay(origen, direccion * alcanceDejar, Color.blue);//Dibujar raycast
 
-        if(Physics.Raycast(rayoDejar, out rayoTocando, alcanceDejar))//Lanzamos el rayo de manera constante
+        if (Physics.Raycast(rayoDejar, out rayoTocando, alcanceDejar))//Lanzamos el rayo de manera constante
         {
-            //Debug.Log("Objeto tocado: " + rayoTocando.collider.gameObject.name);
 
             if (rayoTocando.collider.gameObject.CompareTag("Activable"))
             {
                 rayoAccionToca = true;
                 nombreObjActivable = rayoTocando.collider.gameObject.name;
+                rayoTocando.collider.gameObject.tag = tagObjetoActivable;
                 textoAccion.SetActive(true);
 
             }
@@ -205,6 +223,7 @@ public class Jugador : MonoBehaviour
             {
                 rayoAccionToca = false;
                 nombreObjActivable = null;
+                tagObjetoActivable = null;
                 textoAccion.SetActive(false);
             }
         }
@@ -224,7 +243,6 @@ public class Jugador : MonoBehaviour
         Vector3 origen = OrigenRaycast.transform.position; //Lo mismo del vector
         float alcanceDejar = 2f;
 
-
         Ray rayoDejar = new Ray(origen, direccion);//Definir RayCast de dejar
 
         Debug.DrawRay(origen, direccion * alcanceDejar, Color.green);//Dibujar raycast
@@ -235,24 +253,26 @@ public class Jugador : MonoBehaviour
             {
                 rayoPuzzleToca = true;
                 nombrePuzzle = rayoTocando.collider.gameObject.name;
+                textoAccion1.SetActive(true);
             }
-            
-            else 
+            else
             {
                 rayoPuzzleToca = false;
                 nombrePuzzle = null;
+                textoAccion1.SetActive(false);
             }
-            
+
         }
         else
         {
             // Si el raycast no toca nada, desactiva la accion de tocar el puzzle
             rayoPuzzleToca = false;
+            textoAccion1.SetActive(false);
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        objetoContactado = other.gameObject; 
+        objetoContactado = other.gameObject;
     }
 }

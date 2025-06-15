@@ -15,15 +15,34 @@ public class ControladorSFX : MonoBehaviour
     [SerializeField] AudioClip puertas; 
     [SerializeField] AudioClip ruido1;
     [SerializeField] AudioClip plopBotones;
+    [SerializeField] AudioClip abrrirPuerta;
+    [SerializeField] AudioClip cerrarPuerta;
+    [SerializeField] AudioClip puertaCerrada;
+    [SerializeField] AudioClip abrirCajon;
+    [SerializeField] AudioClip cerrarCajon;
 
     //Musicas
     [SerializeField] AudioClip MusicaPasilloDia1;
+    [SerializeField] AudioClip MusicaCuartoPrin;
+    [SerializeField] AudioClip MusicaCuartoJuanjo;
+    [SerializeField] AudioClip MusicaCuartoIsma;
+    [SerializeField] AudioClip MusicaCuartoNestor;
+    [SerializeField] AudioClip MusicaCuartoPresi;
+    [SerializeField] AudioClip MusicaCuartoPaul;
 
     [Header("Variables")]
     float duracionFadeOut = 2.5f;
     int contador = 0;
     bool yaReproducido = false;
-    bool SonandoAlgo = false;
+
+    //Boolleanos Musica
+    [SerializeField] bool musicaPasilloDia1 = false;
+    [SerializeField] bool musicaCuartoPrin = false;
+    [SerializeField] bool musicaCuartoJuanjo = false;
+    [SerializeField] bool musicaCuartoIsma = false;
+    [SerializeField] bool musicaCuartoNestor = false;
+    [SerializeField] bool musicaCuartoPresi = false;
+    [SerializeField] bool musicaCuartoPaul = false;
 
     [Header("Script")]
     ControlCanva controlCanva;
@@ -60,9 +79,6 @@ public class ControladorSFX : MonoBehaviour
             controlCanva.abrirPuertas = false;
         }
 
-        //Primer sonido de ruido
-        PrimerSonidoRuido();
-
         //Musica general del juego
         ReproductorDeMusica();
     }
@@ -76,6 +92,16 @@ public class ControladorSFX : MonoBehaviour
         SFX.PlayOneShot(sonidoPulsarBoton); 
     }
 
+    public void SonidoAbrePuerta()
+    {
+        SFX.PlayOneShot(abrrirPuerta);
+    }
+
+    public void SonidoCierraPuerta()
+    {
+        SFX.PlayOneShot(cerrarPuerta);
+    }
+
     public void CallarPantallaTitulo()
     {
         StartCoroutine(FadeOut(Musicas, duracionFadeOut));
@@ -85,6 +111,26 @@ public class ControladorSFX : MonoBehaviour
             SFX.PlayOneShot(pasos);
         }
     }
+
+    bool Abrir = false;
+    public void AbrirCajon()
+    {
+        if (Abrir == false)
+        {
+            SFX.PlayOneShot(abrirCajon);
+            Abrir = true;
+        }
+    }
+
+    bool Cerrar = false;
+    public void CerrarCajon()
+    {
+        if (Cerrar == false)
+        {
+            SFX.PlayOneShot(cerrarCajon);
+            Cerrar = true;   
+        }
+    }    
 
     private IEnumerator FadeOut(AudioSource audioSource, float duracion)
     {
@@ -100,9 +146,9 @@ public class ControladorSFX : MonoBehaviour
         audioSource.volume = inicioVolumen; // Por si quieres volver a usarlo
     }
 
-    void PrimerSonidoRuido()
+    public void PrimerSonidoRuido()
     {
-        if(dialogosNPCs.contadorPresi == 5 && yaReproducido == false)
+        if(yaReproducido == false)
         {
             StartCoroutine(Ruido1Tiempo());
         }
@@ -117,17 +163,131 @@ public class ControladorSFX : MonoBehaviour
 
     public void ReproductorDeMusica()
     {
-
-        switch(trigerActual.name)
+        switch (trigerActual.name)
         {
             case "TrigerMusicaPasillo":
-            if(SonandoAlgo == false)
-            {
-                Musicas.clip = MusicaPasilloDia1;
-                Musicas.Play();
-                SonandoAlgo = true;
-            }
-            break;
+                if (musicaPasilloDia1 == false)
+                {
+                    //Silenciar al resto
+                    musicaCuartoJuanjo = false;
+                    musicaCuartoPrin = false;
+                    musicaCuartoIsma = false;
+                    musicaCuartoNestor = false;
+                    musicaCuartoPresi = false;
+                    musicaCuartoPaul = false;
+
+                    //Accion
+                    Musicas.clip = MusicaPasilloDia1;
+                    Musicas.Play();
+                    musicaPasilloDia1 = true;
+                }
+                break;
+            case "TrigerMusicaCuartoPrin":
+                if (musicaCuartoPrin == false)
+                {
+                    //Silenciar al resto
+                    musicaCuartoJuanjo = false;
+                    musicaPasilloDia1 = false;
+                    musicaCuartoIsma = false;
+                    musicaCuartoNestor = false;
+                    musicaCuartoPresi = false;
+                    musicaCuartoPaul = false;
+
+                    //Accion
+                    Musicas.clip = MusicaCuartoPrin;
+                    Musicas.Play();
+                    musicaCuartoPrin = true;
+                }
+                break;
+            case "TrigerMusicaCuartoJuanjo":
+                if (musicaCuartoJuanjo == false)
+                {
+                    //Silenciar al resto
+                    musicaCuartoPrin = false;
+                    musicaPasilloDia1 = false;
+                    musicaCuartoIsma = false;
+                    musicaCuartoNestor = false;
+                    musicaCuartoPresi = false;
+                    musicaCuartoPaul = false;
+
+                    //Accion
+                    Musicas.clip = MusicaCuartoJuanjo;
+                    Musicas.Play();
+                    musicaCuartoJuanjo = true;
+                }
+                break;
+            case "TrigerMusicaCuartoIsma":
+                if (musicaCuartoIsma == false)
+                {
+                    //Silenciar al resto
+                    musicaCuartoPrin = false;
+                    musicaPasilloDia1 = false;
+                    musicaCuartoJuanjo = false;
+                    musicaCuartoNestor = false;
+                    musicaCuartoPresi = false;
+                    musicaCuartoPaul = false;
+
+                    //Accion
+                    Musicas.clip = MusicaCuartoIsma;
+                    Musicas.Play();
+                    musicaCuartoIsma = true;
+                }
+                break;
+            case "TrigerMusicaCuartoNestor":
+                if (musicaCuartoNestor == false)
+                {
+                    //Silenciar al resto
+                    musicaCuartoPrin = false;
+                    musicaPasilloDia1 = false;
+                    musicaCuartoJuanjo = false;
+                    musicaCuartoIsma = false;
+                    musicaCuartoPresi = false;
+                    musicaCuartoPaul = false;
+
+                    //Accion
+                    Musicas.clip = MusicaCuartoNestor;
+                    Musicas.Play();
+                    musicaCuartoNestor = true;
+                }
+                break;
+            case "TrigerMusicaCuartoPresi":
+                if (musicaCuartoPresi == false)
+                {
+                    //Silenciar al resto
+                    musicaCuartoPrin = false;
+                    musicaPasilloDia1 = false;
+                    musicaCuartoJuanjo = false;
+                    musicaCuartoIsma = false;
+                    musicaCuartoNestor = false;
+                    musicaCuartoPaul = false;
+
+                    //Accion
+                    Musicas.clip = MusicaCuartoPresi;
+                    Musicas.Play();
+                    musicaCuartoPresi = true;
+                }
+                break;
+            case "TrigerMusicaCuartoPaul":
+                if(musicaCuartoPaul == false)
+                {
+                    //Silenciar al resto
+                    musicaCuartoPrin = false;
+                    musicaPasilloDia1 = false;
+                    musicaCuartoJuanjo = false;
+                    musicaCuartoIsma = false;
+                    musicaCuartoNestor = false;
+                    musicaCuartoPresi = false;
+
+                    //Accion
+                    Musicas.clip = MusicaCuartoPaul;
+                    Musicas.Play();
+                    musicaCuartoPaul = true;
+                }
+                break;
         }
+    }
+    public void PuertaCerrada()
+    {
+        SFX.PlayOneShot(puertaCerrada);
     }
 }

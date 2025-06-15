@@ -7,37 +7,39 @@ public class Puzzles : MonoBehaviour
 {
     [Header("Scripts")]
     Jugador ScrJugador;
+    ControlCanva controlCanvas;
 
-    [Header("Posiciones Camara")]
+    [Header("Camaras")]
     public GameObject camaraPuzzle;
     private Camera camaraPrincipal;
-    public bool enPuzzle;
-    [SerializeField] Transform posicionCamaraPuzzle;
-    [SerializeField] Transform posicion2;
 
-   
+    [Header("Posiciones Camara")]
+    [SerializeField] Transform posicionCajon;
+
+    [Header("")]
+    public bool enPuzzle;
 
     void Start()
     {
         ScrJugador = FindObjectOfType<Jugador>();
+        controlCanvas = FindObjectOfType<ControlCanva>();
         camaraPrincipal = Camera.main;
     }
 
     void Update()
     {
         PasarCamaraPuzzle();
-        
-
     }
 
     void PasarCamaraPuzzle()
     {
         if (Input.GetKeyDown(KeyCode.E) && ScrJugador.rayoPuzzleToca)
         {
+            controlCanvas.EntrarPuzle();
             switch (ScrJugador.nombrePuzzle)
             {
-                case "Puzzle":
-                    camaraPuzzle.transform.position = posicionCamaraPuzzle.position;
+                case "Cajon":
+                    camaraPuzzle.transform.position = posicionCajon.transform.position;
                     break;
             }
 
@@ -48,6 +50,7 @@ public class Puzzles : MonoBehaviour
             if (camaraPrincipal != null)
             {
                 camaraPrincipal.gameObject.SetActive(!enPuzzle);
+                controlCanvas.SalirPuzle();
             }
 
             Cursor.lockState = CursorLockMode.None;
