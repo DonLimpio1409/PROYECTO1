@@ -316,6 +316,11 @@ public class Eventos : MonoBehaviour
             sistemaParticulas.SetActive(false);
             dialogosNPCs.contadorPresi++;
         }
+        if(dialogosNPCs.contadorPresi == 20)
+        {
+            Javier.tag = "Activable";
+            dialogosNPCs.PuedeHablarJavier = true;
+        }
     }
     void GrabarConjavi()
     {
