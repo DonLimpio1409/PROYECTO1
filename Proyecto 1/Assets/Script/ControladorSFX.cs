@@ -30,6 +30,7 @@ public class ControladorSFX : MonoBehaviour
     [SerializeField] AudioClip MusicaCuartoNestor;
     [SerializeField] AudioClip MusicaCuartoPresi;
     [SerializeField] AudioClip MusicaCuartoPaul;
+    [SerializeField] AudioClip MusicaTension;
 
     [Header("Variables")]
     float duracionFadeOut = 2.5f;
@@ -44,6 +45,7 @@ public class ControladorSFX : MonoBehaviour
     [SerializeField] bool musicaCuartoNestor = false;
     [SerializeField] bool musicaCuartoPresi = false;
     [SerializeField] bool musicaCuartoPaul = false;
+    [SerializeField] bool musicaTension = false;
 
     [Header("Script")]
     ControlCanva controlCanva;
@@ -186,6 +188,7 @@ public class ControladorSFX : MonoBehaviour
                     musicaCuartoNestor = false;
                     musicaCuartoPresi = false;
                     musicaCuartoPaul = false;
+                    musicaTension = false;
 
                     //Accion
                     Musicas.clip = MusicaPasilloDia1;
@@ -203,6 +206,7 @@ public class ControladorSFX : MonoBehaviour
                     musicaCuartoNestor = false;
                     musicaCuartoPresi = false;
                     musicaCuartoPaul = false;
+                    musicaTension = false;
 
                     //Accion
                     Musicas.clip = MusicaCuartoPrin;
@@ -220,6 +224,7 @@ public class ControladorSFX : MonoBehaviour
                     musicaCuartoNestor = false;
                     musicaCuartoPresi = false;
                     musicaCuartoPaul = false;
+                    musicaTension = false;
 
                     //Accion
                     Musicas.clip = MusicaCuartoJuanjo;
@@ -237,6 +242,7 @@ public class ControladorSFX : MonoBehaviour
                     musicaCuartoNestor = false;
                     musicaCuartoPresi = false;
                     musicaCuartoPaul = false;
+                    musicaTension = false;
 
                     //Accion
                     Musicas.clip = MusicaCuartoIsma;
@@ -254,6 +260,7 @@ public class ControladorSFX : MonoBehaviour
                     musicaCuartoIsma = false;
                     musicaCuartoPresi = false;
                     musicaCuartoPaul = false;
+                    musicaTension = false;
 
                     //Accion
                     Musicas.clip = MusicaCuartoNestor;
@@ -271,6 +278,7 @@ public class ControladorSFX : MonoBehaviour
                     musicaCuartoIsma = false;
                     musicaCuartoNestor = false;
                     musicaCuartoPaul = false;
+                    musicaTension = false;
 
                     //Accion
                     Musicas.clip = MusicaCuartoPresi;
@@ -279,6 +287,24 @@ public class ControladorSFX : MonoBehaviour
                 }
                 break;
             case "TrigerMusicaCuartoPaul":
+                if (musicaCuartoPaul == false)
+                {
+                    //Silenciar al resto
+                    musicaCuartoPrin = false;
+                    musicaPasilloDia1 = false;
+                    musicaCuartoJuanjo = false;
+                    musicaCuartoIsma = false;
+                    musicaCuartoNestor = false;
+                    musicaCuartoPresi = false;
+                    musicaTension = false;
+
+                    //Accion
+                    Musicas.clip = MusicaCuartoPaul;
+                    Musicas.Play();
+                    musicaCuartoPaul = true;
+                }
+                break;
+                case "TriguerMusicaTension":
                 if(musicaCuartoPaul == false)
                 {
                     //Silenciar al resto
@@ -288,11 +314,12 @@ public class ControladorSFX : MonoBehaviour
                     musicaCuartoIsma = false;
                     musicaCuartoNestor = false;
                     musicaCuartoPresi = false;
+                    musicaCuartoPaul = false;
 
                     //Accion
-                    Musicas.clip = MusicaCuartoPaul;
+                    Musicas.clip = MusicaTension;
                     Musicas.Play();
-                    musicaCuartoPaul = true;
+                    musicaTension = true;
                 }
                 break;
         }

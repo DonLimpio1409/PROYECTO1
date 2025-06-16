@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.AI;
+using Unity.VisualScripting;
 
 public class Eventos : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class Eventos : MonoBehaviour
     [SerializeField] GameObject mision2;
     [SerializeField] GameObject mision3;
     [SerializeField] GameObject mision4;
+    [SerializeField] GameObject mision5;
+    [SerializeField] GameObject mision6;
     [SerializeField] GameObject cajon;
     [SerializeField] GameObject humo;
     [SerializeField] GameObject itziarCubo;
@@ -30,6 +33,9 @@ public class Eventos : MonoBehaviour
     [SerializeField] GameObject mazo;
     [SerializeField] GameObject extintorRoto;
     [SerializeField] GameObject extintorNormal;
+    [SerializeField] GameObject movil;
+    [SerializeField] GameObject LanzadorEscena;
+
 
     [Header("Personajes")]
     [SerializeField] GameObject Layla;
@@ -49,6 +55,8 @@ public class Eventos : MonoBehaviour
     DestruirPaul destruirPaul;
     Boton boton;
     Puzzles puzzles;
+    DetectorSonidoF detectorSonidoF;
+    PasaDia pasaDia;
 
     [Header("Variables")]
     public bool sePuedeDormir = false;
@@ -64,6 +72,8 @@ public class Eventos : MonoBehaviour
         destruirPaul = FindObjectOfType<DestruirPaul>();
         boton = FindObjectOfType<Boton>();
         puzzles = FindObjectOfType<Puzzles>();
+        pasaDia = FindObjectOfType<PasaDia>();
+        detectorSonidoF = FindObjectOfType<DetectorSonidoF>();
 
         cama.SetActive(false);
     }
@@ -78,6 +88,8 @@ public class Eventos : MonoBehaviour
         Dormir1();
         PuzlePaul();
         EscenaExtintoresYPresi();
+        GrabarConjavi();
+        Juicio();
     }
 
     void PrimeraEscenaPresi()
@@ -96,6 +108,7 @@ public class Eventos : MonoBehaviour
         if (destruirPresi.destPresi == true)
         {
             presi1.transform.position = new Vector3(0, 0, 200);
+            destruirPresi.destPresi = false;
         }
     }
 
@@ -257,6 +270,8 @@ public class Eventos : MonoBehaviour
 
         if (dialogosNPCs.contadorPaul == 16)
         {
+            Presi.transform.position = new Vector3(-317.991f, 7.969f, -25.961f);
+            Presi.transform.rotation = Quaternion.Euler(0, -252.242f, 0);
             dialogosNPCs.contadorPaul++;
             ordenadorPaul.tag = "nada";
         }
@@ -266,14 +281,12 @@ public class Eventos : MonoBehaviour
     {
         if (dialogosNPCs.contadorPaul == 17)
         {
-            Presi.transform.position = new Vector3(-317.991f, 7.969f, -25.961f);
-            Presi.transform.rotation = Quaternion.Euler(0, -252.242f, 0);
-            extintorNormal.SetActive(true);
+            extintorNormal.SetActive(false);
             sistemaParticulas.SetActive(true);
-            dialogosNPCs.PuedeHablarPresi = true;
             extintorRoto.SetActive(true);
-            dialogosNPCs.contadorPaul++;
+            dialogosNPCs.PuedeHablarPresi = true;
             Presi.tag = "Activable";
+            dialogosNPCs.contadorPaul++;
         }
         if (dialogosNPCs.contadorPresi == 14)
         {
@@ -283,7 +296,72 @@ public class Eventos : MonoBehaviour
         {
             dialogosNPCs.PuedeHablarPresi = true;
             Presi.tag = "Activable";
+            Destroy(jugador.ObjMano);
+            jugador.ObjMano = null;
+            jugador.manoLlena = false;
         }
+        if (dialogosNPCs.contadorPresi == 19)
+        {
+            Debug.Log("No estoy");
+            Javier.transform.position = new Vector3(-319.076f, 8.084f, -31.89f);
+            Javier.transform.rotation = Quaternion.Euler(0, -25.258f, 0);
+            Isma.transform.position = new Vector3(-307.0163f, 20.39014f, -23.22144f);
+            Isma.transform.rotation = Quaternion.Euler(0, 149.697f, 0);
+            Javier.tag = "Activable";
+            dialogosNPCs.PuedeHablarJavier = true;
+            movil.SetActive(true);
+            sistemaParticulas.SetActive(false);
+            dialogosNPCs.contadorPresi++;
+        }
+    }
+
+    void GrabarConjavi()
+    {
+        if (jugador.ObjMano == movil)
+        {
+            Javier.transform.position = new Vector3(-312.981f, 20.36f, -37.914f);
+            Javier.transform.rotation = Quaternion.Euler(0, 121.297f, 0);
+            dialogosNPCs.PuedeHablarJavier = true;
+            Javier.tag = "Activable";
+            StartCoroutine(SonidoF());
+            Destroy(jugador.ObjMano);
+            jugador.ObjMano = null;
+            jugador.manoLlena = false;
+        }
+        if (dialogosNPCs.contadorJavier == 30)
+        {
+            Presi.transform.position = new Vector3(-320.919f, 20.275f, -43.482f);
+            Presi.transform.rotation = Quaternion.Euler(0, -248.019f, 0);
+            Presi.tag = "Activable";
+            dialogosNPCs.PuedeHablarPresi = true;
+            mision5.GetComponent<Animator>().SetBool("HaPasado", true);
+            StartCoroutine(Esperar());
+            dialogosNPCs.contadorJavier++;
+        }
+        if (dialogosNPCs.contadorPresi == 31)
+        {
+            mision3.GetComponent<Animator>().SetBool("HaPasado", true);
+            StartCoroutine(Esperar());
+            Javier.transform.position = new Vector3(0, 0, 200);
+            cama.SetActive(true);
+            dialogosNPCs.contadorPresi++;
+        }
+    }
+
+    void Juicio()
+    {
+        if (pasaDia.VpasaDia == 2)
+        {
+            mision6.GetComponent<Animator>().SetBool("HaPasado", true);
+            StartCoroutine(Esperar());
+            LanzadorEscena.SetActive(true);
+        }
+    }
+
+    IEnumerator SonidoF()
+    {
+        yield return new WaitForSeconds(6f);
+        Debug.Log("Sonido fuerte");
     }
 
     IEnumerator Esperar()
@@ -294,6 +372,7 @@ public class Eventos : MonoBehaviour
         mision2.GetComponent<Animator>().SetBool("HaPasado", false);
         mision3.GetComponent<Animator>().SetBool("HaPasado", false);
         mision4.GetComponent<Animator>().SetBool("HaPasado", false);
+        mision5.GetComponent<Animator>().SetBool("HaPasado", false);
     }
 
     IEnumerator Esperar1()

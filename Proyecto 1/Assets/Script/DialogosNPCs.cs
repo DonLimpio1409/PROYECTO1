@@ -115,7 +115,7 @@ public class DialogosNPCs : MonoBehaviour
 
                             if (textoAEnseñar.Contains('$'))
                             {
-                                PuedeHablarPresi = false;
+                                PuedeHablarIsrael = false;
                                 CuadroDialogo.SetActive(false);
                                 ScrJugador.tagObjetoActivable = "Nada";
                                 habladoConPersonajes++;
@@ -137,10 +137,10 @@ public class DialogosNPCs : MonoBehaviour
                             CuadroDialogo.GetComponent<Image>().sprite = CuadroNestor;
                             CuadroDialogo.SetActive(true);
 
-                            if (textoAEnseñar == "#")
+                            if (textoAEnseñar == "º")
                             {
                                 Debug.Log("Dentro");
-                                PuedeHablarPresi = false;
+                                PuedeHablarNestor = false;
                                 CuadroDialogo.SetActive(false);
                                 ScrJugador.tagObjetoActivable = "Nada"; 
                                 habladoConPersonajes++;
@@ -190,7 +190,7 @@ public class DialogosNPCs : MonoBehaviour
                             if (textoAEnseñar == "&")
                             {
                                 Debug.Log("Dentro");
-                                PuedeHablarPresi = false;
+                                PuedeHablarJavier = false;
                                 CuadroDialogo.SetActive(false);
                                 ScrJugador.tagObjetoActivable = "Nada"; 
                                 habladoConPersonajes++;
@@ -238,7 +238,7 @@ public class DialogosNPCs : MonoBehaviour
                             if (textoAEnseñar == "/")
                             {
                                 Debug.Log("Dentro");
-                                PuedeHablarPresi = false;
+                                PuedeHablarPaul = false;
                                 CuadroDialogo.SetActive(false);
                                 ScrJugador.tagObjetoActivable = "Nada"; 
                                 habladoConPersonajes++;
