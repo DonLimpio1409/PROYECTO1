@@ -15,7 +15,7 @@ C:/Users/Usuario/Documents/GitHub/PROYECTO1/Proyecto 1
 -logFile
 Logs/AssetImportWorker3.log
 -srvPort
-59712
+59892
 Successfully changed project path to: C:/Users/Usuario/Documents/GitHub/PROYECTO1/Proyecto 1
 C:/Users/Usuario/Documents/GitHub/PROYECTO1/Proyecto 1
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,12 +49,12 @@ C:/Users/Usuario/Documents/GitHub/PROYECTO1/Proyecto 1
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [11920] Host "[IP] 192.168.1.132 [Port] 0 [Flags] 2 [Guid] 2410177967 [EditorId] 2410177967 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-1OD70R12) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [8420] Host "[IP] 192.168.1.132 [Port] 0 [Flags] 2 [Guid] 1202315856 [EditorId] 1202315856 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-1OD70R12) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [11920] Host "[IP] 192.168.1.132 [Port] 0 [Flags] 2 [Guid] 2410177967 [EditorId] 2410177967 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-1OD70R12) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [8420] Host "[IP] 192.168.1.132 [Port] 0 [Flags] 2 [Guid] 1202315856 [EditorId] 1202315856 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-1OD70R12) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 15 workers.
-Refreshing native plugins compatible for Editor in 8.64 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 9.60 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.17f1 (4fc78088f837)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.17f1/Editor/Data/Resources/UnitySubsystems
@@ -70,47 +70,47 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.17f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.17f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.17f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56392
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56288
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.17f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.17f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.007780 seconds.
-- Loaded All Assemblies, in  0.389 seconds
+Registered in 0.009723 seconds.
+- Loaded All Assemblies, in  0.538 seconds
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 572 ms
+Android Extension - Scanning For ADB Devices 716 ms
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.930 seconds
-Domain Reload Profiling: 1318ms
-	BeginReloadAssembly (137ms)
+- Finished resetting the current domain, in  1.227 seconds
+Domain Reload Profiling: 1764ms
+	BeginReloadAssembly (175ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (35ms)
-	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (57ms)
-	LoadAllAssembliesAndSetupDomain (148ms)
-		LoadAssemblies (135ms)
+	RebuildCommonClasses (54ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (80ms)
+	LoadAllAssembliesAndSetupDomain (214ms)
+		LoadAssemblies (174ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (146ms)
-			TypeCache.Refresh (144ms)
-				TypeCache.ScanAssembly (131ms)
-			ScanForSourceGeneratedMonoScriptInfo (0ms)
+		AnalyzeDomain (210ms)
+			TypeCache.Refresh (207ms)
+				TypeCache.ScanAssembly (189ms)
+			ScanForSourceGeneratedMonoScriptInfo (1ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (931ms)
+	FinalizeReload (1228ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (870ms)
+		SetupLoadedEditorAssemblies (1150ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (695ms)
-			SetLoadedEditorAssemblies (4ms)
+			InitializePlatformSupportModulesInManaged (892ms)
+			SetLoadedEditorAssemblies (7ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (2ms)
-			ProcessInitializeOnLoadAttributes (121ms)
-			ProcessInitializeOnLoadMethodAttributes (48ms)
+			BeforeProcessingInitializeOnLoad (3ms)
+			ProcessInitializeOnLoadAttributes (188ms)
+			ProcessInitializeOnLoadMethodAttributes (60ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -118,52 +118,52 @@ Domain Reload Profiling: 1318ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.688 seconds
-Refreshing native plugins compatible for Editor in 3.22 ms, found 3 plugins.
+- Loaded All Assemblies, in  1.026 seconds
+Refreshing native plugins compatible for Editor in 3.74 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.592 seconds
-Domain Reload Profiling: 1278ms
-	BeginReloadAssembly (146ms)
+- Finished resetting the current domain, in  0.896 seconds
+Domain Reload Profiling: 1919ms
+	BeginReloadAssembly (228ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (5ms)
+		DisableScriptedObjects (7ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (23ms)
-	RebuildCommonClasses (36ms)
-	RebuildNativeTypeToScriptingClass (14ms)
-	initialDomainReloadingComplete (45ms)
-	LoadAllAssembliesAndSetupDomain (445ms)
-		LoadAssemblies (332ms)
+		CreateAndSetChildDomain (42ms)
+	RebuildCommonClasses (47ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (58ms)
+	LoadAllAssembliesAndSetupDomain (677ms)
+		LoadAssemblies (541ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (198ms)
-			TypeCache.Refresh (168ms)
-				TypeCache.ScanAssembly (153ms)
-			ScanForSourceGeneratedMonoScriptInfo (22ms)
+		AnalyzeDomain (260ms)
+			TypeCache.Refresh (230ms)
+				TypeCache.ScanAssembly (209ms)
+			ScanForSourceGeneratedMonoScriptInfo (21ms)
 			ResolveRequiredComponents (6ms)
-	FinalizeReload (592ms)
+	FinalizeReload (897ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (416ms)
+		SetupLoadedEditorAssemblies (638ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (24ms)
-			SetLoadedEditorAssemblies (5ms)
+			InitializePlatformSupportModulesInManaged (32ms)
+			SetLoadedEditorAssemblies (6ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (60ms)
-			ProcessInitializeOnLoadAttributes (301ms)
-			ProcessInitializeOnLoadMethodAttributes (20ms)
-			AfterProcessingInitializeOnLoad (5ms)
+			BeforeProcessingInitializeOnLoad (77ms)
+			ProcessInitializeOnLoadAttributes (475ms)
+			ProcessInitializeOnLoadMethodAttributes (37ms)
+			AfterProcessingInitializeOnLoad (9ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (7ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.12 seconds
-Refreshing native plugins compatible for Editor in 3.32 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (9ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.11 seconds
+Refreshing native plugins compatible for Editor in 3.09 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3199 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 29 unused Assets / (29.8 KB). Loaded Objects now: 3688.
-Memory consumption went from 155.0 MB to 155.0 MB.
-Total: 4.466600 ms (FindLiveObjects: 0.456800 ms CreateObjectMapping: 0.175900 ms MarkObjects: 3.709300 ms  DeleteObjects: 0.122700 ms)
+Memory consumption went from 154.7 MB to 154.6 MB.
+Total: 5.473000 ms (FindLiveObjects: 0.387100 ms CreateObjectMapping: 0.097200 ms MarkObjects: 4.868000 ms  DeleteObjects: 0.118100 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -180,50 +180,402 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 179874.257161 seconds.
-  path: Assets/Modelos/TexturaPablo 1/TexturaPablo/Madera.003_Displacement.1001.png
-  artifactKey: Guid(9e1e59a246fc9e4499f8d9d7dd147820) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Modelos/TexturaPablo 1/TexturaPablo/Madera.003_Displacement.1001.png using Guid(9e1e59a246fc9e4499f8d9d7dd147820) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fdb17ba481c7d7743bca810eb9a79d29') in 0.102845 seconds
+  Time since last request: 257405.060714 seconds.
+  path: Assets/Modelos/Materiales/HabitacionIsma/Bebida.001.mat
+  artifactKey: Guid(1dde30e643ed96b4b8fd7454cf8a5a60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/Materiales/HabitacionIsma/Bebida.001.mat using Guid(1dde30e643ed96b4b8fd7454cf8a5a60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57d5e3ee49543167b7ed2c78ed29037d') in 0.135997 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 46.025537 seconds.
-  path: Assets/Modelos/Materiales/Habitacion Paul/Cojin.003.mat
-  artifactKey: Guid(ee00dff971c49ab4ab71e52c0e36e7f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Modelos/Materiales/Habitacion Paul/Cojin.003.mat using Guid(ee00dff971c49ab4ab71e52c0e36e7f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '802ca4217aa233e165d9e14406f748e8') in 0.076460 seconds
+  Time since last request: 0.000106 seconds.
+  path: Assets/Modelos/Materiales/HabitacionIsma/Cable.001.mat
+  artifactKey: Guid(cb6cfeb21cb4ddf40ba71f8d001baf88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/Materiales/HabitacionIsma/Cable.001.mat using Guid(cb6cfeb21cb4ddf40ba71f8d001baf88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f10cdc8690b268fbd4f7c03c5106a066') in 0.019160 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000131 seconds.
-  path: Assets/Modelos/Materiales/Habitacion Paul/Mancuerna.mat
-  artifactKey: Guid(cb2d2b37431a6d14fa76bc4d0fb38098) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Modelos/Materiales/Habitacion Paul/Mancuerna.mat using Guid(cb2d2b37431a6d14fa76bc4d0fb38098) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ea207db0ec4dc489f59d2c7eb178006') in 0.034582 seconds
+  Time since last request: 0.000047 seconds.
+  path: Assets/Modelos/Materiales/HabitacionIsma/Puerta.003.mat
+  artifactKey: Guid(207af8703c403704284173442195faa9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/Materiales/HabitacionIsma/Puerta.003.mat using Guid(207af8703c403704284173442195faa9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02b2fb429905fa38ab7ff26b624a6647') in 0.024612 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000076 seconds.
-  path: Assets/Modelos/Materiales/Habitacion Paul/Ventana.002.mat
-  artifactKey: Guid(887bff25daa3c394cb6102b5b6ac42b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Modelos/Materiales/Habitacion Paul/Ventana.002.mat using Guid(887bff25daa3c394cb6102b5b6ac42b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '047340467ab5ab26bc34edadb8bdce01') in 0.011596 seconds
+  Time since last request: 0.000440 seconds.
+  path: Assets/Modelos/Materiales/HabitacionIsma/Electro.mat
+  artifactKey: Guid(d1e4356637e12034f91fe35ceb4ed142) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/Materiales/HabitacionIsma/Electro.mat using Guid(d1e4356637e12034f91fe35ceb4ed142) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ab23d06aa8a200a6cac1443843fec37') in 0.031350 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/Modelos/Materiales/HabitacionIsma/portatil.001.mat
+  artifactKey: Guid(76d9fee2b56ebc04eb91e4518556c2b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/Materiales/HabitacionIsma/portatil.001.mat using Guid(76d9fee2b56ebc04eb91e4518556c2b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e40f0e51f8579f6144abded88c90414') in 0.026462 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 3.928221 seconds.
+  path: Assets/Modelos/TextDespachoPresi/Silla_Alpha.1001.png
+  artifactKey: Guid(a6b87aeecbec82b48911e68a55f41c1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/Silla_Alpha.1001.png using Guid(a6b87aeecbec82b48911e68a55f41c1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b0d8b60f7374cb4de92d3feb2bc170a') in 0.021882 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Modelos/TextDespachoPresi/Silla_Normal.1001.png
+  artifactKey: Guid(e5063597c484b3f45b418b0eb11a2e5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/Silla_Normal.1001.png using Guid(e5063597c484b3f45b418b0eb11a2e5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1a70cd73fc0d74d0029cc84d1095db4') in 0.015227 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.011026 seconds.
+  path: Assets/Modelos/TextDespachoPresi/SillaGente_Emission.1001.png
+  artifactKey: Guid(dc9ca49d1cd444947b370c8a8dbfc0aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/SillaGente_Emission.1001.png using Guid(dc9ca49d1cd444947b370c8a8dbfc0aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c68020e422233490b153d13f31652ced') in 0.011901 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.020696 seconds.
+  path: Assets/Modelos/TextDespachoPresi/Sofa.001_Displacement.1001.png
+  artifactKey: Guid(d413683339e617c4a9ab5a1053d61bfb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/Sofa.001_Displacement.1001.png using Guid(d413683339e617c4a9ab5a1053d61bfb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f87693450d7e5c2b2d95eddf84ceb841') in 0.018661 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.036296 seconds.
+  path: Assets/Modelos/TextDespachoPresi/Suelo.001_Emission.1001.png
+  artifactKey: Guid(2b18b5e913147324da7abab348fb3d29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/Suelo.001_Emission.1001.png using Guid(2b18b5e913147324da7abab348fb3d29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '609975ffc816b34d063f2016292ac014') in 0.012008 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.026166 seconds.
+  path: Assets/Modelos/TextDespachoPresi/Techo.002_Emission.1001.png
+  artifactKey: Guid(b668e33920e22344dab6b76403cb0b33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/Techo.002_Emission.1001.png using Guid(b668e33920e22344dab6b76403cb0b33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4dc027b0e7253d342383e56b45e61bc') in 0.012984 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 2.772801 seconds.
+  path: Assets/Modelos/TextDespachoPresi/Puerta_BaseColor.1001.png
+  artifactKey: Guid(51d6b251da315b84c96a00daa06fcfc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/Puerta_BaseColor.1001.png using Guid(51d6b251da315b84c96a00daa06fcfc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83409e5d45ec321f078362417b8cf27e') in 0.015228 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Modelos/TextDespachoPresi/Puerta_Metallic.1001.png
+  artifactKey: Guid(355e213b578333a4aa0dadd7117c4402) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/Puerta_Metallic.1001.png using Guid(355e213b578333a4aa0dadd7117c4402) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f29c7016f99868898f05e186254c45b') in 0.017790 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.001195 seconds.
+  path: Assets/Modelos/TextDespachoPresi/Silla.002_BaseColor.1001.png
+  artifactKey: Guid(7f3e9984d5a7d964aa24948412c91467) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/Silla.002_BaseColor.1001.png using Guid(7f3e9984d5a7d964aa24948412c91467) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '700db72f0b2ee9a12d15012952ea0188') in 0.017155 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 2.429706 seconds.
+  path: Assets/Modelos/TextDespachoPresi/Vaso_Metallic.1001.png
+  artifactKey: Guid(7be50c788de2db5408b98222f6690b1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/Vaso_Metallic.1001.png using Guid(7be50c788de2db5408b98222f6690b1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a5e8599b11d44fa5caacb15c58f7b57') in 0.018598 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 115.458843 seconds.
+  path: Assets/Modelos/Materiales/HabitacionProta/Peluche.mat
+  artifactKey: Guid(e4d69fb2132da5a4a91d894a77149a72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/Materiales/HabitacionProta/Peluche.mat using Guid(e4d69fb2132da5a4a91d894a77149a72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '351d7831feb927a2e3e4429320b1c42a') in 0.008998 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.012403 seconds.
+  path: Assets/Modelos/Materiales/HabitacionProta/Planta.001.mat
+  artifactKey: Guid(e8e8c4ea9a0edc64e87dfc70b8b8a968) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/Materiales/HabitacionProta/Planta.001.mat using Guid(e8e8c4ea9a0edc64e87dfc70b8b8a968) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb2ffe9527aff8266dc6f75bd810eaf1') in 0.013294 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.009027 seconds.
+  path: Assets/Modelos/Materiales/HabitacionProta/Puerta.mat
+  artifactKey: Guid(ea2c0bf0c6e68294cbe9ccd977f66ba8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/Materiales/HabitacionProta/Puerta.mat using Guid(ea2c0bf0c6e68294cbe9ccd977f66ba8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1667bb0f25d6590c952716c724bfff7f') in 0.015027 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Modelos/Materiales/HabitacionProta/Ventana.mat
+  artifactKey: Guid(f41df159bcbe99a45a7d6e5623d70bdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/Materiales/HabitacionProta/Ventana.mat using Guid(f41df159bcbe99a45a7d6e5623d70bdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03ae1a804f85cd2787af34e910d5ce78') in 0.053899 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 1
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000053 seconds.
-  path: Assets/Modelos/Materiales/Habitacion Paul/Shaker.mat
-  artifactKey: Guid(e5b605cb937dd3c44b589db0673b8829) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Modelos/Materiales/Habitacion Paul/Shaker.mat using Guid(e5b605cb937dd3c44b589db0673b8829) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ca2303f0198b12e45312deeddd39189') in 0.032270 seconds
+  Time since last request: 0.000094 seconds.
+  path: Assets/Modelos/Materiales/HabitacionProta/Techo.001.mat
+  artifactKey: Guid(e07a83e2544233643a4ee82eb4bc28d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/Materiales/HabitacionProta/Techo.001.mat using Guid(e07a83e2544233643a4ee82eb4bc28d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd41a7e60cdf4fa4115e26e8479a0eebd') in 0.011662 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Modelos/Materiales/HabitacionProta/Vaso.mat
+  artifactKey: Guid(ae056363d4a9c5745bb6d80e74490d0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/Materiales/HabitacionProta/Vaso.mat using Guid(ae056363d4a9c5745bb6d80e74490d0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '986b99ac164fa4940bbbc3eea0581bb7') in 0.013470 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/Modelos/Materiales/HabitacionProta/Puerta.001.mat
+  artifactKey: Guid(5a6bb9c11ee1a3d4e9d4721f6d8647a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/Materiales/HabitacionProta/Puerta.001.mat using Guid(5a6bb9c11ee1a3d4e9d4721f6d8647a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19ae172422c84bb8323f7b22a67e5179') in 0.041456 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Modelos/Materiales/HabitacionProta/Silla.001.mat
+  artifactKey: Guid(9f01b08025d9ecf438ead50ac179a797) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/Materiales/HabitacionProta/Silla.001.mat using Guid(9f01b08025d9ecf438ead50ac179a797) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c63d25748485b391eeefa38939a814dd') in 0.019869 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 54.055718 seconds.
+  path: Assets/Modelos/TextDespachoPresi/Planta_Alpha.1001.png
+  artifactKey: Guid(358de53fa2e06c44ba425a7e73c77a5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/Planta_Alpha.1001.png using Guid(358de53fa2e06c44ba425a7e73c77a5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0dfd386468510eeb3d607174bf70f2b9') in 0.015944 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Modelos/TextDespachoPresi/Planta_Emission.1001.png
+  artifactKey: Guid(8d7f8ededaf4aa14abc45b4f7c857fa2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/Planta_Emission.1001.png using Guid(8d7f8ededaf4aa14abc45b4f7c857fa2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e489c6dd5d48f67547b8bb1a4441bb29') in 0.013762 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Modelos/TextDespachoPresi/Puerta.001_BaseColor.1001.png
+  artifactKey: Guid(60c17ef9f09153f4392c94aab1b5f8b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/Puerta.001_BaseColor.1001.png using Guid(60c17ef9f09153f4392c94aab1b5f8b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3725f881e141768fe41531d1e8c519ae') in 0.014702 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000086 seconds.
+  path: Assets/Modelos/TextDespachoPresi/Puerta.001_Displacement.1001.png
+  artifactKey: Guid(e2ed6deda1e287243adf2c4bdb164f73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/Puerta.001_Displacement.1001.png using Guid(e2ed6deda1e287243adf2c4bdb164f73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da85f7de75e26114ffdc507563741688') in 0.018042 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Modelos/TextDespachoPresi/Planta_Roughness.1001.png
+  artifactKey: Guid(bc13a60d33dfa8549b547be6a4d41913) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/Planta_Roughness.1001.png using Guid(bc13a60d33dfa8549b547be6a4d41913) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '865cf90014446746dbfe2370b717456f') in 0.046033 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 1.196076 seconds.
+  path: Assets/Modelos/TextDespachoPresi/Pared.001_BaseColor.1001.png
+  artifactKey: Guid(ca112496874cf71479c2bd4e946dc29a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/Pared.001_BaseColor.1001.png using Guid(ca112496874cf71479c2bd4e946dc29a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e715424515ef539e69a2a8e36041e35a') in 0.013175 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.006487 seconds.
+  path: Assets/Modelos/TextDespachoPresi/Pared.001_Metallic.1001.png
+  artifactKey: Guid(4f793e9f6333aa14b988dc20a7f6e7cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/Pared.001_Metallic.1001.png using Guid(4f793e9f6333aa14b988dc20a7f6e7cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d5b3aa061d72fdbdd50b9686a67bfe9') in 0.010986 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.007611 seconds.
+  path: Assets/Modelos/TextDespachoPresi/ParedSalon_BaseColor.1001.png
+  artifactKey: Guid(dc1be62a8e5ddfb44b98076afe2b18c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/ParedSalon_BaseColor.1001.png using Guid(dc1be62a8e5ddfb44b98076afe2b18c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd272fa22b5d52dc2c25bfd9bdeaccbf4') in 0.025316 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.768869 seconds.
+  path: Assets/Modelos/TextDespachoPresi/Metal.002_Displacement.1001.png
+  artifactKey: Guid(bf2c3d1417bfa4047b904e43bdb5ea53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/Metal.002_Displacement.1001.png using Guid(bf2c3d1417bfa4047b904e43bdb5ea53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d7ec7cf7b1015b1329f6a7b8ef77428') in 0.012288 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.023873 seconds.
+  path: Assets/Modelos/TextDespachoPresi/Metal.002_Roughness.1001.png
+  artifactKey: Guid(1d97bb5c7768c7a48aee99a08c7e9d0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/Metal.002_Roughness.1001.png using Guid(1d97bb5c7768c7a48aee99a08c7e9d0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e8cc42a178f48caaf81640086d3ea7d') in 0.011925 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.001283 seconds.
+  path: Assets/Modelos/TextDespachoPresi/Metal.003_Displacement.1001.png
+  artifactKey: Guid(9b592d21bd584a1499c5fb1135b0b692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/Metal.003_Displacement.1001.png using Guid(9b592d21bd584a1499c5fb1135b0b692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13746a92b686be43be04ce06bf207042') in 0.012421 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.084744 seconds.
+  path: Assets/Modelos/TextDespachoPresi/Metal.001_BaseColor.1001.png
+  artifactKey: Guid(ca76d780737fbb84e8032e9fa97a2a45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/Metal.001_BaseColor.1001.png using Guid(ca76d780737fbb84e8032e9fa97a2a45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b1c5a843eabed00404511fa32223abf') in 0.014451 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.374185 seconds.
+  path: Assets/Modelos/TextDespachoPresi/Libro_Metallic.1001.png
+  artifactKey: Guid(efaefbee04eb6464eafab7a1234bbc63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/Libro_Metallic.1001.png using Guid(efaefbee04eb6464eafab7a1234bbc63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15842a953c562eb429552c04fb148d3f') in 0.014484 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Modelos/TextDespachoPresi/Madera.001_BaseColor.1001.png
+  artifactKey: Guid(cfbea2985f545ee488c5da1eeaef3255) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/Madera.001_BaseColor.1001.png using Guid(cfbea2985f545ee488c5da1eeaef3255) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc85bb900b7dbf3268472b9ae7a187d5') in 0.014827 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.010660 seconds.
+  path: Assets/Modelos/TextDespachoPresi/Madera.001_Normal.1001.png
+  artifactKey: Guid(115353012d257d34680320363b1db5b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/Madera.001_Normal.1001.png using Guid(115353012d257d34680320363b1db5b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0332d059a494519bc95dfb54ec084d05') in 0.012554 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.061227 seconds.
+  path: Assets/Modelos/TextDespachoPresi/Electro.003_Roughness.1001.png
+  artifactKey: Guid(73a1f23d73a055a48bd6e53f429ca3c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/Electro.003_Roughness.1001.png using Guid(73a1f23d73a055a48bd6e53f429ca3c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb616f5529cadf1494e97b0428edd22e') in 0.022609 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.009563 seconds.
+  path: Assets/Modelos/TextDespachoPresi/Escritorio_Emission.1001.png
+  artifactKey: Guid(8497b72b9e511234ab9ca0a99b10fd70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/Escritorio_Emission.1001.png using Guid(8497b72b9e511234ab9ca0a99b10fd70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51ab9dee45dac3cee6bc003461f35e89') in 0.016318 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.013681 seconds.
+  path: Assets/Modelos/TextDespachoPresi/Lampara_Alpha.1001.png
+  artifactKey: Guid(aa613835752a3164ba6df204d5ec081a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/Lampara_Alpha.1001.png using Guid(aa613835752a3164ba6df204d5ec081a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb72ec1a07341d8f3d205607123e8395') in 0.017327 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.002659 seconds.
+  path: Assets/Modelos/TextDespachoPresi/Lampara_Normal.1001.png
+  artifactKey: Guid(d58b5437b8027c54a8fc181859c7e82d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/Lampara_Normal.1001.png using Guid(d58b5437b8027c54a8fc181859c7e82d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63e899974f083ccec661c8e73e2ac87f') in 0.013721 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
   Time since last request: 0.000022 seconds.
-  path: Assets/Modelos/Materiales/Habitacion Paul/Puerta.009.mat
-  artifactKey: Guid(cb8f3752561945d4594397de591a03eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Modelos/Materiales/Habitacion Paul/Puerta.009.mat using Guid(cb8f3752561945d4594397de591a03eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba72f2148d66a4ed647431054b05f186') in 0.016641 seconds
+  path: Assets/Modelos/TextDespachoPresi/Lapiz_Displacement.1001.png
+  artifactKey: Guid(8c68b2d6421794440a1295a597422000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/Lapiz_Displacement.1001.png using Guid(8c68b2d6421794440a1295a597422000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e8ec0f0f96ddbf41acfdd0d57f1695e') in 0.015355 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.002864 seconds.
+  path: Assets/Modelos/TextDespachoPresi/Lapiz_Roughness.1001.png
+  artifactKey: Guid(c03990b8524e4de48a5cfb20e36c14ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/Lapiz_Roughness.1001.png using Guid(c03990b8524e4de48a5cfb20e36c14ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ae7550d02a6fb795beebb63b422b088') in 0.014538 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.049962 seconds.
+  path: Assets/Modelos/TextDespachoPresi/Dispositivos_Alpha.1001.png
+  artifactKey: Guid(ac67e460ebfcb5846bc8f07e30584c00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/Dispositivos_Alpha.1001.png using Guid(ac67e460ebfcb5846bc8f07e30584c00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a44ee862f7f5219a2f1be60324b73a49') in 0.018831 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Modelos/TextDespachoPresi/Dispositivos_Metallic.1001.png
+  artifactKey: Guid(ebb0993709875384f826869b5aab34ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/Dispositivos_Metallic.1001.png using Guid(ebb0993709875384f826869b5aab34ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9ba134284bf6cf71420c97e22e056be') in 0.016188 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.280757 seconds.
+  path: Assets/Modelos/TextDespachoPresi/Cuadro_BaseColor.1001.png
+  artifactKey: Guid(049ef9996bb04ac42a507265267876b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/Cuadro_BaseColor.1001.png using Guid(049ef9996bb04ac42a507265267876b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cba83a42d7701bbe1d68f584f321204b') in 0.013324 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.027054 seconds.
+  path: Assets/Modelos/TextDespachoPresi/Discos.002_BaseColor.1001.png
+  artifactKey: Guid(d042eba06d07e2447a8cee60e8fded58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/Discos.002_BaseColor.1001.png using Guid(d042eba06d07e2447a8cee60e8fded58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd066be7630b5cbfa82952841312d2d5') in 0.013590 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.338170 seconds.
+  path: Assets/Modelos/TextDespachoPresi/Alfombra.002_Displacement.1001.png
+  artifactKey: Guid(a0d2718b74ea16448adfb0256df0ef7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/Alfombra.002_Displacement.1001.png using Guid(a0d2718b74ea16448adfb0256df0ef7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fcb29e4b393b6d83c1f37fb5e9ce813b') in 0.013058 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.020231 seconds.
+  path: Assets/Modelos/TextDespachoPresi/Bebida_BaseColor.1001.png
+  artifactKey: Guid(0e4c5e481a3460a4aac505e431c100f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/Bebida_BaseColor.1001.png using Guid(0e4c5e481a3460a4aac505e431c100f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2952b12e167f0aca16269960e8501bfd') in 0.013403 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 2
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout

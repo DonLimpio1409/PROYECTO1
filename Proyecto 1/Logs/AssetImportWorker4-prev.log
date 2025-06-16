@@ -15,7 +15,7 @@ C:/Users/Usuario/Documents/GitHub/PROYECTO1/Proyecto 1
 -logFile
 Logs/AssetImportWorker4.log
 -srvPort
-59712
+59892
 Successfully changed project path to: C:/Users/Usuario/Documents/GitHub/PROYECTO1/Proyecto 1
 C:/Users/Usuario/Documents/GitHub/PROYECTO1/Proyecto 1
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,12 +49,12 @@ C:/Users/Usuario/Documents/GitHub/PROYECTO1/Proyecto 1
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [15476] Host "[IP] 192.168.1.132 [Port] 0 [Flags] 2 [Guid] 979141971 [EditorId] 979141971 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-1OD70R12) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [22556] Host "[IP] 192.168.1.132 [Port] 0 [Flags] 2 [Guid] 565535803 [EditorId] 565535803 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-1OD70R12) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [15476] Host "[IP] 192.168.1.132 [Port] 0 [Flags] 2 [Guid] 979141971 [EditorId] 979141971 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-1OD70R12) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [22556] Host "[IP] 192.168.1.132 [Port] 0 [Flags] 2 [Guid] 565535803 [EditorId] 565535803 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-1OD70R12) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 15 workers.
-Refreshing native plugins compatible for Editor in 9.61 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 8.89 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.17f1 (4fc78088f837)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.17f1/Editor/Data/Resources/UnitySubsystems
@@ -70,47 +70,47 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.17f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.17f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.17f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56692
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56672
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.17f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.17f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.007833 seconds.
-- Loaded All Assemblies, in  0.367 seconds
+Registered in 0.011234 seconds.
+- Loaded All Assemblies, in  0.529 seconds
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 405 ms
+Android Extension - Scanning For ADB Devices 713 ms
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.752 seconds
-Domain Reload Profiling: 1119ms
-	BeginReloadAssembly (109ms)
+- Finished resetting the current domain, in  1.225 seconds
+Domain Reload Profiling: 1753ms
+	BeginReloadAssembly (169ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (34ms)
-	RebuildNativeTypeToScriptingClass (11ms)
-	initialDomainReloadingComplete (58ms)
-	LoadAllAssembliesAndSetupDomain (155ms)
-		LoadAssemblies (107ms)
+	RebuildCommonClasses (51ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (82ms)
+	LoadAllAssembliesAndSetupDomain (211ms)
+		LoadAssemblies (167ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (152ms)
-			TypeCache.Refresh (151ms)
-				TypeCache.ScanAssembly (138ms)
-			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (0ms)
-	FinalizeReload (753ms)
+		AnalyzeDomain (207ms)
+			TypeCache.Refresh (204ms)
+				TypeCache.ScanAssembly (186ms)
+			ScanForSourceGeneratedMonoScriptInfo (1ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (1226ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (694ms)
+		SetupLoadedEditorAssemblies (1147ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (525ms)
-			SetLoadedEditorAssemblies (4ms)
+			InitializePlatformSupportModulesInManaged (888ms)
+			SetLoadedEditorAssemblies (6ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (2ms)
-			ProcessInitializeOnLoadAttributes (114ms)
-			ProcessInitializeOnLoadMethodAttributes (49ms)
+			BeforeProcessingInitializeOnLoad (4ms)
+			ProcessInitializeOnLoadAttributes (187ms)
+			ProcessInitializeOnLoadMethodAttributes (62ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -118,52 +118,52 @@ Domain Reload Profiling: 1119ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.588 seconds
-Refreshing native plugins compatible for Editor in 2.82 ms, found 3 plugins.
+- Loaded All Assemblies, in  1.021 seconds
+Refreshing native plugins compatible for Editor in 3.88 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.634 seconds
-Domain Reload Profiling: 1221ms
-	BeginReloadAssembly (134ms)
+- Finished resetting the current domain, in  0.894 seconds
+Domain Reload Profiling: 1913ms
+	BeginReloadAssembly (223ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (5ms)
+		DisableScriptedObjects (7ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (27ms)
-	RebuildCommonClasses (32ms)
-	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (37ms)
-	LoadAllAssembliesAndSetupDomain (372ms)
-		LoadAssemblies (266ms)
+		CreateAndSetChildDomain (46ms)
+	RebuildCommonClasses (48ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (57ms)
+	LoadAllAssembliesAndSetupDomain (678ms)
+		LoadAssemblies (535ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (177ms)
-			TypeCache.Refresh (157ms)
-				TypeCache.ScanAssembly (141ms)
-			ScanForSourceGeneratedMonoScriptInfo (14ms)
-			ResolveRequiredComponents (4ms)
-	FinalizeReload (635ms)
+		AnalyzeDomain (261ms)
+			TypeCache.Refresh (231ms)
+				TypeCache.ScanAssembly (206ms)
+			ScanForSourceGeneratedMonoScriptInfo (22ms)
+			ResolveRequiredComponents (5ms)
+	FinalizeReload (894ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (435ms)
+		SetupLoadedEditorAssemblies (635ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (25ms)
-			SetLoadedEditorAssemblies (5ms)
+			InitializePlatformSupportModulesInManaged (33ms)
+			SetLoadedEditorAssemblies (6ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (72ms)
-			ProcessInitializeOnLoadAttributes (308ms)
-			ProcessInitializeOnLoadMethodAttributes (19ms)
-			AfterProcessingInitializeOnLoad (6ms)
+			BeforeProcessingInitializeOnLoad (76ms)
+			ProcessInitializeOnLoadAttributes (467ms)
+			ProcessInitializeOnLoadMethodAttributes (42ms)
+			AfterProcessingInitializeOnLoad (10ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (7ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 2.69 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (10ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.10 seconds
+Refreshing native plugins compatible for Editor in 3.83 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3199 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 29 unused Assets / (29.8 KB). Loaded Objects now: 3688.
-Memory consumption went from 155.0 MB to 154.9 MB.
-Total: 3.408900 ms (FindLiveObjects: 0.334800 ms CreateObjectMapping: 0.094700 ms MarkObjects: 2.905300 ms  DeleteObjects: 0.072900 ms)
+Memory consumption went from 154.6 MB to 154.5 MB.
+Total: 4.687200 ms (FindLiveObjects: 0.523000 ms CreateObjectMapping: 0.170600 ms MarkObjects: 3.764600 ms  DeleteObjects: 0.226000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -180,10 +180,242 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 180076.031115 seconds.
-  path: Assets/Modelos/TexturaPablo 1/TexturaPablo/TexturaPablo/Discos_Roughness.1001.png
-  artifactKey: Guid(96eb2b97ed823fd40ba78fa0fc1510b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Modelos/TexturaPablo 1/TexturaPablo/TexturaPablo/Discos_Roughness.1001.png using Guid(96eb2b97ed823fd40ba78fa0fc1510b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7e0aa9aeeedf6ea6b07bfcc6a8f34b5') in 0.090950 seconds
+  Time since last request: 257367.973964 seconds.
+  path: Assets/Modelos/Blend_PasilloDespachoPresidenta_N_v23.fbx
+  artifactKey: Guid(0ade227164d3da94a953c69bc141c3b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/Blend_PasilloDespachoPresidenta_N_v23.fbx using Guid(0ade227164d3da94a953c69bc141c3b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc8495bc3f46363f37e5bf2112c8cb57') in 1.876214 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 440
+========================================================================
+Received Import Request.
+  Time since last request: 33.470092 seconds.
+  path: Assets/Modelos/Blend_HabitacionIsraelCorregida_N_v23.fbx
+  artifactKey: Guid(90ea531fc8225584c98af2c0db1cb2ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/Blend_HabitacionIsraelCorregida_N_v23.fbx using Guid(90ea531fc8225584c98af2c0db1cb2ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57d48d1d069224840a6e52310623f95f') in 1.679451 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 902
+========================================================================
+Received Import Request.
+  Time since last request: 0.049562 seconds.
+  path: Assets/Modelos/Materiales/HabitacionIsma/Alfombra.001.mat
+  artifactKey: Guid(68233723633d0e348a2253f29ef051e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/Materiales/HabitacionIsma/Alfombra.001.mat using Guid(68233723633d0e348a2253f29ef051e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06936ce0fd5e5ac41ac0a9a1854ae2a8') in 0.016756 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Modelos/Materiales/HabitacionIsma/Lampara.001.mat
+  artifactKey: Guid(005a603870ae7d4419dd4925d16f4286) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/Materiales/HabitacionIsma/Lampara.001.mat using Guid(005a603870ae7d4419dd4925d16f4286) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45308f7fcc7f0405c57ae75959591983') in 0.016850 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Modelos/Materiales/HabitacionIsma/Metal.001.mat
+  artifactKey: Guid(65dcd3f4a78f34048bfa8be527130961) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/Materiales/HabitacionIsma/Metal.001.mat using Guid(65dcd3f4a78f34048bfa8be527130961) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ccbf548766ba428544b991938d298d5b') in 0.032459 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Modelos/Materiales/HabitacionIsma/Vaso.002.mat
+  artifactKey: Guid(d850d2e050f756c428a72920af8c8f3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/Materiales/HabitacionIsma/Vaso.002.mat using Guid(d850d2e050f756c428a72920af8c8f3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc4df66d9b35746a33779edbca55353b') in 0.012423 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Modelos/Materiales/HabitacionIsma/Sofa.002.mat
+  artifactKey: Guid(4270caaa4b8f960468383e9e874309bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/Materiales/HabitacionIsma/Sofa.002.mat using Guid(4270caaa4b8f960468383e9e874309bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c895fcbd7168b28c36b40baa2f049bc4') in 0.015862 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000055 seconds.
+  path: Assets/Modelos/Materiales/HabitacionIsma/Persiana.001.mat
+  artifactKey: Guid(0bf5469aea6589544b2e06e804667ed6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/Materiales/HabitacionIsma/Persiana.001.mat using Guid(0bf5469aea6589544b2e06e804667ed6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5303917be99d88aaf4d189d244beec8') in 0.033532 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Modelos/Materiales/HabitacionIsma/Lampara.mat
+  artifactKey: Guid(086e8a2a1b45dc54990d513a456d72ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/Materiales/HabitacionIsma/Lampara.mat using Guid(086e8a2a1b45dc54990d513a456d72ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63830dcf6208469358ba4d0b97b87a65') in 0.016108 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Modelos/Materiales/HabitacionIsma/Bombilla.001.mat
+  artifactKey: Guid(327c2153ca37e9640bfb4cd1797b733c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/Materiales/HabitacionIsma/Bombilla.001.mat using Guid(327c2153ca37e9640bfb4cd1797b733c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a62c90fee6d41afe96a875731619bd44') in 0.013889 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Modelos/Materiales/HabitacionIsma/Metal.003.mat
+  artifactKey: Guid(812cb2037fa79be4686b55d6a6911f27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/Materiales/HabitacionIsma/Metal.003.mat using Guid(812cb2037fa79be4686b55d6a6911f27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12ed213d8cd55ee75b503e397f35b47f') in 0.026107 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000075 seconds.
+  path: Assets/Modelos/Materiales/HabitacionIsma/Juego.mat
+  artifactKey: Guid(d09283bd4508d964da0b90ffcb152f8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/Materiales/HabitacionIsma/Juego.mat using Guid(d09283bd4508d964da0b90ffcb152f8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa39feccb276ff31fb3b12830a4d1b3e') in 0.026187 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 3.928768 seconds.
+  path: Assets/Modelos/TextDespachoPresi/Silla.002_Emission.1001.png
+  artifactKey: Guid(2e1116e2d6dc58649a6175003d014a31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/Silla.002_Emission.1001.png using Guid(2e1116e2d6dc58649a6175003d014a31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ded9634d507d596b425bc33abeca6a6') in 0.020689 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.001976 seconds.
+  path: Assets/Modelos/TextDespachoPresi/Silla.002_Roughness.1001.png
+  artifactKey: Guid(f0cac67618c1ed240a023162fad3912d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/Silla.002_Roughness.1001.png using Guid(f0cac67618c1ed240a023162fad3912d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e2b233c9c06f860cf385e487900aa39') in 0.012603 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Modelos/TextDespachoPresi/Silla_Displacement.1001.png
+  artifactKey: Guid(7a65472ebc6ebad47ab38feaa20152df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/Silla_Displacement.1001.png using Guid(7a65472ebc6ebad47ab38feaa20152df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '689dac0fa91b07bae51cf2323b5938ca') in 0.016622 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.005577 seconds.
+  path: Assets/Modelos/TextDespachoPresi/SillaGente_Alpha.1001.png
+  artifactKey: Guid(af04d6b7671b38340885ca59fd2a57e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/SillaGente_Alpha.1001.png using Guid(af04d6b7671b38340885ca59fd2a57e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd5ed393623af8b98d457fac89e3ecc3') in 0.015282 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.005770 seconds.
+  path: Assets/Modelos/TextDespachoPresi/SillaGente_Metallic.1001.png
+  artifactKey: Guid(67be5b933f37f524f9592bc4a1ba2ff4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/SillaGente_Metallic.1001.png using Guid(67be5b933f37f524f9592bc4a1ba2ff4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b09c5270b374a15da7f3c1d1744d4201') in 0.011752 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.006324 seconds.
+  path: Assets/Modelos/TextDespachoPresi/Sofa.001_Alpha.1001.png
+  artifactKey: Guid(338f9ad6d78ba504cad4c8a14cfefe92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/Sofa.001_Alpha.1001.png using Guid(338f9ad6d78ba504cad4c8a14cfefe92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c2c1a8d3a85cb550a81be070f792c22') in 0.013455 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.013107 seconds.
+  path: Assets/Modelos/TextDespachoPresi/Sofa.001_Metallic.1001.png
+  artifactKey: Guid(0d81a365d8da49f4eac82422cb65e612) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/Sofa.001_Metallic.1001.png using Guid(0d81a365d8da49f4eac82422cb65e612) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d21449cb4870bf0ac7fd9a09bb9b124') in 0.014873 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.006369 seconds.
+  path: Assets/Modelos/TextDespachoPresi/Suelo.001_Alpha.1001.png
+  artifactKey: Guid(58dd350a2d325b041a31b6019c24e77c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/Suelo.001_Alpha.1001.png using Guid(58dd350a2d325b041a31b6019c24e77c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfad9d778dfa8a7069ed8e8821d4829b') in 0.014311 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.004857 seconds.
+  path: Assets/Modelos/TextDespachoPresi/Suelo.001_Metallic.1001.png
+  artifactKey: Guid(e740c0a5652ffa44aab0dbe28805d7cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/Suelo.001_Metallic.1001.png using Guid(e740c0a5652ffa44aab0dbe28805d7cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73bbcc278ac8b755059efb6a93f7bede') in 0.011115 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000806 seconds.
+  path: Assets/Modelos/TextDespachoPresi/Suelo.001_Roughness.1001.png
+  artifactKey: Guid(c2fecbaff217c6d4cbc8f76efae8db1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/Suelo.001_Roughness.1001.png using Guid(c2fecbaff217c6d4cbc8f76efae8db1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6d8367182601920e3132a2f45a5612d') in 0.011442 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.001422 seconds.
+  path: Assets/Modelos/TextDespachoPresi/Techo.002_Displacement.1001.png
+  artifactKey: Guid(cd65b1bad67b29d48a4cc106274a22e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/Techo.002_Displacement.1001.png using Guid(cd65b1bad67b29d48a4cc106274a22e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8de6886552f58b8318e0a3326050298') in 0.012471 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.006578 seconds.
+  path: Assets/Modelos/TextDespachoPresi/Techo.002_Normal.1001.png
+  artifactKey: Guid(0811720d7e0031e4195f42b0790788fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/Techo.002_Normal.1001.png using Guid(0811720d7e0031e4195f42b0790788fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be5241513380571f60bfe253468206f5') in 0.011345 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 2.745704 seconds.
+  path: Assets/Modelos/TextDespachoPresi/Puerta.001_Metallic.1001.png
+  artifactKey: Guid(bdcc6424200867443ab3e0478628faae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/Puerta.001_Metallic.1001.png using Guid(bdcc6424200867443ab3e0478628faae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2f0137f01e3d2bae537e8fd936aaeaf') in 0.011150 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.002223 seconds.
+  path: Assets/Modelos/TextDespachoPresi/Puerta_Alpha.1001.png
+  artifactKey: Guid(08c288d5874e77e4d8bdb1d758e09693) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/Puerta_Alpha.1001.png using Guid(08c288d5874e77e4d8bdb1d758e09693) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74062e9b98a30dc35606eb7b007bcee6') in 0.015454 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Modelos/TextDespachoPresi/Puerta_Normal.1001.png
+  artifactKey: Guid(060dd0ba95a098f4b85a7fa9c9fa317f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/Puerta_Normal.1001.png using Guid(060dd0ba95a098f4b85a7fa9c9fa317f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29b0f072662a998c9b2a3e080f17f431') in 0.024060 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.005587 seconds.
+  path: Assets/Modelos/TextDespachoPresi/Silla.002_Displacement.1001.png
+  artifactKey: Guid(49d34aedd3035fc45942d624ba65a5a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/Silla.002_Displacement.1001.png using Guid(49d34aedd3035fc45942d624ba65a5a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fe02c12299ed06b5c7776ca78a70490') in 0.022617 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 2.403363 seconds.
+  path: Assets/Modelos/TextDespachoPresi/Vaso_BaseColor.1001.png
+  artifactKey: Guid(0f1942a28f5131e4b9715bf8acea94b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/Vaso_BaseColor.1001.png using Guid(0f1942a28f5131e4b9715bf8acea94b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '060b3035a2dcf41d29904d1f6b890801') in 0.011273 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000967 seconds.
+  path: Assets/Modelos/TextDespachoPresi/Vaso_Normal.1001.png
+  artifactKey: Guid(c313ef0e73078b845a1b1c2f109e59ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextDespachoPresi/Vaso_Normal.1001.png using Guid(c313ef0e73078b845a1b1c2f109e59ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db612531fb5a247a0909ef716e1072eb') in 0.015634 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 2
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
