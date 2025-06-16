@@ -1,6 +1,6 @@
-    using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
-using Palmmedia.ReportGenerator.Core.Reporting.Builders;
+//using Palmmedia.ReportGenerator.Core.Reporting.Builders;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -35,6 +35,7 @@ public class Eventos : MonoBehaviour
     [SerializeField] GameObject extintorNormal;
     [SerializeField] GameObject movil;
     [SerializeField] GameObject LanzadorEscena;
+    [SerializeField] GameObject PuertaRota;
 
 
     [Header("Personajes")]
@@ -90,6 +91,8 @@ public class Eventos : MonoBehaviour
         EscenaExtintoresYPresi();
         GrabarConjavi();
         Juicio();
+
+        PuertaRota.tag = "Activable";
     }
 
     void PrimeraEscenaPresi()
@@ -314,7 +317,6 @@ public class Eventos : MonoBehaviour
             dialogosNPCs.contadorPresi++;
         }
     }
-
     void GrabarConjavi()
     {
         if (jugador.ObjMano == movil)

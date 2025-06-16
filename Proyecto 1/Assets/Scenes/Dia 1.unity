@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -72618,6 +72618,7 @@ MonoBehaviour:
   extintorNormal: {fileID: 1390009782}
   movil: {fileID: 1665997984}
   LanzadorEscena: {fileID: 998872541}
+  PuertaRota: {fileID: 1259153083}
   Layla: {fileID: 1049124020}
   Mario: {fileID: 1387767481}
   Javier: {fileID: 1915290840}
