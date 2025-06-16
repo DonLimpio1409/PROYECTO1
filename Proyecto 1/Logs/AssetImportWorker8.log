@@ -1,0 +1,265 @@
+Using pre-set license
+Built from '2022.3/staging' branch; Version is '2022.3.17f1 (4fc78088f837) revision 5228416'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.26100) 64bit Core' Language: 'es' Physical Memory: 15753 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2022.3.17f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker8
+-projectPath
+C:/Users/Usuario/Documents/GitHub/PROYECTO1/Proyecto 1
+-logFile
+Logs/AssetImportWorker8.log
+-srvPort
+59892
+Successfully changed project path to: C:/Users/Usuario/Documents/GitHub/PROYECTO1/Proyecto 1
+C:/Users/Usuario/Documents/GitHub/PROYECTO1/Proyecto 1
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [8660] Host "[IP] 192.168.1.132 [Port] 0 [Flags] 2 [Guid] 3431253007 [EditorId] 3431253007 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-1OD70R12) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [8660] Host "[IP] 192.168.1.132 [Port] 0 [Flags] 2 [Guid] 3431253007 [EditorId] 3431253007 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-1OD70R12) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+[Physics::Module] Initialized MultithreadedJobDispatcher with 15 workers.
+Refreshing native plugins compatible for Editor in 7.11 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.17f1 (4fc78088f837)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.17f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Usuario/Documents/GitHub/PROYECTO1/Proyecto 1/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: AMD Radeon(TM) Graphics (ID=0x164c)
+    Vendor:   ATI
+    VRAM:     7876 MB
+    Driver:   30.0.13044.14002
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.17f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.17f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.17f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56344
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.17f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.17f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.008289 seconds.
+- Loaded All Assemblies, in  0.416 seconds
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 413 ms
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.781 seconds
+Domain Reload Profiling: 1196ms
+	BeginReloadAssembly (151ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (36ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (64ms)
+	LoadAllAssembliesAndSetupDomain (152ms)
+		LoadAssemblies (149ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (149ms)
+			TypeCache.Refresh (148ms)
+				TypeCache.ScanAssembly (133ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (782ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (717ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (543ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (2ms)
+			ProcessInitializeOnLoadAttributes (120ms)
+			ProcessInitializeOnLoadMethodAttributes (48ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.652 seconds
+Refreshing native plugins compatible for Editor in 3.02 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.651 seconds
+Domain Reload Profiling: 1302ms
+	BeginReloadAssembly (147ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (24ms)
+	RebuildCommonClasses (31ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (39ms)
+	LoadAllAssembliesAndSetupDomain (422ms)
+		LoadAssemblies (318ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (191ms)
+			TypeCache.Refresh (170ms)
+				TypeCache.ScanAssembly (153ms)
+			ScanForSourceGeneratedMonoScriptInfo (14ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (652ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (452ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (26ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (58ms)
+			ProcessInitializeOnLoadAttributes (336ms)
+			ProcessInitializeOnLoadMethodAttributes (21ms)
+			AfterProcessingInitializeOnLoad (7ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (7ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.10 seconds
+Refreshing native plugins compatible for Editor in 4.28 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3199 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 29 unused Assets / (29.8 KB). Loaded Objects now: 3688.
+Memory consumption went from 154.3 MB to 154.3 MB.
+Total: 3.614100 ms (FindLiveObjects: 0.423900 ms CreateObjectMapping: 0.106900 ms MarkObjects: 2.998400 ms  DeleteObjects: 0.082400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 6d391050e5a25f67b0a2c618074f2cd9 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 257867.887648 seconds.
+  path: Assets/Modelos/Materiales/Habitacion Paul/Barra.mat
+  artifactKey: Guid(54de71a7ed1a57741ab4c0f6f8ac8176) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/Materiales/Habitacion Paul/Barra.mat using Guid(54de71a7ed1a57741ab4c0f6f8ac8176) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6dc277f65874fb51453066e3e8703b9') in 0.152156 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 2.305900 seconds.
+  path: Assets/Modelos/TextJuanjo/TextJuanjo/Madera_Roughness.1001.png
+  artifactKey: Guid(d6bfc35da0cc21c4babc7b984096cfe7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextJuanjo/TextJuanjo/Madera_Roughness.1001.png using Guid(d6bfc35da0cc21c4babc7b984096cfe7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f589d0e24e160021c28e861dfbdeeb30') in 0.020507 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Modelos/TextJuanjo/TextJuanjo/Pared.001_Roughness.1001.png
+  artifactKey: Guid(31231a534ccb44e43b664136b4cddd74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextJuanjo/TextJuanjo/Pared.001_Roughness.1001.png using Guid(31231a534ccb44e43b664136b4cddd74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61ffd9081e3b3568143edc640513ab1e') in 0.023597 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000164 seconds.
+  path: Assets/Modelos/TextJuanjo/TextJuanjo/Pared_Metallic.1001.png
+  artifactKey: Guid(ef6efc36665aae945a1003dee7e2a8b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextJuanjo/TextJuanjo/Pared_Metallic.1001.png using Guid(ef6efc36665aae945a1003dee7e2a8b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eaa5a2454a3d6ea6e6ed8e203ddd53dd') in 0.018210 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Modelos/TextJuanjo/TextJuanjo/Peluche_Alpha.1001.png
+  artifactKey: Guid(5a4ac0301a853174a8e569e830f192dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextJuanjo/TextJuanjo/Peluche_Alpha.1001.png using Guid(5a4ac0301a853174a8e569e830f192dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1999de389492e9de4a9e2909119e4657') in 0.017266 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000075 seconds.
+  path: Assets/Modelos/TextJuanjo/TextJuanjo/Pared.001_Normal.1001.png
+  artifactKey: Guid(bc3bee66e25baab44a4f1a6da8e79c99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextJuanjo/TextJuanjo/Pared.001_Normal.1001.png using Guid(bc3bee66e25baab44a4f1a6da8e79c99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '215c56e8a32b575bd88c1ddfde74678a') in 0.014543 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Modelos/TextJuanjo/TextJuanjo/Pared_Normal.1001.png
+  artifactKey: Guid(db503d3d7c1ba0b40a60d73edb2eba74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextJuanjo/TextJuanjo/Pared_Normal.1001.png using Guid(db503d3d7c1ba0b40a60d73edb2eba74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '029ce6b76f6f31832b214ddfbdf708f9') in 0.016229 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Modelos/TextJuanjo/TextJuanjo/Poster_Alpha.1001.png
+  artifactKey: Guid(a58bdd7b67b5dcf4fbb6a3b84451a155) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextJuanjo/TextJuanjo/Poster_Alpha.1001.png using Guid(a58bdd7b67b5dcf4fbb6a3b84451a155) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18b511e72d868f3ba6894d177ea2ddbf') in 0.015618 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Modelos/TextJuanjo/TextJuanjo/Puerta.001_Alpha.1001.png
+  artifactKey: Guid(f257fe259ee0d1244bf426691e440a91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextJuanjo/TextJuanjo/Puerta.001_Alpha.1001.png using Guid(f257fe259ee0d1244bf426691e440a91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f4fba94125cc527aecd6abd7a9ec0a1') in 0.016403 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000670 seconds.
+  path: Assets/Modelos/TextJuanjo/TextJuanjo/Puerta.001_Roughness.1001.png
+  artifactKey: Guid(de5c851d03fa1324ca5c51b8dd6477c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Modelos/TextJuanjo/TextJuanjo/Puerta.001_Roughness.1001.png using Guid(de5c851d03fa1324ca5c51b8dd6477c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6cbba31a55f3280bc328ce4d93c8c29c') in 0.019033 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: La operación de E/S se anuló por una salida de subproceso o por una solicitud de aplicación.
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

@@ -20,8 +20,9 @@ public class ControladorSFX : MonoBehaviour
     [SerializeField] AudioClip puertaCerrada;
     [SerializeField] AudioClip abrirCajon;
     [SerializeField] AudioClip cerrarCajon;
+    [SerializeField] AudioClip arrastrarSilla;
 
-    //Musicas
+    [Header("Musicas")]
     [SerializeField] AudioClip MusicaPasilloDia1;
     [SerializeField] AudioClip MusicaCuartoPrin;
     [SerializeField] AudioClip MusicaCuartoJuanjo;
@@ -102,11 +103,21 @@ public class ControladorSFX : MonoBehaviour
         SFX.PlayOneShot(cerrarPuerta);
     }
 
+    bool Arrastrar = false;
+    public void ArrastrarSilla()
+    {
+        if (Arrastrar == false)
+        {
+            SFX.PlayOneShot(arrastrarSilla);
+            Arrastrar = true;   
+        }
+    }
+
     public void CallarPantallaTitulo()
     {
         StartCoroutine(FadeOut(Musicas, duracionFadeOut));
 
-        if(controlCanva.estoyEnMenuPrincipal == false)
+        if (controlCanva.estoyEnMenuPrincipal == false)
         {
             SFX.PlayOneShot(pasos);
         }

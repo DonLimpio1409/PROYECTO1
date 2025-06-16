@@ -217,7 +217,6 @@ public class Jugador : MonoBehaviour
                 nombreObjActivable = rayoTocando.collider.gameObject.name;
                 rayoTocando.collider.gameObject.tag = tagObjetoActivable;
                 textoAccion.SetActive(true);
-
             }
             else
             {
