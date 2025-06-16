@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AbrirPuerta : MonoBehaviour
-{    Jugador ScrJugador;
+{   //hjk 
+    Jugador ScrJugador;
     Animator ScrAnimPuerta;
     ControladorSFX ScrControladorSFX;
     
